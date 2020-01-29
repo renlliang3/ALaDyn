@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>fft_3d_psolv &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>fft_3d_psolv
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.0% of total for procedures.">53 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/psolve.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/psolve.f90.html'>psolve.f90</a></li>
+    
+     <li><a href='../module/psolve.html'>psolve</a></li>
+    
+  
+     <li class="active">fft_3d_psolv</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<em>None</em>
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+public subroutine fft_3d_psolv(rho, pot1, g2, omp0, n1, n1_loc, n2, n2_loc, n3, n3_loc, i1, i2, j1, j2, k1, k2, ft_mod, sym, s_ind)
+    
+    
+   
+</h2>
+    
+  
+
+
+    
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rho~2"></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rho</strong>(:,:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pot1"></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>pot1</strong>(:,:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-g2~2"></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-omp0"></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>omp0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1~55"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1_loc~7"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1_loc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n2~38"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n2_loc~12"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2_loc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n3~19"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n3</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n3_loc~12"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n3_loc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i1~12"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>i1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i2~12"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>i2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j1~6"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>j1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j2~6"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>j2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-k1~6"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>k1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-k2~6"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>k2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ft_mod"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ft_mod</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sym~5"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sym</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-s_ind"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>s_ind</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    <br>
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Calls</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~fft_3d_psolv~~CallsGraph Pages: 1 -->
+<svg id="procfft_3d_psolvCallsGraph" width="641pt" height="559pt"
+ viewBox="0.00 0.00 641.00 558.70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~fft_3d_psolv~~CallsGraph" class="graph" transform="scale(.9683 .9683) rotate(0) translate(4 573)">
+<title>proc~~fft_3d_psolv~~CallsGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-573 658,-573 658,4 -4,4"/>
+<!-- proc~fft_3d_psolv -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node1" class="node">
+<title>proc~fft_3d_psolv</title>
+<polygon fill="none" stroke="#000000" points="76,-234 0,-234 0,-210 76,-210 76,-234"/>
+<text text-anchor="middle" x="38" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">fft_3d_psolv</text>
+</g>
+<!-- proc~pftw3d -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node2" class="node">
+<title>proc~pftw3d</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node2"><a xlink:href=".././proc/pftw3d.html" xlink:title="pftw3d">
+<polygon fill="#d9534f" stroke="#d9534f" points="205.5,-443 151.5,-443 151.5,-419 205.5,-419 205.5,-443"/>
+<text text-anchor="middle" x="178.5" y="-428.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pftw3d</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;proc~pftw3d -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge1" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;proc~pftw3d</title>
+<path fill="none" stroke="#ff0000" d="M39.7935,-234.2254C45.0628,-266.0183 63.3073,-352.265 112,-402 120.1629,-410.3376 131.1264,-416.4385 141.7945,-420.8297"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="140.8269,-424.2037 151.42,-424.3969 143.2595,-417.64 140.8269,-424.2037"/>
+</g>
+<!-- ftw_end -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node3" class="node">
+<title>ftw_end</title>
+<polygon fill="#777777" stroke="#777777" points="205.5,-318 151.5,-318 151.5,-294 205.5,-294 205.5,-318"/>
+<text text-anchor="middle" x="178.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ftw_end</text>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;ftw_end -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge2" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;ftw_end</title>
+<path fill="none" stroke="#ff0000" d="M49.4296,-234.3485C63.0812,-248.43 87.2005,-271.2718 112,-285 121.136,-290.0574 131.6644,-294.0907 141.6099,-297.2159"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="140.7077,-300.5986 151.288,-300.0427 142.6704,-293.8793 140.7077,-300.5986"/>
+</g>
+<!-- all_gather_dpreal -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node4" class="node">
+<title>all_gather_dpreal</title>
+<polygon fill="#777777" stroke="#777777" points="231.5,-276 125.5,-276 125.5,-252 231.5,-252 231.5,-276"/>
+<text text-anchor="middle" x="178.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">all_gather_dpreal</text>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;all_gather_dpreal -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge3" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;all_gather_dpreal</title>
+<path fill="none" stroke="#ff0000" d="M76.0213,-233.3658C92.0542,-238.1585 110.9464,-243.806 128.1141,-248.938"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="127.4047,-252.3789 137.9883,-251.8897 129.4096,-245.6722 127.4047,-252.3789"/>
+</g>
+<!-- proc~beam_potential -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node5" class="node">
+<title>proc~beam_potential</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node5"><a xlink:href=".././proc/beam_potential.html" xlink:title="beam_potential">
+<polygon fill="#d9534f" stroke="#d9534f" points="226.5,-234 130.5,-234 130.5,-210 226.5,-210 226.5,-234"/>
+<text text-anchor="middle" x="178.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">beam_potential</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;proc~beam_potential -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge4" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;proc~beam_potential</title>
+<path fill="none" stroke="#ff0000" d="M76.0213,-222C89.6237,-222 105.2843,-222 120.2037,-222"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="120.3798,-225.5001 130.3797,-222 120.3797,-218.5001 120.3798,-225.5001"/>
+</g>
+<!-- proc~pftw3d_sc -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node6" class="node">
+<title>proc~pftw3d_sc</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node6"><a xlink:href=".././proc/pftw3d_sc.html" xlink:title="pftw3d_sc">
+<polygon fill="#d9534f" stroke="#d9534f" points="211,-360 146,-360 146,-336 211,-336 211,-360"/>
+<text text-anchor="middle" x="178.5" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pftw3d_sc</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;proc~pftw3d_sc -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge5" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;proc~pftw3d_sc</title>
+<path fill="none" stroke="#ff0000" d="M43.2394,-234.0074C53.3469,-255.7834 77.6162,-301.8575 112,-327 119.0946,-332.1878 127.513,-336.122 135.9338,-339.0965"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="135.1523,-342.5192 145.7412,-342.165 137.2425,-335.8386 135.1523,-342.5192"/>
+</g>
+<!-- proc~mpi_ftw_alloc -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node7" class="node">
+<title>proc~mpi_ftw_alloc</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node7"><a xlink:href=".././proc/mpi_ftw_alloc.html" xlink:title="mpi_ftw_alloc">
+<polygon fill="#d9534f" stroke="#d9534f" points="221,-192 136,-192 136,-168 221,-168 221,-192"/>
+<text text-anchor="middle" x="178.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_ftw_alloc</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;proc~mpi_ftw_alloc -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge6" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;proc~mpi_ftw_alloc</title>
+<path fill="none" stroke="#ff0000" d="M76.0213,-210.6342C92.0542,-205.8415 110.9464,-200.194 128.1141,-195.062"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="129.4096,-198.3278 137.9883,-192.1103 127.4047,-191.6211 129.4096,-198.3278"/>
+</g>
+<!-- proc~ft_overset_grid -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node8" class="node">
+<title>proc~ft_overset_grid</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node8"><a xlink:href=".././proc/ft_overset_grid.html" xlink:title="ft_overset_grid">
+<polygon fill="#d9534f" stroke="#d9534f" points="484.5,-401 393.5,-401 393.5,-377 484.5,-377 484.5,-401"/>
+<text text-anchor="middle" x="439" y="-386.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ft_overset_grid</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;proc~ft_overset_grid -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge7" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;proc~ft_overset_grid</title>
+<path fill="none" stroke="#ff0000" d="M39.9749,-234.1888C45.4166,-263.3497 63.5719,-337.0802 112,-369 155.1505,-397.4413 301.8201,-395.5816 383.2935,-392.1084"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="383.5432,-395.6009 393.3763,-391.6562 383.2295,-388.6079 383.5432,-395.6009"/>
+</g>
+<!-- proc~unif_to_str_field_interp -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node9" class="node">
+<title>proc~unif_to_str_field_interp</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node9"><a xlink:href=".././proc/unif_to_str_field_interp.html" xlink:title="unif_to_str_field_interp">
+<polygon fill="#d9534f" stroke="#d9534f" points="245,-150 112,-150 112,-126 245,-126 245,-150"/>
+<text text-anchor="middle" x="178.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">unif_to_str_field_interp</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;proc~unif_to_str_field_interp -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge8" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;proc~unif_to_str_field_interp</title>
+<path fill="none" stroke="#ff0000" d="M49.4296,-209.6515C63.0812,-195.57 87.2005,-172.7282 112,-159 115.4177,-157.1081 119.0303,-155.3594 122.7343,-153.7481"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="124.0807,-156.9792 132.071,-150.0218 121.486,-150.4779 124.0807,-156.9792"/>
+</g>
+<!-- proc~mpi_ftw_dalloc -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node10" class="node">
+<title>proc~mpi_ftw_dalloc</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node10"><a xlink:href=".././proc/mpi_ftw_dalloc.html" xlink:title="mpi_ftw_dalloc">
+<polygon fill="#d9534f" stroke="#d9534f" points="224,-108 133,-108 133,-84 224,-84 224,-108"/>
+<text text-anchor="middle" x="178.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_ftw_dalloc</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;proc~mpi_ftw_dalloc -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge9" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;proc~mpi_ftw_dalloc</title>
+<path fill="none" stroke="#ff0000" d="M43.2394,-209.9926C53.3469,-188.2166 77.6162,-142.1425 112,-117 115.616,-114.3559 119.5759,-112.0374 123.7048,-110.0056"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="125.162,-113.1887 132.9455,-106.0007 122.3783,-106.766 125.162,-113.1887"/>
+</g>
+<!-- ftw_init -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node11" class="node">
+<title>ftw_init</title>
+<polygon fill="#777777" stroke="#777777" points="205.5,-66 151.5,-66 151.5,-42 205.5,-42 205.5,-66"/>
+<text text-anchor="middle" x="178.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ftw_init</text>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;ftw_init -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge10" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;ftw_init</title>
+<path fill="none" stroke="#ff0000" d="M40.7234,-209.7144C47.5895,-181.6155 68.2665,-112.2233 112,-75 120.3143,-67.9234 131.0229,-63.2265 141.4073,-60.111"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="142.3716,-63.4768 151.1754,-57.5824 140.6173,-56.7002 142.3716,-63.4768"/>
+</g>
+<!-- proc~mpi_yzft_ord -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node12" class="node">
+<title>proc~mpi_yzft_ord</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node12"><a xlink:href=".././proc/mpi_yzft_ord.html" xlink:title="mpi_yzft_ord">
+<polygon fill="#d9534f" stroke="#d9534f" points="218.5,-24 138.5,-24 138.5,0 218.5,0 218.5,-24"/>
+<text text-anchor="middle" x="178.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_yzft_ord</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_3d_psolv&#45;&gt;proc~mpi_yzft_ord -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge11" class="edge">
+<title>proc~fft_3d_psolv&#45;&gt;proc~mpi_yzft_ord</title>
+<path fill="none" stroke="#ff0000" d="M39.1821,-209.8372C43.0702,-176.5398 58.4582,-83.0541 112,-33 116.932,-28.3892 122.8709,-24.7907 129.1439,-21.9823"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="130.4046,-25.2475 138.4953,-18.407 127.9048,-18.709 130.4046,-25.2475"/>
+</g>
+<!-- proc~ftw1d~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node17" class="node">
+<title>proc~ftw1d~2</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node17"><a xlink:href=".././proc/ftw1d~2.html" xlink:title="ftw1d">
+<polygon fill="#d9534f" stroke="#d9534f" points="466,-527 412,-527 412,-503 466,-503 466,-527"/>
+<text text-anchor="middle" x="439" y="-512.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ftw1d</text>
+</a>
+</g>
+</g>
+<!-- proc~pftw3d&#45;&gt;proc~ftw1d~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge13" class="edge">
+<title>proc~pftw3d&#45;&gt;proc~ftw1d~2</title>
+<path fill="none" stroke="#ff0000" d="M205.8857,-439.8307C253.0103,-455.0264 349.4568,-486.1262 402.3268,-503.1745"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="401.3896,-506.5497 411.9812,-506.2876 403.538,-499.8875 401.3896,-506.5497"/>
+</g>
+<!-- proc~pftw2d -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node23" class="node">
+<title>proc~pftw2d</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node23"><a xlink:href=".././proc/pftw2d.html" xlink:title="pftw2d">
+<polygon fill="#d9534f" stroke="#d9534f" points="340.5,-443 286.5,-443 286.5,-419 340.5,-419 340.5,-443"/>
+<text text-anchor="middle" x="313.5" y="-428.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pftw2d</text>
+</a>
+</g>
+</g>
+<!-- proc~pftw3d&#45;&gt;proc~pftw2d -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge12" class="edge">
+<title>proc~pftw3d&#45;&gt;proc~pftw2d</title>
+<path fill="none" stroke="#ff0000" d="M205.8193,-431C226.0389,-431 253.8216,-431 276.1017,-431"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="276.2214,-434.5001 286.2214,-431 276.2213,-427.5001 276.2214,-434.5001"/>
+</g>
+<!-- proc~pftw2d_sc -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node18" class="node">
+<title>proc~pftw2d_sc</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node18"><a xlink:href=".././proc/pftw2d_sc.html" xlink:title="pftw2d_sc">
+<polygon fill="#d9534f" stroke="#d9534f" points="346,-360 281,-360 281,-336 346,-336 346,-360"/>
+<text text-anchor="middle" x="313.5" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pftw2d_sc</text>
+</a>
+</g>
+</g>
+<!-- proc~pftw3d_sc&#45;&gt;proc~pftw2d_sc -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge14" class="edge">
+<title>proc~pftw3d_sc&#45;&gt;proc~pftw2d_sc</title>
+<path fill="none" stroke="#00ff2e" d="M211.1797,-348C229.0393,-348 251.3772,-348 270.6213,-348"/>
+<polygon fill="#00ff2e" stroke="#00ff2e" points="270.6533,-351.5001 280.6533,-348 270.6533,-344.5001 270.6533,-351.5001"/>
+</g>
+<!-- proc~ftw1d_sc~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node27" class="node">
+<title>proc~ftw1d_sc~2</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node27"><a xlink:href=".././proc/ftw1d_sc~2.html" xlink:title="ftw1d_sc">
+<polygon fill="#d9534f" stroke="#d9534f" points="468,-275 410,-275 410,-251 468,-251 468,-275"/>
+<text text-anchor="middle" x="439" y="-260.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ftw1d_sc</text>
+</a>
+</g>
+</g>
+<!-- proc~pftw3d_sc&#45;&gt;proc~ftw1d_sc~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge15" class="edge">
+<title>proc~pftw3d_sc&#45;&gt;proc~ftw1d_sc~2</title>
+<path fill="none" stroke="#00ff2e" d="M211.3359,-337.7222C222.0748,-334.3364 234.0545,-330.5335 245,-327 298.8685,-309.6097 360.9759,-289.0266 400.1099,-275.9917"/>
+<polygon fill="#00ff2e" stroke="#00ff2e" points="401.4066,-279.2488 409.7868,-272.7663 399.1932,-272.608 401.4066,-279.2488"/>
+</g>
+<!-- yp_prev -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node15" class="node">
+<title>yp_prev</title>
+<polygon fill="#777777" stroke="#777777" points="620.5,-443 565.5,-443 565.5,-419 620.5,-419 620.5,-443"/>
+<text text-anchor="middle" x="593" y="-428.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">yp_prev</text>
+</g>
+<!-- proc~ft_overset_grid&#45;&gt;yp_prev -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge16" class="edge">
+<title>proc~ft_overset_grid&#45;&gt;yp_prev</title>
+<path fill="none" stroke="#00b9ff" d="M483.1302,-401.0355C505.9954,-407.2715 533.621,-414.8057 555.4507,-420.7593"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="554.7757,-424.203 565.3443,-423.4575 556.6176,-417.4496 554.7757,-424.203"/>
+</g>
+<!-- zp_next -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node19" class="node">
+<title>zp_next</title>
+<polygon fill="#777777" stroke="#777777" points="620,-359 566,-359 566,-335 620,-335 620,-359"/>
+<text text-anchor="middle" x="593" y="-344.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">zp_next</text>
+</g>
+<!-- proc~ft_overset_grid&#45;&gt;zp_next -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge17" class="edge">
+<title>proc~ft_overset_grid&#45;&gt;zp_next</title>
+<path fill="none" stroke="#00b9ff" d="M483.1302,-376.9645C506.1488,-370.6867 533.9921,-363.0931 555.8895,-357.1211"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="557.0763,-360.4253 565.803,-354.4174 555.2345,-353.6719 557.0763,-360.4253"/>
+</g>
+<!-- comm_col -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node20" class="node">
+<title>comm_col</title>
+<polygon fill="#777777" stroke="#777777" points="626.5,-401 559.5,-401 559.5,-377 626.5,-377 626.5,-401"/>
+<text text-anchor="middle" x="593" y="-386.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">comm_col</text>
+</g>
+<!-- proc~ft_overset_grid&#45;&gt;comm_col -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge18" class="edge">
+<title>proc~ft_overset_grid&#45;&gt;comm_col</title>
+<path fill="none" stroke="#00b9ff" d="M484.7881,-389C505.1735,-389 529.0721,-389 549.2178,-389"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="549.3721,-392.5001 559.3721,-389 549.372,-385.5001 549.3721,-392.5001"/>
+</g>
+<!-- yp_next -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node25" class="node">
+<title>yp_next</title>
+<polygon fill="#777777" stroke="#777777" points="620,-485 566,-485 566,-461 620,-461 620,-485"/>
+<text text-anchor="middle" x="593" y="-470.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">yp_next</text>
+</g>
+<!-- proc~ft_overset_grid&#45;&gt;yp_next -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge19" class="edge">
+<title>proc~ft_overset_grid&#45;&gt;yp_next</title>
+<path fill="none" stroke="#00b9ff" d="M479.834,-401.1193C485.5011,-403.6237 491.0646,-406.5683 496,-410 516.1854,-424.0354 511.6653,-438.1817 532,-452 539.2576,-456.9318 547.786,-460.8118 556.1278,-463.8219"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="555.1546,-467.186 565.7471,-466.9667 557.3298,-460.5325 555.1546,-467.186"/>
+</g>
+<!-- zp_prev -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node26" class="node">
+<title>zp_prev</title>
+<polygon fill="#777777" stroke="#777777" points="620,-317 566,-317 566,-293 620,-293 620,-317"/>
+<text text-anchor="middle" x="593" y="-302.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">zp_prev</text>
+</g>
+<!-- proc~ft_overset_grid&#45;&gt;zp_prev -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge20" class="edge">
+<title>proc~ft_overset_grid&#45;&gt;zp_prev</title>
+<path fill="none" stroke="#00b9ff" d="M479.834,-376.8807C485.5011,-374.3763 491.0646,-371.4317 496,-368 516.1854,-353.9646 511.6653,-339.8183 532,-326 539.2576,-321.0682 547.786,-317.1882 556.1278,-314.1781"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="557.3298,-317.4675 565.7471,-311.0333 555.1546,-310.814 557.3298,-317.4675"/>
+</g>
+<!-- loc_yft -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node13" class="node">
+<title>loc_yft</title>
+<polygon fill="#777777" stroke="#777777" points="340.5,-129 286.5,-129 286.5,-105 340.5,-105 340.5,-129"/>
+<text text-anchor="middle" x="313.5" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_yft</text>
+</g>
+<!-- proc~unif_to_str_field_interp&#45;&gt;loc_yft -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge21" class="edge">
+<title>proc~unif_to_str_field_interp&#45;&gt;loc_yft</title>
+<path fill="none" stroke="#002eff" d="M245.209,-127.623C255.9414,-125.9536 266.7005,-124.2799 276.4008,-122.771"/>
+<polygon fill="#002eff" stroke="#002eff" points="277.1165,-126.2018 286.4596,-121.2063 276.0405,-119.285 277.1165,-126.2018"/>
+</g>
+<!-- loc_zft -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node14" class="node">
+<title>loc_zft</title>
+<polygon fill="#777777" stroke="#777777" points="340.5,-87 286.5,-87 286.5,-63 340.5,-63 340.5,-87"/>
+<text text-anchor="middle" x="313.5" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_zft</text>
+</g>
+<!-- proc~unif_to_str_field_interp&#45;&gt;loc_zft -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge22" class="edge">
+<title>proc~unif_to_str_field_interp&#45;&gt;loc_zft</title>
+<path fill="none" stroke="#002eff" d="M222.0049,-125.9478C229.7884,-123.3183 237.7299,-120.3162 245,-117 253.2754,-113.2252 270.8948,-102.3977 286.1911,-92.6823"/>
+<polygon fill="#002eff" stroke="#002eff" points="288.3008,-95.4877 294.8407,-87.1522 284.5301,-89.59 288.3008,-95.4877"/>
+</g>
+<!-- loc_yg -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node16" class="node">
+<title>loc_yg</title>
+<polygon fill="#777777" stroke="#777777" points="340.5,-45 286.5,-45 286.5,-21 340.5,-21 340.5,-45"/>
+<text text-anchor="middle" x="313.5" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_yg</text>
+</g>
+<!-- proc~unif_to_str_field_interp&#45;&gt;loc_yg -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge23" class="edge">
+<title>proc~unif_to_str_field_interp&#45;&gt;loc_yg</title>
+<path fill="none" stroke="#002eff" d="M230.5793,-125.8491C235.741,-123.4146 240.6652,-120.4966 245,-117 270.101,-96.753 258.8265,-77.4166 281,-54 281.7621,-53.1951 282.561,-52.4068 283.3888,-51.6362"/>
+<polygon fill="#002eff" stroke="#002eff" points="285.7901,-54.1971 291.4044,-45.2121 281.4124,-48.7348 285.7901,-54.1971"/>
+</g>
+<!-- zft_ind -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node21" class="node">
+<title>zft_ind</title>
+<polygon fill="#777777" stroke="#777777" points="340.5,-255 286.5,-255 286.5,-231 340.5,-231 340.5,-255"/>
+<text text-anchor="middle" x="313.5" y="-240.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">zft_ind</text>
+</g>
+<!-- proc~unif_to_str_field_interp&#45;&gt;zft_ind -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge24" class="edge">
+<title>proc~unif_to_str_field_interp&#45;&gt;zft_ind</title>
+<path fill="none" stroke="#002eff" d="M230.5793,-150.1509C235.741,-152.5854 240.6652,-155.5034 245,-159 270.101,-179.247 258.8265,-198.5834 281,-222 281.7621,-222.8049 282.561,-223.5932 283.3888,-224.3638"/>
+<polygon fill="#002eff" stroke="#002eff" points="281.4124,-227.2652 291.4044,-230.7879 285.7901,-221.8029 281.4124,-227.2652"/>
+</g>
+<!-- loc_zg -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node22" class="node">
+<title>loc_zg</title>
+<polygon fill="#777777" stroke="#777777" points="340.5,-213 286.5,-213 286.5,-189 340.5,-189 340.5,-213"/>
+<text text-anchor="middle" x="313.5" y="-198.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_zg</text>
+</g>
+<!-- proc~unif_to_str_field_interp&#45;&gt;loc_zg -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge26" class="edge">
+<title>proc~unif_to_str_field_interp&#45;&gt;loc_zg</title>
+<path fill="none" stroke="#002eff" d="M222.0049,-150.0522C229.7884,-152.6817 237.7299,-155.6838 245,-159 253.2754,-162.7748 270.8948,-173.6023 286.1911,-183.3177"/>
+<polygon fill="#002eff" stroke="#002eff" points="284.5301,-186.41 294.8407,-188.8478 288.3008,-180.5123 284.5301,-186.41"/>
+</g>
+<!-- yft_ind -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node24" class="node">
+<title>yft_ind</title>
+<polygon fill="#777777" stroke="#777777" points="340.5,-171 286.5,-171 286.5,-147 340.5,-147 340.5,-171"/>
+<text text-anchor="middle" x="313.5" y="-156.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">yft_ind</text>
+</g>
+<!-- proc~unif_to_str_field_interp&#45;&gt;yft_ind -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge25" class="edge">
+<title>proc~unif_to_str_field_interp&#45;&gt;yft_ind</title>
+<path fill="none" stroke="#002eff" d="M245.209,-148.377C255.9414,-150.0464 266.7005,-151.7201 276.4008,-153.229"/>
+<polygon fill="#002eff" stroke="#002eff" points="276.0405,-156.715 286.4596,-154.7937 277.1165,-149.7982 276.0405,-156.715"/>
+</g>
+<!-- interface~fftw_execute_dft_r2c~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node31" class="node">
+<title>interface~fftw_execute_dft_r2c~2</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node31"><a xlink:href=".././interface/fftw_execute_dft_r2c~2.html" xlink:title="fftw_execute_dft_r2c">
+<polygon fill="#a7506f" stroke="#a7506f" points="654,-569 532,-569 532,-545 654,-545 654,-569"/>
+<text text-anchor="middle" x="593" y="-554.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fftw_execute_dft_r2c</text>
+</a>
+</g>
+</g>
+<!-- proc~ftw1d~2&#45;&gt;interface~fftw_execute_dft_r2c~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge28" class="edge">
+<title>proc~ftw1d~2&#45;&gt;interface~fftw_execute_dft_r2c~2</title>
+<path fill="none" stroke="#65ff00" d="M466.1776,-522.4121C486.289,-527.897 514.3471,-535.5492 538.9602,-542.2619"/>
+<polygon fill="#65ff00" stroke="#65ff00" points="538.3391,-545.7202 548.9076,-544.9748 540.1809,-538.9669 538.3391,-545.7202"/>
+</g>
+<!-- interface~fftw_execute_dft_c2r~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node32" class="node">
+<title>interface~fftw_execute_dft_c2r~2</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node32"><a xlink:href=".././interface/fftw_execute_dft_c2r~2.html" xlink:title="fftw_execute_dft_c2r">
+<polygon fill="#a7506f" stroke="#a7506f" points="654,-527 532,-527 532,-503 654,-503 654,-527"/>
+<text text-anchor="middle" x="593" y="-512.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fftw_execute_dft_c2r</text>
+</a>
+</g>
+</g>
+<!-- proc~ftw1d~2&#45;&gt;interface~fftw_execute_dft_c2r~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge27" class="edge">
+<title>proc~ftw1d~2&#45;&gt;interface~fftw_execute_dft_c2r~2</title>
+<path fill="none" stroke="#65ff00" d="M466.1776,-515C481.6927,-515 501.9371,-515 521.6808,-515"/>
+<polygon fill="#65ff00" stroke="#65ff00" points="521.9321,-518.5001 531.9321,-515 521.9321,-511.5001 521.9321,-518.5001"/>
+</g>
+<!-- proc~pftw2d_sc&#45;&gt;proc~ftw1d_sc~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge30" class="edge">
+<title>proc~pftw2d_sc&#45;&gt;proc~ftw1d_sc~2</title>
+<path fill="none" stroke="#00ff00" d="M327.9393,-335.9583C333.648,-331.0949 340.2145,-325.3712 346,-320 362.5828,-304.6048 362.9401,-296.1951 382,-284 387.5382,-280.4565 393.7595,-277.3934 400.0026,-274.787"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="401.6469,-277.9054 409.7364,-271.0635 399.1459,-271.3674 401.6469,-277.9054"/>
+</g>
+<!-- proc~swap_xz_3data_inv -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node29" class="node">
+<title>proc~swap_xz_3data_inv</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node29"><a xlink:href=".././proc/swap_xz_3data_inv.html" xlink:title="swap_xz_3data_inv">
+<polygon fill="#d9534f" stroke="#d9534f" points="495.5,-317 382.5,-317 382.5,-293 495.5,-293 495.5,-317"/>
+<text text-anchor="middle" x="439" y="-302.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">swap_xz_3data_inv</text>
+</a>
+</g>
+</g>
+<!-- proc~pftw2d_sc&#45;&gt;proc~swap_xz_3data_inv -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge29" class="edge">
+<title>proc~pftw2d_sc&#45;&gt;proc~swap_xz_3data_inv</title>
+<path fill="none" stroke="#00ff00" d="M346.146,-336.8145C360.8212,-331.7863 378.3753,-325.7718 394.2503,-320.3326"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="395.5513,-323.5866 403.877,-317.0342 393.2824,-316.9645 395.5513,-323.5866"/>
+</g>
+<!-- proc~swap_xz_3data -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node34" class="node">
+<title>proc~swap_xz_3data</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node34"><a xlink:href=".././proc/swap_xz_3data.html" xlink:title="swap_xz_3data">
+<polygon fill="#d9534f" stroke="#d9534f" points="485,-359 393,-359 393,-335 485,-335 485,-359"/>
+<text text-anchor="middle" x="439" y="-344.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">swap_xz_3data</text>
+</a>
+</g>
+</g>
+<!-- proc~pftw2d_sc&#45;&gt;proc~swap_xz_3data -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge31" class="edge">
+<title>proc~pftw2d_sc&#45;&gt;proc~swap_xz_3data</title>
+<path fill="none" stroke="#00ff00" d="M346.146,-347.7399C357.2671,-347.6513 370.0414,-347.5495 382.4853,-347.4503"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="382.8452,-350.9477 392.817,-347.368 382.7894,-343.9479 382.8452,-350.9477"/>
+</g>
+<!-- proc~swap_xy_3data_inv -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node35" class="node">
+<title>proc~swap_xy_3data_inv</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node35"><a xlink:href=".././proc/swap_xy_3data_inv.html" xlink:title="swap_xy_3data_inv">
+<polygon fill="#d9534f" stroke="#d9534f" points="496,-443 382,-443 382,-419 496,-419 496,-443"/>
+<text text-anchor="middle" x="439" y="-428.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">swap_xy_3data_inv</text>
+</a>
+</g>
+</g>
+<!-- proc~pftw2d_sc&#45;&gt;proc~swap_xy_3data_inv -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge32" class="edge">
+<title>proc~pftw2d_sc&#45;&gt;proc~swap_xy_3data_inv</title>
+<path fill="none" stroke="#00ff00" d="M324.2718,-360.2408C336.9158,-373.9709 359.084,-396.1288 382,-410 384.7968,-411.6929 387.7521,-413.2838 390.7865,-414.7725"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="389.4913,-418.0275 400.0475,-418.9319 392.3593,-411.642 389.4913,-418.0275"/>
+</g>
+<!-- proc~swap_xy_3data -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node36" class="node">
+<title>proc~swap_xy_3data</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node36"><a xlink:href=".././proc/swap_xy_3data.html" xlink:title="swap_xy_3data">
+<polygon fill="#d9534f" stroke="#d9534f" points="485.5,-485 392.5,-485 392.5,-461 485.5,-461 485.5,-485"/>
+<text text-anchor="middle" x="439" y="-470.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">swap_xy_3data</text>
+</a>
+</g>
+</g>
+<!-- proc~pftw2d_sc&#45;&gt;proc~swap_xy_3data -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge33" class="edge">
+<title>proc~pftw2d_sc&#45;&gt;proc~swap_xy_3data</title>
+<path fill="none" stroke="#00ff00" d="M320.2893,-360.2906C334.066,-384.8644 365.4015,-438.8315 382,-452 383.7789,-453.4113 385.6617,-454.7337 387.6185,-455.9723"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="386.1261,-459.1455 396.5779,-460.8808 389.4895,-453.0064 386.1261,-459.1455"/>
+</g>
+<!-- proc~pftw2d&#45;&gt;proc~ftw1d~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge35" class="edge">
+<title>proc~pftw2d&#45;&gt;proc~ftw1d~2</title>
+<path fill="none" stroke="#0000ff" d="M324.006,-443.1995C336.5734,-457.1411 358.8347,-479.8516 382,-494 388.3114,-497.8547 395.4421,-501.1734 402.4696,-503.9604"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="401.3086,-507.2626 411.9021,-507.4318 403.7263,-500.6933 401.3086,-507.2626"/>
+</g>
+<!-- proc~pftw2d&#45;&gt;proc~swap_xz_3data_inv -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge34" class="edge">
+<title>proc~pftw2d&#45;&gt;proc~swap_xz_3data_inv</title>
+<path fill="none" stroke="#0000ff" d="M320.0666,-418.9683C333.7077,-394.3375 365.234,-339.3614 382,-326 383.7758,-324.5848 385.656,-323.2591 387.6107,-322.0179"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="389.4832,-324.9827 396.5635,-317.1011 386.1135,-318.8471 389.4832,-324.9827"/>
+</g>
+<!-- proc~pftw2d&#45;&gt;proc~swap_xz_3data -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge36" class="edge">
+<title>proc~pftw2d&#45;&gt;proc~swap_xz_3data</title>
+<path fill="none" stroke="#0000ff" d="M324.006,-418.8005C336.5734,-404.8589 358.8347,-382.1484 382,-368 384.7901,-366.2959 387.7402,-364.6967 390.7708,-363.2017"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="392.3465,-366.3307 400.0242,-359.0298 389.4693,-359.9493 392.3465,-366.3307"/>
+</g>
+<!-- proc~pftw2d&#45;&gt;proc~swap_xy_3data_inv -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge37" class="edge">
+<title>proc~pftw2d&#45;&gt;proc~swap_xy_3data_inv</title>
+<path fill="none" stroke="#0000ff" d="M340.7316,-431C350.0043,-431 360.8199,-431 371.818,-431"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="371.9306,-434.5001 381.9306,-431 371.9305,-427.5001 371.9306,-434.5001"/>
+</g>
+<!-- proc~pftw2d&#45;&gt;proc~swap_xy_3data -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge38" class="edge">
+<title>proc~pftw2d&#45;&gt;proc~swap_xy_3data</title>
+<path fill="none" stroke="#0000ff" d="M340.7316,-440.1134C356.06,-445.2432 375.6045,-451.784 393.2198,-457.6791"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="392.1748,-461.0202 402.7686,-460.8748 394.3964,-454.382 392.1748,-461.0202"/>
+</g>
+<!-- interface~fftw_execute_r2r~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node28" class="node">
+<title>interface~fftw_execute_r2r~2</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node28"><a xlink:href=".././interface/fftw_execute_r2r~2.html" xlink:title="fftw_execute_r2r">
+<polygon fill="#a7506f" stroke="#a7506f" points="643.5,-275 542.5,-275 542.5,-251 643.5,-251 643.5,-275"/>
+<text text-anchor="middle" x="593" y="-260.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fftw_execute_r2r</text>
+</a>
+</g>
+</g>
+<!-- proc~ftw1d_sc~2&#45;&gt;interface~fftw_execute_r2r~2 -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge39" class="edge">
+<title>proc~ftw1d_sc~2&#45;&gt;interface~fftw_execute_r2r~2</title>
+<path fill="none" stroke="#ff0066" d="M468.3287,-263C486.3344,-263 510.0738,-263 532.0018,-263"/>
+<polygon fill="#ff0066" stroke="#ff0066" points="532.2538,-266.5001 542.2538,-263 532.2537,-259.5001 532.2538,-266.5001"/>
+</g>
+<!-- proc~logical_dimension -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node30" class="node">
+<title>proc~logical_dimension</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node30"><a xlink:href=".././proc/logical_dimension.html" xlink:title="logical_dimension">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="647.5,-233 538.5,-233 538.5,-209 647.5,-209 647.5,-233"/>
+<text text-anchor="middle" x="593" y="-218.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">logical_dimension</text>
+</a>
+</g>
+</g>
+<!-- proc~ftw1d_sc~2&#45;&gt;proc~logical_dimension -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge40" class="edge">
+<title>proc~ftw1d_sc~2&#45;&gt;proc~logical_dimension</title>
+<path fill="none" stroke="#ff0066" d="M468.3287,-255.0013C488.2587,-249.5658 515.2135,-242.2145 538.9611,-235.7379"/>
+<polygon fill="#ff0066" stroke="#ff0066" points="540.1858,-239.0318 548.9125,-233.0239 538.3439,-232.2784 540.1858,-239.0318"/>
+</g>
+<!-- proc~determine_kind -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_node33" class="node">
+<title>proc~determine_kind</title>
+<g id="a_proc~~fft_3d_psolv~~CallsGraph_node33"><a xlink:href=".././proc/determine_kind.html" xlink:title="determine_kind">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="641,-191 545,-191 545,-167 641,-167 641,-191"/>
+<text text-anchor="middle" x="593" y="-176.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">determine_kind</text>
+</a>
+</g>
+</g>
+<!-- proc~ftw1d_sc~2&#45;&gt;proc~determine_kind -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge41" class="edge">
+<title>proc~ftw1d_sc~2&#45;&gt;proc~determine_kind</title>
+<path fill="none" stroke="#ff0066" d="M454.0238,-250.9773C471.8001,-237.2018 502.6936,-214.6472 532,-200 535.7194,-198.1411 539.6429,-196.3796 543.6331,-194.7265"/>
+<polygon fill="#ff0066" stroke="#ff0066" points="544.9567,-197.9672 552.9999,-191.071 542.4117,-191.4462 544.9567,-197.9672"/>
+</g>
+<!-- proc~swap_xz_3data_inv&#45;&gt;zp_next -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge42" class="edge">
+<title>proc~swap_xz_3data_inv&#45;&gt;zp_next</title>
+<path fill="none" stroke="#ffaa00" d="M483.1302,-317.0355C506.1488,-323.3133 533.9921,-330.9069 555.8895,-336.8789"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="555.2345,-340.3281 565.803,-339.5826 557.0763,-333.5747 555.2345,-340.3281"/>
+</g>
+<!-- proc~swap_xz_3data_inv&#45;&gt;comm_col -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge43" class="edge">
+<title>proc~swap_xz_3data_inv&#45;&gt;comm_col</title>
+<path fill="none" stroke="#ffaa00" d="M479.834,-317.1193C485.5011,-319.6237 491.0646,-322.5683 496,-326 516.1854,-340.0354 511.6653,-354.1817 532,-368 537.3498,-371.6354 543.3902,-374.6993 549.5373,-377.2645"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="548.6089,-380.6546 559.201,-380.8956 551.0711,-374.1019 548.6089,-380.6546"/>
+</g>
+<!-- proc~swap_xz_3data_inv&#45;&gt;zp_prev -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge44" class="edge">
+<title>proc~swap_xz_3data_inv&#45;&gt;zp_prev</title>
+<path fill="none" stroke="#ffaa00" d="M495.9064,-305C515.8179,-305 537.6569,-305 555.5716,-305"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="555.6218,-308.5001 565.6218,-305 555.6218,-301.5001 555.6218,-308.5001"/>
+</g>
+<!-- proc~swap_xz_3data&#45;&gt;zp_next -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge45" class="edge">
+<title>proc~swap_xz_3data&#45;&gt;zp_next</title>
+<path fill="none" stroke="#0000ff" d="M485.2051,-347C507.6395,-347 534.2496,-347 555.4176,-347"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="555.6343,-350.5001 565.6343,-347 555.6342,-343.5001 555.6343,-350.5001"/>
+</g>
+<!-- proc~swap_xz_3data&#45;&gt;comm_col -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge46" class="edge">
+<title>proc~swap_xz_3data&#45;&gt;comm_col</title>
+<path fill="none" stroke="#0000ff" d="M483.1302,-359.0355C503.906,-364.7016 528.612,-371.4396 549.3293,-377.0898"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="548.5759,-380.5121 559.1445,-379.7667 550.4178,-373.7588 548.5759,-380.5121"/>
+</g>
+<!-- proc~swap_xz_3data&#45;&gt;zp_prev -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge47" class="edge">
+<title>proc~swap_xz_3data&#45;&gt;zp_prev</title>
+<path fill="none" stroke="#0000ff" d="M483.1302,-334.9645C506.1488,-328.6867 533.9921,-321.0931 555.8895,-315.1211"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="557.0763,-318.4253 565.803,-312.4174 555.2345,-311.6719 557.0763,-318.4253"/>
+</g>
+<!-- proc~swap_xy_3data_inv&#45;&gt;yp_prev -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge48" class="edge">
+<title>proc~swap_xy_3data_inv&#45;&gt;yp_prev</title>
+<path fill="none" stroke="#aa00ff" d="M496.3439,-431C515.8898,-431 537.2465,-431 554.9023,-431"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="555.3679,-434.5001 565.3679,-431 555.3679,-427.5001 555.3679,-434.5001"/>
+</g>
+<!-- proc~swap_xy_3data_inv&#45;&gt;comm_col -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge49" class="edge">
+<title>proc~swap_xy_3data_inv&#45;&gt;comm_col</title>
+<path fill="none" stroke="#aa00ff" d="M483.1302,-418.9645C503.906,-413.2984 528.612,-406.5604 549.3293,-400.9102"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="550.4178,-404.2412 559.1445,-398.2333 548.5759,-397.4879 550.4178,-404.2412"/>
+</g>
+<!-- proc~swap_xy_3data_inv&#45;&gt;yp_next -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge50" class="edge">
+<title>proc~swap_xy_3data_inv&#45;&gt;yp_next</title>
+<path fill="none" stroke="#aa00ff" d="M483.1302,-443.0355C506.1488,-449.3133 533.9921,-456.9069 555.8895,-462.8789"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="555.2345,-466.3281 565.803,-465.5826 557.0763,-459.5747 555.2345,-466.3281"/>
+</g>
+<!-- proc~swap_xy_3data&#45;&gt;yp_prev -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge51" class="edge">
+<title>proc~swap_xy_3data&#45;&gt;yp_prev</title>
+<path fill="none" stroke="#ff00aa" d="M483.1302,-460.9645C505.9954,-454.7285 533.621,-447.1943 555.4507,-441.2407"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="556.6176,-444.5504 565.3443,-438.5425 554.7757,-437.797 556.6176,-444.5504"/>
+</g>
+<!-- proc~swap_xy_3data&#45;&gt;comm_col -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge52" class="edge">
+<title>proc~swap_xy_3data&#45;&gt;comm_col</title>
+<path fill="none" stroke="#ff00aa" d="M479.834,-460.8807C485.5011,-458.3763 491.0646,-455.4317 496,-452 516.1854,-437.9646 511.6653,-423.8183 532,-410 537.3498,-406.3646 543.3902,-403.3007 549.5373,-400.7355"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="551.0711,-403.8981 559.201,-397.1044 548.6089,-397.3454 551.0711,-403.8981"/>
+</g>
+<!-- proc~swap_xy_3data&#45;&gt;yp_next -->
+<g id="proc~~fft_3d_psolv~~CallsGraph_edge53" class="edge">
+<title>proc~swap_xy_3data&#45;&gt;yp_next</title>
+<path fill="none" stroke="#ff00aa" d="M485.623,-473C508.0399,-473 534.5475,-473 555.6166,-473"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="555.7837,-476.5001 565.7837,-473 555.7837,-469.5001 555.7837,-476.5001"/>
+</g>
+</g>
+</svg>
+</div><script>var panprocfft_3d_psolvCallsGraph = svgPanZoom('#procfft_3d_psolvCallsGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="599pt" height="32pt"
+ viewBox="0.00 0.00 598.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 594.5,-28 594.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="147.5,-24 89.5,-24 89.5,0 147.5,0 147.5,-24"/>
+<text text-anchor="middle" x="118.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="227,-24 166,-24 166,0 227,0 227,-24"/>
+<text text-anchor="middle" x="196.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="392,-24 245,-24 245,0 392,0 392,-24"/>
+<text text-anchor="middle" x="318.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="468.5,-24 410.5,-24 410.5,0 468.5,0 468.5,-24"/>
+<text text-anchor="middle" x="439.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="590.5,-24 486.5,-24 486.5,0 590.5,0 590.5,-24"/>
+<text text-anchor="middle" x="538.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<em>None</em>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-01-29 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

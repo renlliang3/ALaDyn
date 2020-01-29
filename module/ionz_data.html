@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ionz_data &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>ionz_data 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 3.3% of total for modules and submodules.">806 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/ionz_data.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/ionz_data.f90.html'>ionz_data.f90</a></li>
+    
+  
+     <li class="active">ionz_data</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-species_name">species_name</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-an_max">an_max</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-v">v</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-vfact">vfact</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-nstar">nstar</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-c_nstar">c_nstar</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_c">e_c</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_b">e_b</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_m">e_m</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-v_norm">v_norm</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-nl_fact">nl_fact</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-nl_indx">nl_indx</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-ne_shell">ne_shell</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-l_fact">l_fact</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-z1_coll">z1_coll</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-be">be</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-p_nl">p_nl</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-wi">wi</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-wsp">wsp</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-w_one_lev">w_one_lev</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-sigma_coll">sigma_coll</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_coll">e_coll</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-v_h">v_h</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_unit">e_unit</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-omega_a">omega_a</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-c_au">c_au</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-euler">euler</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-omega_l">omega_l</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-pig">pig</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-tiny">tiny</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-n_ge">n_ge</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-nec">nec</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-lstar">lstar</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-dge">dge</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-d2ge">d2ge</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-de_inv">de_inv</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-deb_inv">deb_inv</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-dt_fs">dt_fs</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-dgi">dgi</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-d2gi">d2gi</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-dei_inv">dei_inv</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/ionz_data.html#proc-set_atomic_weight">set_atomic_weight</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#proc-set_atoms_per_molecule">set_atoms_per_molecule</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#proc-set_ionization_coeff">set_ionization_coeff</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#proc-set_impact_ioniz_wfunction">set_impact_ioniz_wfunction</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/precision_def.html'>precision_def</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~ionz_data~~UsesGraph Pages: 1 -->
+<svg id="moduleionz_dataUsesGraph" width="192pt" height="32pt"
+ viewBox="0.00 0.00 192.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~ionz_data~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~ionz_data~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 188,-28 188,4 -4,4"/>
+<!-- module~ionz_data -->
+<g id="module~~ionz_data~~UsesGraph_node1" class="node">
+<title>module~ionz_data</title>
+<polygon fill="none" stroke="#000000" points="184,-24 120,-24 120,0 184,0 184,-24"/>
+<text text-anchor="middle" x="152" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">ionz_data</text>
+</g>
+<!-- module~precision_def -->
+<g id="module~~ionz_data~~UsesGraph_node2" class="node">
+<title>module~precision_def</title>
+<g id="a_module~~ionz_data~~UsesGraph_node2"><a xlink:href=".././module/precision_def.html" xlink:title="precision_def">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-24 0,-24 0,0 84,0 84,-24"/>
+<text text-anchor="middle" x="42" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def</text>
+</a>
+</g>
+</g>
+<!-- module~ionz_data&#45;&gt;module~precision_def -->
+<g id="module~~ionz_data~~UsesGraph_edge1" class="edge">
+<title>module~ionz_data&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M119.8877,-12C111.8659,-12 103.0534,-12 94.3306,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="94.1848,-8.5001 84.1848,-12 94.1848,-15.5001 94.1848,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~ionz_data~~UsedByGraph Pages: 1 -->
+<svg id="moduleionz_dataUsedByGraph" width="488pt" height="194pt"
+ viewBox="0.00 0.00 488.00 194.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~ionz_data~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 190)">
+<title>module~~ionz_data~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-190 484,-190 484,4 -4,4"/>
+<!-- module~ionz_data -->
+<g id="module~~ionz_data~~UsedByGraph_node1" class="node">
+<title>module~ionz_data</title>
+<polygon fill="none" stroke="#000000" points="64,-144 0,-144 0,-120 64,-120 64,-144"/>
+<text text-anchor="middle" x="32" y="-129.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">ionz_data</text>
+</g>
+<!-- module~set_init_param -->
+<g id="module~~ionz_data~~UsedByGraph_node2" class="node">
+<title>module~set_init_param</title>
+<g id="a_module~~ionz_data~~UsedByGraph_node2"><a xlink:href=".././module/set_init_param.html" xlink:title="set_init_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="191,-186 100,-186 100,-162 191,-162 191,-186"/>
+<text text-anchor="middle" x="145.5" y="-171.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">set_init_param</text>
+</a>
+</g>
+</g>
+<!-- module~set_init_param&#45;&gt;module~ionz_data -->
+<g id="module~~ionz_data~~UsedByGraph_edge1" class="edge">
+<title>module~set_init_param&#45;&gt;module~ionz_data</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M112.9755,-161.9645C100.7606,-157.4445 86.7025,-152.2423 73.7639,-147.4545"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="74.7301,-144.0801 64.1369,-143.8921 72.3007,-150.645 74.7301,-144.0801"/>
+</g>
+<!-- module~run_data_info -->
+<g id="module~~ionz_data~~UsedByGraph_node3" class="node">
+<title>module~run_data_info</title>
+<g id="a_module~~ionz_data~~UsedByGraph_node3"><a xlink:href=".././module/run_data_info.html" xlink:title="run_data_info">
+<polygon fill="#337ab7" stroke="#337ab7" points="188,-144 103,-144 103,-120 188,-120 188,-144"/>
+<text text-anchor="middle" x="145.5" y="-129.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">run_data_info</text>
+</a>
+</g>
+</g>
+<!-- module~run_data_info&#45;&gt;module~ionz_data -->
+<g id="module~~ionz_data~~UsedByGraph_edge3" class="edge">
+<title>module~run_data_info&#45;&gt;module~ionz_data</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M102.9139,-132C93.5905,-132 83.7223,-132 74.4061,-132"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="74.1807,-128.5001 64.1807,-132 74.1806,-135.5001 74.1807,-128.5001"/>
+</g>
+<!-- module~ionize -->
+<g id="module~~ionz_data~~UsedByGraph_node4" class="node">
+<title>module~ionize</title>
+<g id="a_module~~ionz_data~~UsedByGraph_node4"><a xlink:href=".././module/ionize.html" xlink:title="ionize">
+<polygon fill="#337ab7" stroke="#337ab7" points="281,-104 227,-104 227,-80 281,-80 281,-104"/>
+<text text-anchor="middle" x="254" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ionize</text>
+</a>
+</g>
+</g>
+<!-- module~ionize&#45;&gt;module~ionz_data -->
+<g id="module~~ionz_data~~UsedByGraph_edge2" class="edge">
+<title>module~ionize&#45;&gt;module~ionz_data</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M226.7741,-93.8962C195.8089,-96.39 143.857,-101.5997 100,-111 91.4902,-112.824 82.5154,-115.234 73.9755,-117.7696"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="72.7328,-114.49 64.2043,-120.7762 74.7915,-121.1804 72.7328,-114.49"/>
+</g>
+<!-- module~start_all -->
+<g id="module~~ionz_data~~UsedByGraph_node5" class="node">
+<title>module~start_all</title>
+<g id="a_module~~ionz_data~~UsedByGraph_node5"><a xlink:href=".././module/start_all.html" xlink:title="start_all">
+<polygon fill="#337ab7" stroke="#337ab7" points="381,-108 326,-108 326,-84 381,-84 381,-108"/>
+<text text-anchor="middle" x="353.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">start_all</text>
+</a>
+</g>
+</g>
+<!-- module~start_all&#45;&gt;module~set_init_param -->
+<g id="module~~ionz_data~~UsedByGraph_edge4" class="edge">
+<title>module~start_all&#45;&gt;module~set_init_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M341.0457,-108.1855C327.4555,-120.7374 304.4848,-139.8557 281,-150 256.0375,-160.7826 226.4873,-166.7213 201.3631,-169.992"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="200.7692,-166.538 191.2541,-171.1977 201.5983,-173.4887 200.7692,-166.538"/>
+</g>
+<!-- module~start_all&#45;&gt;module~run_data_info -->
+<g id="module~~ionz_data~~UsedByGraph_edge6" class="edge">
+<title>module~start_all&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M333.8103,-108.0543C314.35,-118.9464 283.3204,-133.627 254,-136"/>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M254,-136C235.8599,-137.4681 215.9695,-137.2599 198.2294,-136.4309"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="198.2373,-132.9263 188.0623,-135.8791 197.8579,-139.916 198.2373,-132.9263"/>
+</g>
+<!-- module~start_all&#45;&gt;module~ionize -->
+<g id="module~~ionz_data~~UsedByGraph_edge10" class="edge">
+<title>module~start_all&#45;&gt;module~ionize</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M325.7837,-94.8858C315.1296,-94.4575 302.786,-93.9612 291.3709,-93.5023"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="291.3563,-89.999 281.2238,-93.0944 291.0751,-96.9934 291.3563,-89.999"/>
+</g>
+<!-- module~pic_evolve -->
+<g id="module~~ionz_data~~UsedByGraph_node6" class="node">
+<title>module~pic_evolve</title>
+<g id="a_module~~ionz_data~~UsedByGraph_node6"><a xlink:href=".././module/pic_evolve.html" xlink:title="pic_evolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="388,-24 319,-24 319,0 388,0 388,-24"/>
+<text text-anchor="middle" x="353.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_evolve</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~ionize -->
+<g id="module~~ionz_data~~UsedByGraph_edge8" class="edge">
+<title>module~pic_evolve&#45;&gt;module~ionize</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M330.061,-24.1329C325.5705,-26.828 321.0199,-29.8331 317,-33 298.7252,-47.3968 298.2313,-55.3693 281,-71 280.0598,-71.8528 279.0885,-72.7096 278.0976,-73.5638"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="275.8252,-70.901 270.3161,-79.9509 280.2664,-76.3117 275.8252,-70.901"/>
+</g>
+<!-- module~window -->
+<g id="module~~ionz_data~~UsedByGraph_node9" class="node">
+<title>module~window</title>
+<g id="a_module~~ionz_data~~UsedByGraph_node9"><a xlink:href=".././module/window.html" xlink:title="window">
+<polygon fill="#337ab7" stroke="#337ab7" points="281,-62 227,-62 227,-38 281,-38 281,-62"/>
+<text text-anchor="middle" x="254" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">window</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~window -->
+<g id="module~~ionz_data~~UsedByGraph_edge14" class="edge">
+<title>module~pic_evolve&#45;&gt;module~window</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M322.0176,-24.0234C312.0941,-27.8133 301.0446,-32.0332 290.7856,-35.9512"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="289.3478,-32.7537 281.2546,-39.5912 291.8452,-39.2931 289.3478,-32.7537"/>
+</g>
+<!-- program~aladyn -->
+<g id="module~~ionz_data~~UsedByGraph_node7" class="node">
+<title>program~aladyn</title>
+<g id="a_module~~ionz_data~~UsedByGraph_node7"><a xlink:href=".././program/aladyn.html" xlink:title="aladyn">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="480,-87 426,-87 426,-63 480,-63 480,-87"/>
+<text text-anchor="middle" x="453" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">aladyn</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;module~run_data_info -->
+<g id="module~~ionz_data~~UsedByGraph_edge5" class="edge">
+<title>program~aladyn&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M439.0205,-87.0343C426.8918,-96.7762 408.4301,-109.9911 390,-117 332.9544,-138.6942 314.8326,-131.0767 254,-136"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~start_all -->
+<g id="module~~ionz_data~~UsedByGraph_edge11" class="edge">
+<title>program~aladyn&#45;&gt;module~start_all</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M425.8112,-80.7383C415.0415,-83.0114 402.4821,-85.6621 390.8809,-88.1106"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="390.0633,-84.7059 381.0017,-90.1956 391.5089,-91.555 390.0633,-84.7059"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_evolve -->
+<g id="module~~ionz_data~~UsedByGraph_edge12" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_evolve</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M435.5508,-62.9183C423.0158,-54.3501 405.6405,-42.6983 390,-33 388.0817,-31.8105 386.0951,-30.6025 384.0848,-29.3976"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="385.6496,-26.2575 375.2557,-24.2037 382.1003,-32.291 385.6496,-26.2575"/>
+</g>
+<!-- module~env_evolve -->
+<g id="module~~ionz_data~~UsedByGraph_node8" class="node">
+<title>module~env_evolve</title>
+<g id="a_module~~ionz_data~~UsedByGraph_node8"><a xlink:href=".././module/env_evolve.html" xlink:title="env_evolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="390,-66 317,-66 317,-42 390,-42 390,-66"/>
+<text text-anchor="middle" x="353.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">env_evolve</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;module~env_evolve -->
+<g id="module~~ionz_data~~UsedByGraph_edge13" class="edge">
+<title>program~aladyn&#45;&gt;module~env_evolve</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M425.8112,-69.2617C417.8681,-67.5852 408.9515,-65.7033 400.1638,-63.8486"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="400.863,-60.4192 390.3557,-61.7786 399.4174,-67.2683 400.863,-60.4192"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~ionize -->
+<g id="module~~ionz_data~~UsedByGraph_edge9" class="edge">
+<title>module~env_evolve&#45;&gt;module~ionize</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M322.0176,-66.0234C312.0941,-69.8133 301.0446,-74.0332 290.7856,-77.9512"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="289.3478,-74.7537 281.2546,-81.5912 291.8452,-81.2931 289.3478,-74.7537"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~window -->
+<g id="module~~ionz_data~~UsedByGraph_edge15" class="edge">
+<title>module~env_evolve&#45;&gt;module~window</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M316.7326,-52.5219C308.4806,-52.1902 299.7163,-51.8378 291.4374,-51.505"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="291.418,-48.0015 281.2854,-51.0969 291.1368,-54.9959 291.418,-48.0015"/>
+</g>
+<!-- module~window&#45;&gt;module~run_data_info -->
+<g id="module~~ionz_data~~UsedByGraph_edge7" class="edge">
+<title>module~window&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M237.9905,-62.0994C219.9608,-75.7255 190.4657,-98.0167 169.6379,-113.7576"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="167.4428,-111.0293 161.5752,-119.851 171.6634,-116.6138 167.4428,-111.0293"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-species_name">species_name</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-an_max">an_max</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-v">v</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-vfact">vfact</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-nstar">nstar</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-c_nstar">c_nstar</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_c">e_c</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_b">e_b</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_m">e_m</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-v_norm">v_norm</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-nl_fact">nl_fact</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-nl_indx">nl_indx</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-ne_shell">ne_shell</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-l_fact">l_fact</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-z1_coll">z1_coll</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-be">be</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-p_nl">p_nl</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-wi">wi</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-wsp">wsp</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-w_one_lev">w_one_lev</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-sigma_coll">sigma_coll</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_coll">e_coll</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-v_h">v_h</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-e_unit">e_unit</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-omega_a">omega_a</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-c_au">c_au</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-euler">euler</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-omega_l">omega_l</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-pig">pig</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-tiny">tiny</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-n_ge">n_ge</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-nec">nec</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-lstar">lstar</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-dge">dge</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-d2ge">d2ge</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-de_inv">de_inv</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-deb_inv">deb_inv</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-dt_fs">dt_fs</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-dgi">dgi</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-d2gi">d2gi</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#variable-dei_inv">dei_inv</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/ionz_data.html#proc-set_atomic_weight">set_atomic_weight</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#proc-set_atoms_per_molecule">set_atoms_per_molecule</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#proc-set_ionization_coeff">set_ionization_coeff</a>
+      
+      <a class="list-group-item" href="../module/ionz_data.html#proc-set_impact_ioniz_wfunction">set_impact_ioniz_wfunction</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-species_name"></span>character(len=10),</td>
+  
+  <td>public,</td>
+  <td>parameter, dimension (0:28)</td><td>::</td>
+  <td><strong>species_name</strong></td><td> =</td><td>[' Electron ', ' Hydrogen ', '&nbsp;&nbsp;Helium&nbsp;&nbsp;', ' Lithium&nbsp;&nbsp;', 'Berillium ', ' Boron&nbsp;&nbsp;&nbsp;&nbsp;', '&nbsp;&nbsp;Carbon&nbsp;&nbsp;', ' Nitrogen ', ' Oxygen&nbsp;&nbsp;&nbsp;', ' Florine&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;Neon&nbsp;&nbsp;&nbsp;', ' Sodium&nbsp;&nbsp;&nbsp;', 'Magnesium ', ' Aluminium', ' Silicon&nbsp;&nbsp;', 'Phosphorus', ' Solfur&nbsp;&nbsp;&nbsp;', ' Chlorine ', ' Argon&nbsp;&nbsp;&nbsp;&nbsp;', 'Potassium ', ' Calcium&nbsp;&nbsp;', ' Scandium ', ' Titanium ', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', ' Chromium ', 'Manganese ', '&nbsp;&nbsp;Iron&nbsp;&nbsp;&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', '&nbsp;&nbsp;Nickel&nbsp;&nbsp;']</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-an_max"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>an_max</strong></td><td> =</td><td>40</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-v"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>v</strong>(an_max)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vfact"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>vfact</strong>(an_max,3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nstar"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nstar</strong>(an_max,3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-c_nstar"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>c_nstar</strong>(an_max,3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-e_c"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>e_c</strong>(an_max,3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-e_b"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>e_b</strong>(an_max,3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-e_m"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>e_m</strong>(an_max,3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-v_norm"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>v_norm</strong>(an_max,3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nl_fact"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nl_fact</strong>(0:an_max)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nl_indx"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nl_indx</strong>(0:an_max)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ne_shell"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ne_shell</strong>(1:6,0:an_max)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l_fact"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>l_fact</strong>(an_max)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-z1_coll"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>z1_coll</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-be"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>be</strong>(10,0:an_max)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-p_nl"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>p_nl</strong>(10,0:an_max)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wi"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>wi</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wsp"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>wsp</strong>(:,:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w_one_lev"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>w_one_lev</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sigma_coll"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>sigma_coll</strong>(:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-e_coll"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>e_coll</strong>(:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-v_h"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>v_h</strong></td><td> =</td><td>13.5984</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-e_unit"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>e_unit</strong></td><td> =</td><td>0.511*1.e+06</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-omega_a"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>omega_a</strong></td><td> =</td><td>41.3</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-c_au"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>c_au</strong></td><td> =</td><td>137.0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-euler"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>euler</strong></td><td> =</td><td>2.71828</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-omega_l"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>omega_l</strong></td><td> =</td><td>0.057</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pig"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>pig</strong></td><td> =</td><td>3.141592653589793</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tiny"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>tiny</strong></td><td> =</td><td>1.e-10</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n_ge"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>n_ge</strong></td><td> =</td><td>10000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nec"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>nec</strong></td><td> =</td><td>1000</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lstar"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lstar</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dge"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dge</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-d2ge"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>d2ge</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-de_inv"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>de_inv</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-deb_inv"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>deb_inv</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dt_fs"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dt_fs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dgi"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dgi</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-d2gi"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>d2gi</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dei_inv"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dei_inv</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-set_atomic_weight"></span><h3>
+public subroutine <a href='../proc/set_atomic_weight.html'>set_atomic_weight</a>(at_number, w_number)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>at_number</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>w_number</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-set_atoms_per_molecule"></span><h3>
+public subroutine <a href='../proc/set_atoms_per_molecule.html'>set_atoms_per_molecule</a>(at_number, n_mol_atoms)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>at_number</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n_mol_atoms</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-set_ionization_coeff"></span><h3>
+public subroutine <a href='../proc/set_ionization_coeff.html'>set_ionization_coeff</a>(an, sp_ionz)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>an</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sp_ionz</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-set_impact_ioniz_wfunction"></span><h3>
+public subroutine <a href='../proc/set_impact_ioniz_wfunction.html'>set_impact_ioniz_wfunction</a>(zm, imod)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>zm</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>imod</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-01-29 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

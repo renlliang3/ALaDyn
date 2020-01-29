@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>struct_def.f90 &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>struct_def.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.2% of total for source files.">42 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/struct_def.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">struct_def.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/struct_def.html">struct_def</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/struct_def.f90.html#src">struct_def.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">This file depends on</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~struct_def.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefilestruct_deff90EfferentGraph" width="235pt" height="32pt"
+ viewBox="0.00 0.00 235.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~struct_def.f90~~EfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>sourcefile~~struct_def.f90~~EfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 231,-28 231,4 -4,4"/>
+<!-- sourcefile~struct_def.f90 -->
+<g id="sourcefile~~struct_def.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~struct_def.f90</title>
+<polygon fill="none" stroke="#000000" points="227,-24 142,-24 142,0 227,0 227,-24"/>
+<text text-anchor="middle" x="184.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">struct_def.f90</text>
+</g>
+<!-- sourcefile~precision_def.f90 -->
+<g id="sourcefile~~struct_def.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~precision_def.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~EfferentGraph_node2"><a xlink:href=".././sourcefile/precision_def.f90.html" xlink:title="precision_def.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="106,-24 0,-24 0,0 106,0 106,-24"/>
+<text text-anchor="middle" x="53" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~struct_def.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~struct_def.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~struct_def.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M141.8057,-12C133.6126,-12 124.8725,-12 116.1921,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="116.0656,-8.5001 106.0656,-12 116.0656,-15.5001 116.0656,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="193.5,-24 89.5,-24 89.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+    
+      
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Files dependent on this one</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~struct_def.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefilestruct_deff90AfferentGraph" width="641pt" height="474pt"
+ viewBox="0.00 0.00 641.00 473.84" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~struct_def.f90~~AfferentGraph" class="graph" transform="scale(.5302 .5302) rotate(0) translate(4 889.7167)">
+<title>sourcefile~~struct_def.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-889.7167 1205,-889.7167 1205,4 -4,4"/>
+<!-- sourcefile~struct_def.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~struct_def.f90</title>
+<polygon fill="none" stroke="#000000" points="85,-578.3999 0,-578.3999 0,-554.3999 85,-554.3999 85,-578.3999"/>
+<text text-anchor="middle" x="42.5" y="-563.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">struct_def.f90</text>
+</g>
+<!-- sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~grid_param.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node2"><a xlink:href=".././sourcefile/grid_param.f90.html" xlink:title="grid_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="215,-608.3999 121,-608.3999 121,-584.3999 215,-584.3999 215,-608.3999"/>
+<text text-anchor="middle" x="168" y="-593.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_param.f90&#45;&gt;sourcefile~struct_def.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~grid_param.f90&#45;&gt;sourcefile~struct_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M120.9114,-585.1437C112.5128,-583.1361 103.7145,-581.0329 95.172,-578.9908"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="95.8404,-575.5521 85.3006,-576.6312 94.2128,-582.3603 95.8404,-575.5521"/>
+</g>
+<!-- sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~pstruct_data.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node3"><a xlink:href=".././sourcefile/pstruct_data.f90.html" xlink:title="pstruct_data.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-528.3999 263,-528.3999 263,-504.3999 362,-504.3999 362,-528.3999"/>
+<text text-anchor="middle" x="312.5" y="-513.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pstruct_data.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pstruct_data.f90&#45;&gt;sourcefile~struct_def.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~pstruct_data.f90&#45;&gt;sourcefile~struct_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M262.9778,-525.5707C215.3643,-534.388 143.6521,-547.6681 95.0486,-556.6687"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="94.2404,-553.2588 85.0449,-558.5212 95.5151,-560.1418 94.2404,-553.2588"/>
+</g>
+<!-- sourcefile~window.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~window.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node4"><a xlink:href=".././sourcefile/window.f90.html" xlink:title="window.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="873.5,-438.3999 801.5,-438.3999 801.5,-414.3999 873.5,-414.3999 873.5,-438.3999"/>
+<text text-anchor="middle" x="837.5" y="-423.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">window.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge7" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M801.3761,-417.9402C684.3435,-390.6285 322.5601,-306.9905 312.5,-314.3999"/>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge25" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M801.3962,-430.5208C764.5368,-433.9498 705.7591,-437.2652 655.5,-430.3999"/>
+</g>
+<!-- sourcefile~mpi_part_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node7" class="node">
+<title>sourcefile~mpi_part_interface.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node7"><a xlink:href=".././sourcefile/mpi_part_interface.f90.html" xlink:title="mpi_part_interface.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="722,-326.3999 589,-326.3999 589,-302.3999 722,-302.3999 722,-326.3999"/>
+<text text-anchor="middle" x="655.5" y="-311.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_part_interface.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~mpi_part_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge43" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~mpi_part_interface.f90</title>
+<path fill="none" stroke="#ffc700" stroke-dasharray="5,2" d="M801.262,-420.0943C786.9664,-416.2319 771.1039,-410.0903 759,-400.3999 734.7233,-380.964 746.8049,-360.4108 723,-340.3999 718.7343,-336.8141 713.9193,-333.6902 708.8736,-330.9758"/>
+<polygon fill="#ffc700" stroke="#ffc700" points="710.1398,-327.7011 699.6109,-326.5209 707.1058,-334.0094 710.1398,-327.7011"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node15" class="node">
+<title>sourcefile~mpi_field_interface.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node15"><a xlink:href=".././sourcefile/mpi_field_interface.f90.html" xlink:title="mpi_field_interface.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="723,-680.3999 588,-680.3999 588,-656.3999 723,-656.3999 723,-680.3999"/>
+<text text-anchor="middle" x="655.5" y="-665.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_field_interface.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge60" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#00ffdd" stroke-dasharray="5,2" d="M801.3418,-428.0639C786.3665,-430.5869 769.9699,-436.028 759,-447.3999 709.2983,-498.9235 758.4905,-542.2279 723,-604.3999 712.6937,-622.4545 695.6836,-638.535 681.3182,-650.0613"/>
+<polygon fill="#00ffdd" stroke="#00ffdd" points="679.0122,-647.42 673.2364,-656.302 683.2905,-652.9604 679.0122,-647.42"/>
+</g>
+<!-- sourcefile~run_data_info.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node18" class="node">
+<title>sourcefile~run_data_info.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node18"><a xlink:href=".././sourcefile/run_data_info.f90.html" xlink:title="run_data_info.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="708.5,-284.3999 602.5,-284.3999 602.5,-260.3999 708.5,-260.3999 708.5,-284.3999"/>
+<text text-anchor="middle" x="655.5" y="-269.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">run_data_info.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~run_data_info.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge67" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~run_data_info.f90</title>
+<path fill="none" stroke="#0058ff" stroke-dasharray="5,2" d="M823.1745,-414.3994C806.6252,-400.1328 779.0991,-375.1306 759,-350.3999 740.1026,-327.1477 746.7703,-311.6414 723,-293.3999 721.141,-291.9733 719.1838,-290.6427 717.1534,-289.4016"/>
+<polygon fill="#0058ff" stroke="#0058ff" points="718.3396,-286.0711 707.8598,-284.5145 715.0816,-292.2666 718.3396,-286.0711"/>
+</g>
+<!-- sourcefile~grid_part_lib.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node5" class="node">
+<title>sourcefile~grid_part_lib.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node5"><a xlink:href=".././sourcefile/grid_part_lib.f90.html" xlink:title="grid_part_lib.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="530.5,-724.3999 431.5,-724.3999 431.5,-700.3999 530.5,-700.3999 530.5,-724.3999"/>
+<text text-anchor="middle" x="481" y="-709.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_lib.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge8" class="edge">
+<title>sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M445.2206,-700.3933C433.8292,-696.2804 421.2644,-691.437 410,-686.3999 365.1671,-666.3522 360.1765,-646.1835 312.5,-634.3999"/>
+</g>
+<!-- sourcefile~stretched_grid.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node16" class="node">
+<title>sourcefile~stretched_grid.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node16"><a xlink:href=".././sourcefile/stretched_grid.f90.html" xlink:title="stretched_grid.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="367,-705.3999 258,-705.3999 258,-681.3999 367,-681.3999 367,-705.3999"/>
+<text text-anchor="middle" x="312.5" y="-690.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">stretched_grid.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~stretched_grid.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge62" class="edge">
+<title>sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~stretched_grid.f90</title>
+<path fill="none" stroke="#00ddff" stroke-dasharray="5,2" d="M431.3558,-706.8021C414.3977,-704.8899 395.1755,-702.7224 377.2083,-700.6964"/>
+<polygon fill="#00ddff" stroke="#00ddff" points="377.42,-697.1982 367.0907,-699.5556 376.6356,-704.1541 377.42,-697.1982"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node6" class="node">
+<title>sourcefile~mpi_curr_interface.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node6"><a xlink:href=".././sourcefile/mpi_curr_interface.f90.html" xlink:title="mpi_curr_interface.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="722,-722.3999 589,-722.3999 589,-698.3999 722,-698.3999 722,-722.3999"/>
+<text text-anchor="middle" x="655.5" y="-707.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_curr_interface.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge11" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M605.8901,-722.4875C570.9849,-730.9562 523.1631,-742.4865 481,-752.3999"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M481,-752.3999C449.2012,-759.8765 440.9058,-760.8218 410,-771.3999 365.5242,-786.6226 353.9642,-834.5482 312.5,-812.3999"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M312.5,-812.3999C233.6754,-770.2954 190.3235,-664.0393 174.7401,-618.1071"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="178.0415,-616.9423 171.6003,-608.5304 171.3899,-619.1232 178.0415,-616.9423"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge28" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M602.1631,-698.3329C597.0735,-695.8842 592.2391,-692.9399 588,-689.3999 561.4502,-667.2289 578.2779,-642.8925 552,-620.3999 526.6946,-598.7397 510.0549,-612.6893 481,-596.3999"/>
+</g>
+<!-- sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge12" class="edge">
+<title>sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M588.7395,-312.5292C556.2091,-312.0948 516.533,-312.2695 481,-314.3999"/>
+</g>
+<!-- sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node13" class="node">
+<title>sourcefile~array_alloc.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node13"><a xlink:href=".././sourcefile/array_alloc.f90.html" xlink:title="array_alloc.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="527,-244.3999 435,-244.3999 435,-220.3999 527,-220.3999 527,-244.3999"/>
+<text text-anchor="middle" x="481" y="-229.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">array_alloc.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge53" class="edge">
+<title>sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~array_alloc.f90</title>
+<path fill="none" stroke="#00ff58" stroke-dasharray="5,2" d="M611.7824,-302.3204C603.7593,-299.6767 595.5417,-296.6767 588,-293.3999 559.5137,-281.023 528.9069,-263.0537 507.7563,-249.8224"/>
+<polygon fill="#00ff58" stroke="#00ff58" points="509.6258,-246.8636 499.3044,-244.4721 505.8817,-252.7781 509.6258,-246.8636"/>
+</g>
+<!-- sourcefile~diag_part_and_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node8" class="node">
+<title>sourcefile~diag_part_and_fields.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node8"><a xlink:href=".././sourcefile/diag_part_and_fields.f90.html" xlink:title="diag_part_and_fields.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="552,-804.3999 410,-804.3999 410,-780.3999 552,-780.3999 552,-804.3999"/>
+<text text-anchor="middle" x="481" y="-789.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">diag_part_and_fields.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~diag_part_and_fields.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge16" class="edge">
+<title>sourcefile~diag_part_and_fields.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M431.5958,-804.4849C389.4201,-813.6788 332.5078,-823.0872 312.5,-812.3999"/>
+</g>
+<!-- sourcefile~diag_part_and_fields.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge31" class="edge">
+<title>sourcefile~diag_part_and_fields.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M459.4859,-780.2671C443.251,-769.9446 421.8199,-753.5943 410,-733.3999 365.2604,-656.9623 431.8458,-604.4687 374,-537.3999 372.8601,-536.0783 371.6335,-534.8398 370.3347,-533.6791"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="372.3739,-530.8345 362.2093,-527.846 368.2917,-536.521 372.3739,-530.8345"/>
+</g>
+<!-- sourcefile~set_init_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node9" class="node">
+<title>sourcefile~set_init_param.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node9"><a xlink:href=".././sourcefile/set_init_param.f90.html" xlink:title="set_init_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="893,-122.3999 782,-122.3999 782,-98.3999 893,-98.3999 893,-122.3999"/>
+<text text-anchor="middle" x="837.5" y="-107.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">set_init_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge19" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M781.9847,-105.8587C709.203,-102.2416 579.2552,-103.954 481,-150.3999"/>
+</g>
+<!-- sourcefile~set_grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node19" class="node">
+<title>sourcefile~set_grid_param.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node19"><a xlink:href=".././sourcefile/set_grid_param.f90.html" xlink:title="set_grid_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="713,-82.3999 598,-82.3999 598,-58.3999 713,-58.3999 713,-82.3999"/>
+<text text-anchor="middle" x="655.5" y="-67.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">set_grid_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~set_grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge69" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~set_grid_param.f90</title>
+<path fill="none" stroke="#0016ff" stroke-dasharray="5,2" d="M782.894,-98.3986C763.1881,-94.0676 740.7561,-89.1375 720.2648,-84.634"/>
+<polygon fill="#0016ff" stroke="#0016ff" points="720.9,-81.1901 710.3818,-82.4619 719.3973,-88.0269 720.9,-81.1901"/>
+</g>
+<!-- sourcefile~pic_dump.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node10" class="node">
+<title>sourcefile~pic_dump.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node10"><a xlink:href=".././sourcefile/pic_dump.f90.html" xlink:title="pic_dump.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="698,-162.3999 613,-162.3999 613,-138.3999 698,-138.3999 698,-162.3999"/>
+<text text-anchor="middle" x="655.5" y="-147.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_dump.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_dump.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~pic_dump.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M612.7506,-140.5947C575.9905,-134.3863 522.4947,-130.7851 481,-150.3999"/>
+</g>
+<!-- sourcefile~pic_dump.f90&#45;&gt;sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge49" class="edge">
+<title>sourcefile~pic_dump.f90&#45;&gt;sourcefile~array_alloc.f90</title>
+<path fill="none" stroke="#00ff58" stroke-dasharray="5,2" d="M612.8589,-162.1265C604.4965,-164.8551 595.8794,-167.9765 588,-171.3999 559.5137,-183.7769 528.9069,-201.7462 507.7563,-214.9774"/>
+<polygon fill="#00ff58" stroke="#00ff58" points="505.8817,-212.0217 499.3044,-220.3278 509.6258,-217.9363 505.8817,-212.0217"/>
+</g>
+<!-- sourcefile~grid_part_connect.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node11" class="node">
+<title>sourcefile~grid_part_connect.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node11"><a xlink:href=".././sourcefile/grid_part_connect.f90.html" xlink:title="grid_part_connect.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="720,-562.3999 591,-562.3999 591,-538.3999 720,-538.3999 720,-562.3999"/>
+<text text-anchor="middle" x="655.5" y="-547.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_connect.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge20" class="edge">
+<title>sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M590.9862,-540.3917C578.0923,-538.5773 564.6305,-536.8147 552,-535.3999 490.8561,-528.5512 420.6585,-523.2868 372.1411,-520.0548"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="372.3364,-516.5601 362.1282,-519.3961 371.8768,-523.545 372.3364,-516.5601"/>
+</g>
+<!-- sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~grid_part_lib.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge36" class="edge">
+<title>sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~grid_part_lib.f90</title>
+<path fill="none" stroke="#ff4200" stroke-dasharray="5,2" d="M642.8475,-562.5707C623.4367,-581.1989 585.0802,-617.8379 552,-648.3999 535.4931,-663.6503 516.5821,-680.6753 502.4297,-693.3298"/>
+<polygon fill="#ff4200" stroke="#ff4200" points="499.8302,-690.9587 494.701,-700.2292 504.4919,-696.1807 499.8302,-690.9587"/>
+</g>
+<!-- sourcefile~init_beam_part_distrib.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node12" class="node">
+<title>sourcefile~init_beam_part_distrib.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node12"><a xlink:href=".././sourcefile/init_beam_part_distrib.f90.html" xlink:title="init_beam_part_distrib.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="913,-722.3999 762,-722.3999 762,-698.3999 913,-698.3999 913,-722.3999"/>
+<text text-anchor="middle" x="837.5" y="-707.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_beam_part_distrib.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge5" class="edge">
+<title>sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M805.8332,-722.4175C790.3763,-729.4319 772.2967,-739.4687 759,-752.3999 735.881,-774.8835 750.8925,-799.2133 723,-815.3999 676.3494,-842.4723 407.2249,-862.9977 312.5,-812.3999"/>
+</g>
+<!-- sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~mpi_curr_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge40" class="edge">
+<title>sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~mpi_curr_interface.f90</title>
+<path fill="none" stroke="#ff8500" stroke-dasharray="5,2" d="M761.8967,-710.3999C752.1112,-710.3999 742.081,-710.3999 732.2767,-710.3999"/>
+<polygon fill="#ff8500" stroke="#ff8500" points="732.1611,-706.9 722.1611,-710.3999 732.161,-713.9 732.1611,-706.9"/>
+</g>
+<!-- sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge51" class="edge">
+<title>sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~array_alloc.f90</title>
+<path fill="none" stroke="#00ff58" stroke-dasharray="5,2" d="M824.5766,-698.3286C806.794,-680.9238 775.1517,-646.9469 759,-611.3999 722.5423,-531.1631 773.2321,-488.8144 723,-416.3999 683.1184,-358.9068 643.4537,-378.0718 588,-335.3999 570.3146,-321.791 568.0582,-315.8954 552,-300.3999 534.7974,-283.8002 515.1655,-265.0094 500.9119,-251.3941"/>
+<polygon fill="#00ff58" stroke="#00ff58" points="503.2459,-248.7834 493.5961,-244.4093 498.4119,-253.8464 503.2459,-248.7834"/>
+</g>
+<!-- sourcefile~psolve.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node14" class="node">
+<title>sourcefile~psolve.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node14"><a xlink:href=".././sourcefile/psolve.f90.html" xlink:title="psolve.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="689,-764.3999 622,-764.3999 622,-740.3999 689,-740.3999 689,-764.3999"/>
+<text text-anchor="middle" x="655.5" y="-749.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">psolve.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~psolve.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge56" class="edge">
+<title>sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~psolve.f90</title>
+<path fill="none" stroke="#00ff9b" stroke-dasharray="5,2" d="M785.3461,-722.4354C757.9905,-728.7483 724.8692,-736.3917 698.9253,-742.3787"/>
+<polygon fill="#00ff9b" stroke="#00ff9b" points="697.9602,-739.0094 689.0033,-744.6684 699.5343,-745.8301 697.9602,-739.0094"/>
+</g>
+<!-- sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge59" class="edge">
+<title>sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#00ffdd" stroke-dasharray="5,2" d="M785.3461,-698.3644C764.2133,-693.4876 739.6396,-687.8168 717.5922,-682.7289"/>
+<polygon fill="#00ffdd" stroke="#00ffdd" points="718.1925,-679.2755 707.6615,-680.4372 716.6184,-686.0962 718.1925,-679.2755"/>
+</g>
+<!-- sourcefile~grid_part_util.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node20" class="node">
+<title>sourcefile~grid_part_util.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node20"><a xlink:href=".././sourcefile/grid_part_util.f90.html" xlink:title="grid_part_util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="707,-806.3999 604,-806.3999 604,-782.3999 707,-782.3999 707,-806.3999"/>
+<text text-anchor="middle" x="655.5" y="-791.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~grid_part_util.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge71" class="edge">
+<title>sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~grid_part_util.f90</title>
+<path fill="none" stroke="#2c00ff" stroke-dasharray="5,2" d="M814.3649,-722.4915C798.6662,-730.7665 777.4841,-742.0686 759,-752.3999 742.831,-761.4373 739.9521,-765.9341 723,-773.3999 718.5319,-775.3677 713.8224,-777.2311 709.0545,-778.9749"/>
+<polygon fill="#2c00ff" stroke="#2c00ff" points="707.5428,-775.7947 699.2444,-782.3816 709.8392,-782.4074 707.5428,-775.7947"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node23" class="node">
+<title>sourcefile~init_grid_fields.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node23"><a xlink:href=".././sourcefile/init_grid_fields.f90.html" xlink:title="init_grid_fields.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="535.5,-488.3999 426.5,-488.3999 426.5,-464.3999 535.5,-464.3999 535.5,-488.3999"/>
+<text text-anchor="middle" x="481" y="-473.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_grid_fields.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge78" class="edge">
+<title>sourcefile~init_beam_part_distrib.f90&#45;&gt;sourcefile~init_grid_fields.f90</title>
+<path fill="none" stroke="#f300ff" stroke-dasharray="5,2" d="M826.2378,-698.3476C809.9034,-680.4266 779.3691,-645.2232 759,-611.3999 738.4664,-577.3035 753.0348,-555.5172 723,-529.3999 699.4821,-508.9496 685.2719,-519.6162 655.5,-510.3999"/>
+</g>
+<!-- sourcefile~array_alloc.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge29" class="edge">
+<title>sourcefile~array_alloc.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M472.3297,-244.5708C458.576,-264.0443 431.1507,-303.5628 410,-338.3999 376.381,-393.7735 340.7629,-461.4186 323.3567,-495.1491"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="320.2134,-493.6083 318.7539,-504.1022 326.4389,-496.8089 320.2134,-493.6083"/>
+</g>
+<!-- sourcefile~psolve.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge17" class="edge">
+<title>sourcefile~psolve.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M621.8488,-747.8908C586.3169,-744.1693 528.9228,-741.1323 481,-752.3999"/>
+</g>
+<!-- sourcefile~psolve.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge32" class="edge">
+<title>sourcefile~psolve.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M621.9715,-748.4693C609.9218,-745.5188 597.0793,-740.3709 588,-731.3999 551.1079,-694.9479 588.4456,-657.2984 552,-620.3999 528.5924,-596.7015 510.0549,-612.6893 481,-596.3999"/>
+</g>
+<!-- sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node29" class="node">
+<title>sourcefile~grid_fields.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node29"><a xlink:href=".././sourcefile/grid_fields.f90.html" xlink:title="grid_fields.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="525,-568.3999 437,-568.3999 437,-544.3999 525,-544.3999 525,-568.3999"/>
+<text text-anchor="middle" x="481" y="-553.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_fields.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~psolve.f90&#45;&gt;sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge87" class="edge">
+<title>sourcefile~psolve.f90&#45;&gt;sourcefile~grid_fields.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M621.9501,-748.913C609.7523,-746.0234 596.8133,-740.8013 588,-731.3999 541.4061,-681.6969 597.3518,-633.2388 552,-582.3999 547.1338,-576.945 541.025,-572.6329 534.4445,-569.2247"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="535.8089,-566.0009 525.2512,-565.1149 532.952,-572.3914 535.8089,-566.0009"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge6" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M612.9034,-656.3279C577.8345,-647.3061 526.6434,-636.228 481,-634.3999"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge24" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M631.5652,-656.3994C610.7926,-646.2027 579.774,-631.4967 552,-620.3999 521.0679,-608.0414 510.0549,-612.6893 481,-596.3999"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M481,-596.3999C452.5066,-580.4253 437.8531,-594.4665 410,-577.3999 389.6063,-564.904 393.9599,-550.5776 374,-537.3999 371.446,-535.7138 368.7429,-534.1492 365.9507,-532.6994"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="367.3482,-529.4894 356.8043,-528.4509 364.3993,-535.8379 367.3482,-529.4894"/>
+</g>
+<!-- sourcefile~stretched_grid.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge9" class="edge">
+<title>sourcefile~stretched_grid.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M294.4911,-681.3109C269.3971,-664.4658 223.7304,-633.8107 194.6776,-614.3081"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="196.4893,-611.3088 186.2358,-608.6413 192.5879,-617.1208 196.4893,-611.3088"/>
+</g>
+<!-- sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node17" class="node">
+<title>sourcefile~grid_field_param.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node17"><a xlink:href=".././sourcefile/grid_field_param.f90.html" xlink:title="grid_field_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="374,-570.3999 251,-570.3999 251,-546.3999 374,-546.3999 374,-570.3999"/>
+<text text-anchor="middle" x="312.5" y="-555.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_field_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_field_param.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge10" class="edge">
+<title>sourcefile~grid_field_param.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M266.7793,-570.4234C253.0745,-574.0274 237.8908,-578.0203 223.622,-581.7727"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="222.7003,-578.396 213.9192,-584.3243 224.4806,-585.1658 222.7003,-578.396"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge18" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M612.7844,-284.5089C569.7715,-296.3702 506.2724,-312.8847 481,-314.3999"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M481,-314.3999C406.2453,-318.8819 372.7992,-269.9888 312.5,-314.3999"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge33" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M606.7381,-284.5281C600.2263,-287.0131 593.8018,-289.95 588,-293.3999 568.8195,-304.8054 569.5871,-314.6642 552,-328.3999 493.4843,-374.1012 467.8994,-369.9204 410,-416.3999 378.9517,-441.3244 347.6201,-475.4166 329.1424,-496.6615"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="326.3615,-494.5273 322.4943,-504.3912 331.6686,-499.0919 326.3615,-494.5273"/>
+</g>
+<!-- sourcefile~set_grid_param.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge13" class="edge">
+<title>sourcefile~set_grid_param.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M622.2716,-82.4446C611.2673,-86.633 599.0201,-91.5114 588,-96.3999 539.3075,-118.0002 529.1589,-127.6349 481,-150.3999"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M481,-150.3999C386.5199,-195.0613 396.645,-252.4261 312.5,-314.3999"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M312.5,-314.3999C222.1621,-380.935 184.0512,-520.4398 172.2881,-574.4184"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="168.8416,-573.8008 170.2236,-584.3051 175.6938,-575.2317 168.8416,-573.8008"/>
+</g>
+<!-- sourcefile~grid_part_util.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge22" class="edge">
+<title>sourcefile~grid_part_util.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M603.9472,-783.5923C598.1531,-780.9136 592.6668,-777.571 588,-773.3999 558.3237,-746.8761 578.633,-720.9783 552,-691.3999 503.3825,-637.4059 459.8058,-663.2998 410,-610.3999 385.2022,-584.0616 401.1765,-561.2763 374,-537.3999 372.5061,-536.0875 370.9264,-534.8562 369.2799,-533.7011"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="370.963,-530.6301 360.5767,-528.5381 367.3914,-536.6504 370.963,-530.6301"/>
+</g>
+<!-- sourcefile~grid_part_util.f90&#45;&gt;sourcefile~grid_part_lib.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge37" class="edge">
+<title>sourcefile~grid_part_util.f90&#45;&gt;sourcefile~grid_part_lib.f90</title>
+<path fill="none" stroke="#ff4200" stroke-dasharray="5,2" d="M606.7381,-782.2718C600.2263,-779.7868 593.8018,-776.8499 588,-773.3999 568.8195,-761.9945 570.8929,-750.2757 552,-738.3999 545.8875,-734.5577 539.1243,-731.1663 532.272,-728.2094"/>
+<polygon fill="#ff4200" stroke="#ff4200" points="533.5092,-724.9346 522.9257,-724.4451 530.894,-731.4277 533.5092,-724.9346"/>
+</g>
+<!-- sourcefile~boris_push.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node21" class="node">
+<title>sourcefile~boris_push.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node21"><a xlink:href=".././sourcefile/boris_push.f90.html" xlink:title="boris_push.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="882.5,-480.3999 792.5,-480.3999 792.5,-456.3999 882.5,-456.3999 882.5,-480.3999"/>
+<text text-anchor="middle" x="837.5" y="-465.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">boris_push.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~boris_push.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge21" class="edge">
+<title>sourcefile~boris_push.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M792.1818,-457.092C755.5448,-448.3982 702.513,-436.8218 655.5,-430.3999"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M655.5,-430.3999C578.658,-419.9036 557.3177,-416.5989 481,-430.3999"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M481,-430.3999C425.1661,-440.4967 367.9542,-476.1308 336.6511,-498.2371"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="334.6034,-495.3986 328.5317,-504.0811 338.6927,-501.08 334.6034,-495.3986"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node22" class="node">
+<title>sourcefile~curr_and_fields_util.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node22"><a xlink:href=".././sourcefile/curr_and_fields_util.f90.html" xlink:title="curr_and_fields_util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="905.5,-560.3999 769.5,-560.3999 769.5,-536.3999 905.5,-536.3999 905.5,-560.3999"/>
+<text text-anchor="middle" x="837.5" y="-545.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">curr_and_fields_util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M778.73,-560.5445C771.8668,-562.9941 765.1342,-565.9174 759,-569.3999 739.594,-580.4173 743.1197,-594.7473 723,-604.3999 625.2849,-651.2799 589.292,-638.7371 481,-634.3999"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M481,-634.3999C406.1449,-632.1499 385.2013,-652.3686 312.5,-634.3999"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M312.5,-634.3999C282.559,-626.9998 249.2597,-618.2766 222.1803,-611.0556"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="223.0676,-607.6699 212.5029,-608.4684 221.2596,-614.4324 223.0676,-607.6699"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge23" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M819.2678,-536.2075C802.8399,-524.8774 778.3662,-507.1275 759,-489.3999 741.3578,-473.2505 743.3126,-462.0271 723,-449.3999 696.5316,-432.946 686.3791,-434.6179 655.5,-430.3999"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_curr_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge39" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_curr_interface.f90</title>
+<path fill="none" stroke="#ff8500" stroke-dasharray="5,2" d="M771.2958,-560.4347C766.8169,-562.9057 762.6448,-565.8631 759,-569.3999 719.0398,-608.1766 762.1723,-649.8275 723,-689.3999 721.9208,-690.4902 720.786,-691.5241 719.6036,-692.5044"/>
+<polygon fill="#ff8500" stroke="#ff8500" points="717.4916,-689.7082 711.1952,-698.2291 721.431,-695.4945 717.4916,-689.7082"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_part_connect.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge47" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_part_connect.f90</title>
+<path fill="none" stroke="#2cff00" stroke-dasharray="5,2" d="M769.4711,-549.1475C756.7242,-549.2876 743.3338,-549.4347 730.3924,-549.5769"/>
+<polygon fill="#2cff00" stroke="#2cff00" points="730.0917,-546.0799 720.1308,-549.6897 730.1687,-553.0795 730.0917,-546.0799"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge58" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#00ffdd" stroke-dasharray="5,2" d="M773.0799,-560.5643C768.0334,-562.9966 763.2538,-565.9104 759,-569.3999 731.0315,-592.3435 749.7104,-618.0033 723,-642.3999 719.1578,-645.9094 714.7908,-648.9639 710.1698,-651.6188"/>
+<polygon fill="#00ffdd" stroke="#00ffdd" points="708.3779,-648.6031 701.041,-656.2465 711.543,-654.8467 708.3779,-648.6031"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge77" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~init_grid_fields.f90</title>
+<path fill="none" stroke="#f300ff" stroke-dasharray="5,2" d="M769.3086,-537.3192C734.8048,-530.9199 692.5019,-521.8544 655.5,-510.3999"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge88" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_fields.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M791.2643,-560.4029C741.9184,-572.9995 668.9879,-590.9232 655.5,-590.3999"/>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M655.5,-590.3999C613.815,-588.7827 567.5054,-579.3958 533.0739,-570.8943"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="533.7931,-567.4661 523.2405,-568.4109 532.079,-574.253 533.7931,-567.4661"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge27" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M430.4444,-488.4013C412.0359,-492.7712 391.0578,-497.7512 371.9486,-502.2875"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="371.0707,-498.8986 362.1495,-504.6137 372.6876,-505.7093 371.0707,-498.8986"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge64" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90</title>
+<path fill="none" stroke="#009bff" stroke-dasharray="5,2" d="M462.2436,-488.5462C441.3164,-501.749 406.1638,-522.8976 374,-537.3999 369.8377,-539.2767 365.4545,-541.0848 361.0243,-542.7992"/>
+<polygon fill="#009bff" stroke="#009bff" points="359.4808,-539.6384 351.318,-546.3927 361.9112,-546.203 359.4808,-539.6384"/>
+</g>
+<!-- sourcefile~init_laser_field.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node24" class="node">
+<title>sourcefile~init_laser_field.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node24"><a xlink:href=".././sourcefile/init_laser_field.f90.html" xlink:title="init_laser_field.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="710,-482.3999 601,-482.3999 601,-458.3999 710,-458.3999 710,-482.3999"/>
+<text text-anchor="middle" x="655.5" y="-467.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_laser_field.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_laser_field.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge26" class="edge">
+<title>sourcefile~init_laser_field.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M618.4538,-458.2987C575.4176,-444.8805 506.9971,-425.6987 481,-430.3999"/>
+</g>
+<!-- sourcefile~init_laser_field.f90&#45;&gt;sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge76" class="edge">
+<title>sourcefile~init_laser_field.f90&#45;&gt;sourcefile~init_grid_fields.f90</title>
+<path fill="none" stroke="#f300ff" stroke-dasharray="5,2" d="M600.7659,-472.2819C583.3056,-472.8823 563.818,-473.5523 545.719,-474.1746"/>
+<polygon fill="#f300ff" stroke="#f300ff" points="545.4137,-470.683 535.5399,-474.5246 545.6543,-477.6788 545.4137,-470.683"/>
+</g>
+<!-- sourcefile~init_laser_field.f90&#45;&gt;sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge85" class="edge">
+<title>sourcefile~init_laser_field.f90&#45;&gt;sourcefile~grid_fields.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M630.8685,-482.5392C600.4692,-497.5211 548.635,-523.0669 514.6009,-539.8402"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="512.9288,-536.7622 505.5062,-544.3224 516.0233,-543.0411 512.9288,-536.7622"/>
+</g>
+<!-- sourcefile~pic_out.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node25" class="node">
+<title>sourcefile~pic_out.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node25"><a xlink:href=".././sourcefile/pic_out.f90.html" xlink:title="pic_out.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="516.5,-884.3999 445.5,-884.3999 445.5,-860.3999 516.5,-860.3999 516.5,-884.3999"/>
+<text text-anchor="middle" x="481" y="-869.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_out.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_out.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge15" class="edge">
+<title>sourcefile~pic_out.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M445.1847,-863.0108C410.1607,-853.0639 355.9134,-835.5894 312.5,-812.3999"/>
+</g>
+<!-- sourcefile~pic_out.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge30" class="edge">
+<title>sourcefile~pic_out.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M458.8556,-860.2223C442.5027,-849.9789 421.2142,-833.7541 410,-813.3999 350.3047,-705.0506 452.3347,-633.1433 374,-537.3999 372.8703,-536.0192 371.6455,-534.7289 370.3417,-533.5231"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="372.2573,-530.5877 362.1221,-527.5007 368.1201,-536.2343 372.2573,-530.5877"/>
+</g>
+<!-- sourcefile~init_part_distrib.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node26" class="node">
+<title>sourcefile~init_part_distrib.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node26"><a xlink:href=".././sourcefile/init_part_distrib.f90.html" xlink:title="init_part_distrib.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="713,-204.3999 598,-204.3999 598,-180.3999 713,-180.3999 713,-204.3999"/>
+<text text-anchor="middle" x="655.5" y="-189.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_part_distrib.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_part_distrib.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge14" class="edge">
+<title>sourcefile~init_part_distrib.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M616.6196,-180.3259C569.0278,-165.9686 493.2193,-144.6238 481,-150.3999"/>
+</g>
+<!-- sourcefile~init_part_distrib.f90&#45;&gt;sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge54" class="edge">
+<title>sourcefile~init_part_distrib.f90&#45;&gt;sourcefile~array_alloc.f90</title>
+<path fill="none" stroke="#00ff58" stroke-dasharray="5,2" d="M603.1442,-204.4013C582.2579,-209.189 558.1774,-214.7088 536.9474,-219.5753"/>
+<polygon fill="#00ff58" stroke="#00ff58" points="536.0644,-216.1869 527.0993,-221.8328 537.6285,-223.0099 536.0644,-216.1869"/>
+</g>
+<!-- sourcefile~pic_out_util.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node27" class="node">
+<title>sourcefile~pic_out_util.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node27"><a xlink:href=".././sourcefile/pic_out_util.f90.html" xlink:title="pic_out_util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="884,-785.3999 791,-785.3999 791,-761.3999 884,-761.3999 884,-785.3999"/>
+<text text-anchor="middle" x="837.5" y="-770.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_out_util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_out_util.f90&#45;&gt;sourcefile~mpi_curr_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge38" class="edge">
+<title>sourcefile~pic_out_util.f90&#45;&gt;sourcefile~mpi_curr_interface.f90</title>
+<path fill="none" stroke="#ff8500" stroke-dasharray="5,2" d="M806.0602,-761.3866C783.1395,-752.7463 751.2767,-740.978 723,-731.3999 717.3405,-729.4829 711.3923,-727.5355 705.4697,-725.6386"/>
+<polygon fill="#ff8500" stroke="#ff8500" points="706.1725,-722.1899 695.5824,-722.5082 704.0595,-728.8634 706.1725,-722.1899"/>
+</g>
+<!-- sourcefile~pic_out_util.f90&#45;&gt;sourcefile~psolve.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge55" class="edge">
+<title>sourcefile~pic_out_util.f90&#45;&gt;sourcefile~psolve.f90</title>
+<path fill="none" stroke="#00ff9b" stroke-dasharray="5,2" d="M790.6305,-767.9919C762.5196,-764.7483 726.9954,-760.6494 699.426,-757.4683"/>
+<polygon fill="#00ff9b" stroke="#00ff9b" points="699.6166,-753.9672 689.2813,-756.2978 698.8142,-760.921 699.6166,-753.9672"/>
+</g>
+<!-- sourcefile~pic_out_util.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge57" class="edge">
+<title>sourcefile~pic_out_util.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#00ffdd" stroke-dasharray="5,2" d="M809.0764,-761.343C793.4372,-753.9611 774.1834,-743.5961 759,-731.3999 739.8325,-716.0035 743.5392,-702.9123 723,-689.3999 720.4175,-687.701 717.6898,-686.1331 714.8704,-684.6868"/>
+<polygon fill="#00ffdd" stroke="#00ffdd" points="716.1706,-681.4331 705.6196,-680.4707 713.2675,-687.8027 716.1706,-681.4331"/>
+</g>
+<!-- sourcefile~pic_out_util.f90&#45;&gt;sourcefile~grid_part_util.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge70" class="edge">
+<title>sourcefile~pic_out_util.f90&#45;&gt;sourcefile~grid_part_util.f90</title>
+<path fill="none" stroke="#2c00ff" stroke-dasharray="5,2" d="M790.6305,-778.808C768.2362,-781.3919 741.1372,-784.5187 717.1033,-787.2919"/>
+<polygon fill="#2c00ff" stroke="#2c00ff" points="716.5462,-783.8328 707.0133,-788.4561 717.3486,-790.7867 716.5462,-783.8328"/>
+</g>
+<!-- sourcefile~start_all.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node28" class="node">
+<title>sourcefile~start_all.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node28"><a xlink:href=".././sourcefile/start_all.f90.html" xlink:title="start_all.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1059,-224.3999 982,-224.3999 982,-200.3999 1059,-200.3999 1059,-224.3999"/>
+<text text-anchor="middle" x="1020.5" y="-209.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">start_all.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~start_all.f90&#45;&gt;sourcefile~set_init_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge45" class="edge">
+<title>sourcefile~start_all.f90&#45;&gt;sourcefile~set_init_param.f90</title>
+<path fill="none" stroke="#b1ff00" stroke-dasharray="5,2" d="M1002.3846,-200.2343C981.8426,-186.6524 947.1515,-164.3555 916,-147.3999 902.6892,-140.155 887.7195,-132.8912 874.4494,-126.7419"/>
+<polygon fill="#b1ff00" stroke="#b1ff00" points="875.6845,-123.458 865.1351,-122.4774 872.7704,-129.8226 875.6845,-123.458"/>
+</g>
+<!-- sourcefile~start_all.f90&#45;&gt;sourcefile~pic_dump.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge46" class="edge">
+<title>sourcefile~start_all.f90&#45;&gt;sourcefile~pic_dump.f90</title>
+<path fill="none" stroke="#6eff00" stroke-dasharray="5,2" d="M981.8649,-204.2313C962.1859,-200.1735 937.8583,-195.3146 916,-191.3999 844.177,-178.5371 760.8177,-165.7992 708.1232,-158.0161"/>
+<polygon fill="#6eff00" stroke="#6eff00" points="708.4088,-154.5205 698.0057,-156.527 707.3894,-161.4459 708.4088,-154.5205"/>
+</g>
+<!-- sourcefile~start_all.f90&#45;&gt;sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge50" class="edge">
+<title>sourcefile~start_all.f90&#45;&gt;sourcefile~array_alloc.f90</title>
+<path fill="none" stroke="#00ff58" stroke-dasharray="5,2" d="M1013.6493,-200.1481C992.8768,-164.5277 926.528,-61.5526 837.5,-30.3999"/>
+<path fill="none" stroke="#00ff58" stroke-dasharray="5,2" d="M837.5,-30.3999C732.5309,6.3309 675.0505,19.8089 588,-49.3999 546.0779,-82.7298 580.2296,-118.8869 552,-164.3999 540.0067,-183.7361 521.2505,-201.3739 506.0274,-213.8387"/>
+<polygon fill="#00ff58" stroke="#00ff58" points="503.6569,-211.2517 497.9989,-220.2093 508.008,-216.7351 503.6569,-211.2517"/>
+</g>
+<!-- sourcefile~start_all.f90&#45;&gt;sourcefile~run_data_info.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge65" class="edge">
+<title>sourcefile~start_all.f90&#45;&gt;sourcefile~run_data_info.f90</title>
+<path fill="none" stroke="#0058ff" stroke-dasharray="5,2" d="M996.1169,-224.5065C961.7531,-240.6013 896.6512,-267.5836 837.5,-272.3999"/>
+<path fill="none" stroke="#0058ff" stroke-dasharray="5,2" d="M837.5,-272.3999C798.0876,-275.609 753.7151,-275.6806 718.6506,-274.9153"/>
+<polygon fill="#0058ff" stroke="#0058ff" points="718.6358,-271.4139 708.5525,-274.6664 718.4632,-278.4118 718.6358,-271.4139"/>
+</g>
+<!-- sourcefile~start_all.f90&#45;&gt;sourcefile~set_grid_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge68" class="edge">
+<title>sourcefile~start_all.f90&#45;&gt;sourcefile~set_grid_param.f90</title>
+<path fill="none" stroke="#0016ff" stroke-dasharray="5,2" d="M837.5,-30.3999C812.4654,-21.6398 744.8358,-40.5112 699.446,-55.2118"/>
+<polygon fill="#0016ff" stroke="#0016ff" points="698.2474,-51.9215 689.8394,-58.3678 700.4323,-58.5718 698.2474,-51.9215"/>
+</g>
+<!-- sourcefile~pic_in.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node30" class="node">
+<title>sourcefile~pic_in.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node30"><a xlink:href=".././sourcefile/pic_in.f90.html" xlink:title="pic_in.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="869.5,-224.3999 805.5,-224.3999 805.5,-200.3999 869.5,-200.3999 869.5,-224.3999"/>
+<text text-anchor="middle" x="837.5" y="-209.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_in.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~start_all.f90&#45;&gt;sourcefile~pic_in.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge89" class="edge">
+<title>sourcefile~start_all.f90&#45;&gt;sourcefile~pic_in.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M981.6904,-212.3999C951.8453,-212.3999 910.655,-212.3999 879.9385,-212.3999"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="879.5463,-208.9 869.5463,-212.3999 879.5462,-215.9 879.5463,-208.9"/>
+</g>
+<!-- sourcefile~ionize.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node31" class="node">
+<title>sourcefile~ionize.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node31"><a xlink:href=".././sourcefile/ionize.f90.html" xlink:title="ionize.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="869.5,-341.3999 805.5,-341.3999 805.5,-317.3999 869.5,-317.3999 869.5,-341.3999"/>
+<text text-anchor="middle" x="837.5" y="-326.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ionize.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~start_all.f90&#45;&gt;sourcefile~ionize.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge90" class="edge">
+<title>sourcefile~start_all.f90&#45;&gt;sourcefile~ionize.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1004.603,-224.5271C984.4509,-239.695 948.4235,-266.1331 916,-286.3999 901.2996,-295.5886 884.5036,-304.9349 870.2303,-312.5564"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="868.4676,-309.5292 861.2623,-317.2967 871.7389,-315.7178 868.4676,-309.5292"/>
+</g>
+<!-- sourcefile~grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge63" class="edge">
+<title>sourcefile~grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90</title>
+<path fill="none" stroke="#009bff" stroke-dasharray="5,2" d="M436.7286,-556.9254C420.7527,-557.115 402.28,-557.3343 384.5445,-557.5448"/>
+<polygon fill="#009bff" stroke="#009bff" points="384.1695,-554.0489 374.2118,-557.6675 384.2526,-561.0484 384.1695,-554.0489"/>
+</g>
+<!-- sourcefile~pic_in.f90&#45;&gt;sourcefile~init_laser_field.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge80" class="edge">
+<title>sourcefile~pic_in.f90&#45;&gt;sourcefile~init_laser_field.f90</title>
+<path fill="none" stroke="#ff00c7" stroke-dasharray="5,2" d="M824.6381,-224.4879C807.222,-241.5614 776.3297,-274.4614 759,-308.3999 730.5653,-364.0865 764.741,-397.8466 723,-444.3999 719.9466,-447.8054 716.3957,-450.7681 712.5507,-453.3451"/>
+<polygon fill="#ff00c7" stroke="#ff00c7" points="710.6786,-450.384 703.7425,-458.3928 714.159,-456.4574 710.6786,-450.384"/>
+</g>
+<!-- sourcefile~pic_in.f90&#45;&gt;sourcefile~init_part_distrib.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge82" class="edge">
+<title>sourcefile~pic_in.f90&#45;&gt;sourcefile~init_part_distrib.f90</title>
+<path fill="none" stroke="#ff0042" stroke-dasharray="5,2" d="M805.381,-208.8704C782.6594,-206.3735 751.3549,-202.9334 723.2296,-199.8427"/>
+<polygon fill="#ff0042" stroke="#ff0042" points="723.3557,-196.3356 713.0332,-198.7223 722.591,-203.2937 723.3557,-196.3356"/>
+</g>
+<!-- sourcefile~ionize.f90&#45;&gt;sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge52" class="edge">
+<title>sourcefile~ionize.f90&#45;&gt;sourcefile~array_alloc.f90</title>
+<path fill="none" stroke="#00ff58" stroke-dasharray="5,2" d="M824.681,-317.2561C804.7464,-299.2201 764.2963,-265.9236 723,-251.3999 662.0022,-229.9475 587.1937,-227.3846 537.0395,-228.7747"/>
+<polygon fill="#00ff58" stroke="#00ff58" points="536.913,-225.2769 527.0372,-229.1134 537.15,-232.2728 536.913,-225.2769"/>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node32" class="node">
+<title>sourcefile~env_evolve_in_time.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node32"><a xlink:href=".././sourcefile/env_evolve_in_time.f90.html" xlink:title="env_evolve_in_time.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1089,-438.3999 952,-438.3999 952,-414.3999 1089,-414.3999 1089,-438.3999"/>
+<text text-anchor="middle" x="1020.5" y="-423.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">env_evolve_in_time.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~window.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge34" class="edge">
+<title>sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~window.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M951.8369,-426.3999C929.1054,-426.3999 904.365,-426.3999 883.7306,-426.3999"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="883.6532,-422.9 873.6532,-426.3999 883.6532,-429.9 883.6532,-422.9"/>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~mpi_part_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge41" class="edge">
+<title>sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~mpi_part_interface.f90</title>
+<path fill="none" stroke="#ffc700" stroke-dasharray="5,2" d="M961.6208,-414.3512C912.6847,-404.2008 849.2266,-390.6703 837.5,-386.3999"/>
+<path fill="none" stroke="#ffc700" stroke-dasharray="5,2" d="M837.5,-386.3999C785.9684,-367.6343 774.0342,-360.479 723,-340.3999 714.5093,-337.0593 705.4011,-333.5207 696.7097,-330.1654"/>
+<polygon fill="#ffc700" stroke="#ffc700" points="697.7189,-326.8035 687.1291,-326.4755 695.203,-333.3358 697.7189,-326.8035"/>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~boris_push.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge72" class="edge">
+<title>sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~boris_push.f90</title>
+<path fill="none" stroke="#6e00ff" stroke-dasharray="5,2" d="M968.0595,-438.4354C944.4012,-443.8652 916.454,-450.2793 892.4991,-455.7772"/>
+<polygon fill="#6e00ff" stroke="#6e00ff" points="891.4649,-452.4235 882.5012,-458.0718 893.0308,-459.2461 891.4649,-452.4235"/>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge74" class="edge">
+<title>sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90</title>
+<path fill="none" stroke="#b100ff" stroke-dasharray="5,2" d="M969.6387,-438.4017C963.45,-440.8857 957.411,-443.8562 952,-447.3999 931.4328,-460.8697 933.9327,-472.5815 916,-489.3999 899.8418,-504.5541 879.8628,-519.5246 864.1044,-530.5938"/>
+<polygon fill="#b100ff" stroke="#b100ff" points="862.0649,-527.7488 855.835,-536.3184 866.0492,-533.5043 862.0649,-527.7488"/>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~ionize.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge91" class="edge">
+<title>sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~ionize.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M997.6929,-414.3109C965.414,-397.2013 906.2568,-365.8448 869.5684,-346.398"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="870.7811,-343.0795 860.3063,-341.4885 867.5027,-349.2643 870.7811,-343.0795"/>
+</g>
+<!-- sourcefile~fluid_density_momenta.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node35" class="node">
+<title>sourcefile~fluid_density_momenta.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node35"><a xlink:href=".././sourcefile/fluid_density_momenta.f90.html" xlink:title="fluid_density_momenta.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="916,-602.3999 759,-602.3999 759,-578.3999 916,-578.3999 916,-602.3999"/>
+<text text-anchor="middle" x="837.5" y="-587.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fluid_density_momenta.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~fluid_density_momenta.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge95" class="edge">
+<title>sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~fluid_density_momenta.f90</title>
+<path fill="none" stroke="#ff00aa" stroke-dasharray="5,2" d="M963.9687,-438.4687C959.5779,-440.9191 955.4996,-443.8633 952,-447.3999 912.2358,-487.5852 956.4826,-529.9384 916,-569.3999 914.7498,-570.6186 913.4371,-571.7684 912.0708,-572.8534"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="910.1262,-569.9432 903.7219,-578.3834 913.9917,-575.7792 910.1262,-569.9432"/>
+</g>
+<!-- sourcefile~aladyn.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node33" class="node">
+<title>sourcefile~aladyn.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node33"><a xlink:href=".././sourcefile/aladyn.f90.html" xlink:title="ALaDyn.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1201,-438.3999 1125,-438.3999 1125,-414.3999 1201,-414.3999 1201,-438.3999"/>
+<text text-anchor="middle" x="1163" y="-423.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ALaDyn.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~diag_part_and_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge44" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~diag_part_and_fields.f90</title>
+<path fill="none" stroke="#f3ff00" stroke-dasharray="5,2" d="M1020.5,-842.3999C873.5762,-912.4515 818.1911,-877.4423 655.5,-872.3999"/>
+<path fill="none" stroke="#f3ff00" stroke-dasharray="5,2" d="M655.5,-872.3999C598.7907,-864.4019 539.5862,-831.0938 506.7895,-810.059"/>
+<polygon fill="#f3ff00" stroke="#f3ff00" points="508.5482,-807.0271 498.2634,-804.4828 504.7167,-812.8855 508.5482,-807.0271"/>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~init_beam_part_distrib.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge48" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~init_beam_part_distrib.f90</title>
+<path fill="none" stroke="#00ff16" stroke-dasharray="5,2" d="M1161.1457,-438.4704C1150.9438,-502.9098 1099.2299,-804.8625 1020.5,-842.3999"/>
+<path fill="none" stroke="#00ff16" stroke-dasharray="5,2" d="M1020.5,-842.3999C965.1719,-868.7797 966.5498,-787.067 916,-752.3999 902.4325,-743.0953 886.577,-734.2675 872.6814,-727.1285"/>
+<polygon fill="#00ff16" stroke="#00ff16" points="873.9327,-723.84 863.4267,-722.4708 870.7858,-730.0928 873.9327,-723.84"/>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~run_data_info.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge66" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~run_data_info.f90</title>
+<path fill="none" stroke="#0058ff" stroke-dasharray="5,2" d="M1150.0647,-414.1803C1108.0656,-375.915 970.5313,-261.568 837.5,-272.3999"/>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_out.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge81" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_out.f90</title>
+<path fill="none" stroke="#ff0085" stroke-dasharray="5,2" d="M655.5,-872.3999C612.0881,-866.2773 561.9946,-867.0768 526.6461,-868.9289"/>
+<polygon fill="#ff0085" stroke="#ff0085" points="526.4133,-865.4364 516.6298,-869.5025 526.8135,-872.425 526.4133,-865.4364"/>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_out_util.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge83" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_out_util.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1020.5,-842.3999C992.5303,-855.7356 911.4222,-814.9822 867.1641,-790.4877"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="868.7472,-787.3629 858.3115,-785.533 865.3283,-793.4712 868.7472,-787.3629"/>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~start_all.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge84" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~start_all.f90</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M1160.1393,-414.1571C1152.731,-384.5763 1130.5391,-308.0012 1089,-258.3999 1079.3787,-246.9113 1066.1824,-237.1308 1053.9395,-229.5809"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="1055.6538,-226.5287 1045.2579,-224.485 1052.1103,-232.5656 1055.6538,-226.5287"/>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~env_evolve_in_time.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge93" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~env_evolve_in_time.f90</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M1124.8126,-426.3999C1116.7861,-426.3999 1108.0404,-426.3999 1099.1391,-426.3999"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="1099.0533,-422.9 1089.0533,-426.3999 1099.0532,-429.9 1099.0533,-422.9"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_node34" class="node">
+<title>sourcefile~pic_evolve_in_time.f90</title>
+<g id="a_sourcefile~~struct_def.f90~~AfferentGraph_node34"><a xlink:href=".././sourcefile/pic_evolve_in_time.f90.html" xlink:title="pic_evolve_in_time.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1087,-480.3999 954,-480.3999 954,-456.3999 1087,-456.3999 1087,-480.3999"/>
+<text text-anchor="middle" x="1020.5" y="-465.9999" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_evolve_in_time.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_evolve_in_time.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge94" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_evolve_in_time.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1124.8126,-437.6552C1108.2573,-442.5346 1088.6419,-448.316 1070.9136,-453.5412"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="1069.8926,-450.1932 1061.2901,-456.3776 1071.8716,-456.9076 1069.8926,-450.1932"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~window.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge35" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~window.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M968.0595,-456.3644C941.3928,-450.2442 909.277,-442.8733 883.5712,-436.9737"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="884.2306,-433.5341 873.701,-434.7084 882.6647,-440.3567 884.2306,-433.5341"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~mpi_part_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge42" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~mpi_part_interface.f90</title>
+<path fill="none" stroke="#ffc700" stroke-dasharray="5,2" d="M969.6387,-456.3982C963.45,-453.9142 957.411,-450.9436 952,-447.3999 931.4328,-433.9302 936.962,-418.2467 916,-405.3999 885.3942,-386.6429 871.2294,-398.6828 837.5,-386.3999"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~boris_push.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge73" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~boris_push.f90</title>
+<path fill="none" stroke="#6e00ff" stroke-dasharray="5,2" d="M953.9151,-468.3999C933.8177,-468.3999 911.9843,-468.3999 892.7135,-468.3999"/>
+<polygon fill="#6e00ff" stroke="#6e00ff" points="892.5966,-464.9 882.5965,-468.3999 892.5965,-471.9 892.5966,-464.9"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge75" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90</title>
+<path fill="none" stroke="#b100ff" stroke-dasharray="5,2" d="M999.3571,-480.5785C978.5751,-492.2467 945.739,-509.8827 916,-522.3999 906.9649,-526.2029 897.1649,-529.8268 887.6509,-533.0967"/>
+<polygon fill="#b100ff" stroke="#b100ff" points="886.254,-529.8734 877.8838,-536.3688 888.4777,-536.5108 886.254,-529.8734"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge79" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~init_grid_fields.f90</title>
+<path fill="none" stroke="#f300ff" stroke-dasharray="5,2" d="M988.9383,-480.5072C924.6711,-503.3357 774.6248,-547.2765 655.5,-510.3999"/>
+<path fill="none" stroke="#f300ff" stroke-dasharray="5,2" d="M655.5,-510.3999C619.8798,-499.193 578.9535,-490.985 545.6921,-485.4443"/>
+<polygon fill="#f300ff" stroke="#f300ff" points="546.0618,-481.9586 535.63,-483.8101 544.9395,-488.8681 546.0618,-481.9586"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~ionize.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge92" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~ionize.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M965.9115,-456.3906C960.8957,-453.9315 956.1492,-450.969 952,-447.3999 923.969,-423.2882 941.4348,-399.2362 916,-372.3999 905.678,-361.5092 891.9741,-352.7165 878.9081,-345.9885"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="880.089,-342.6712 869.5643,-341.4539 877.0327,-348.9688 880.089,-342.6712"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~fluid_density_momenta.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge96" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~fluid_density_momenta.f90</title>
+<path fill="none" stroke="#ff00aa" stroke-dasharray="5,2" d="M1011.3017,-480.7078C994.6836,-502.0573 957.5043,-545.9174 916,-569.3999 912.5754,-571.3375 908.9653,-573.1022 905.2506,-574.7086"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="903.8875,-571.4835 895.848,-578.3841 906.436,-578.0031 903.8875,-571.4835"/>
+</g>
+<!-- sourcefile~fluid_density_momenta.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge61" class="edge">
+<title>sourcefile~fluid_density_momenta.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#00ffdd" stroke-dasharray="5,2" d="M811.7698,-602.6075C788.6877,-613.4333 753.8058,-629.4848 723,-642.3999 714.7537,-645.8571 705.8727,-649.4026 697.3482,-652.7197"/>
+<polygon fill="#00ffdd" stroke="#00ffdd" points="695.9998,-649.4883 687.9279,-656.3509 698.5175,-656.0199 695.9998,-649.4883"/>
+</g>
+<!-- sourcefile~fluid_density_momenta.f90&#45;&gt;sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~struct_def.f90~~AfferentGraph_edge86" class="edge">
+<title>sourcefile~fluid_density_momenta.f90&#45;&gt;sourcefile~grid_fields.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M758.64,-591.732C726.6212,-591.9257 689.2836,-591.7106 655.5,-590.3999"/>
+</g>
+</g>
+</svg>
+</div><script>var pansourcefilestruct_deff90AfferentGraph = svgPanZoom('#sourcefilestruct_deff90AfferentGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="193.5,-24 89.5,-24 89.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/struct_def.html">struct_def</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/struct_def.f90.html#src">struct_def.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-2"></a><span class="c">!                            Copyright 2008-2020  The ALaDyn Collaboration                            !</span>
+<a name="ln-3"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-4"></a>
+<a name="ln-5"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-6"></a><span class="c">!  This file is part of ALaDyn.                                                                       !</span>
+<a name="ln-7"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-8"></a><span class="c">!  ALaDyn is free software: you can redistribute it and/or modify                                     !</span>
+<a name="ln-9"></a><span class="c">!  it under the terms of the GNU General Public License as published by                               !</span>
+<a name="ln-10"></a><span class="c">!  the Free Software Foundation, either version 3 of the License, or                                  !</span>
+<a name="ln-11"></a><span class="c">!  (at your option) any later version.                                                                !</span>
+<a name="ln-12"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-13"></a><span class="c">!  ALaDyn is distributed in the hope that it will be useful,                                          !</span>
+<a name="ln-14"></a><span class="c">!  but WITHOUT ANY WARRANTY; without even the implied warranty of                                     !</span>
+<a name="ln-15"></a><span class="c">!  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                                      !</span>
+<a name="ln-16"></a><span class="c">!  GNU General Public License for more details.                                                       !</span>
+<a name="ln-17"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-18"></a><span class="c">!  You should have received a copy of the GNU General Public License                                  !</span>
+<a name="ln-19"></a><span class="c">!  along with ALaDyn.  If not, see &lt;http://www.gnu.org/licenses/&gt;.                                    !</span>
+<a name="ln-20"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-21"></a> <span class="k">module </span><span class="n">struct_def</span>
+<a name="ln-22"></a>  <span class="k">use </span><span class="n">precision_def</span>
+<a name="ln-23"></a>  <span class="k">implicit none</span>
+<a name="ln-24"></a><span class="k">  public</span>
+<a name="ln-25"></a>
+<a name="ln-26"></a><span class="k">  type </span><span class="n">species</span>
+<a name="ln-27"></a>   <span class="kt">real</span> <span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">part</span><span class="p">(:,</span> <span class="p">:)</span>
+<a name="ln-28"></a>  <span class="k">end type</span>
+<a name="ln-29"></a>
+<a name="ln-30"></a>
+<a name="ln-31"></a><span class="k">  type </span><span class="n">grid</span>
+<a name="ln-32"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">ng</span>
+<a name="ln-33"></a>   <span class="c">!!Number of cells in a given direction of the grid</span>
+<a name="ln-34"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">p_ind</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-35"></a>   <span class="c">!!Minimum and maximum cell number of the grid</span>
+<a name="ln-36"></a>   <span class="kt">real</span> <span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gmin</span>
+<a name="ln-37"></a>   <span class="c">!!Value of the corresponding axis at the minimum cell</span>
+<a name="ln-38"></a>   <span class="kt">real</span> <span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gmax</span>
+<a name="ln-39"></a>   <span class="c">!!Value of the corresponding axis at the maximum cell</span>
+<a name="ln-40"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">min_cell</span>
+<a name="ln-41"></a>   <span class="c">!!Initial cell of the grid in absolute units (i.e. respect to the total grid)</span>
+<a name="ln-42"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">max_cell</span>
+<a name="ln-43"></a>   <span class="c">!!Final cell of the grid in absolute units (i.e. respect to the total grid)</span>
+<a name="ln-44"></a>  <span class="k">end type</span>
+<a name="ln-45"></a>
+<a name="ln-46"></a><span class="k">  type </span><span class="n">sgrid</span>
+<a name="ln-47"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">sind</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-48"></a>   <span class="c">!!Initial and final stretched cell (sind(1) also coincides with the number of</span>
+<a name="ln-49"></a>   <span class="c">!!stretched cells)</span>
+<a name="ln-50"></a>   <span class="kt">real</span> <span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">smin</span>
+<a name="ln-51"></a>   <span class="c">!!Axis value on the boundary between stretched and unstretched grid (left side of the box)</span>
+<a name="ln-52"></a>   <span class="kt">real</span> <span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">smax</span>
+<a name="ln-53"></a>   <span class="c">!!Axis value on the boundary between stretched and unstretched grid (right side of the box)</span>
+<a name="ln-54"></a>  <span class="k">end type</span>
+<a name="ln-55"></a>
+<a name="ln-56"></a><span class="k">  type </span><span class="n">index_array</span>
+<a name="ln-57"></a>   <span class="c">!! Type defining an array of consecutive integer numbers, useful as</span>
+<a name="ln-58"></a>   <span class="c">!! indices in arrays.</span>
+<a name="ln-59"></a>   <span class="kt">integer</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">indices</span><span class="p">(:)</span>
+<a name="ln-60"></a>   <span class="k">contains</span>
+<a name="ln-61"></a><span class="k">    procedure</span><span class="p">,</span> <span class="k">public</span> <span class="kd">::</span> <span class="n">find_index</span>
+<a name="ln-62"></a>  <span class="k">end type</span>
+<a name="ln-63"></a>
+<a name="ln-64"></a><span class="k">  interface </span><span class="n">index_array</span>
+<a name="ln-65"></a>   <span class="k">module procedure </span><span class="n">new_index_array</span>
+<a name="ln-66"></a>  <span class="k">end interface</span>
+<a name="ln-67"></a>
+<a name="ln-68"></a><span class="k">  contains</span>
+<a name="ln-69"></a>
+<a name="ln-70"></a><span class="k">   function </span><span class="n">new_index_array</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">this</span><span class="p">)</span>
+<a name="ln-71"></a>    <span class="c">!! Constructor for the index_array type</span>
+<a name="ln-72"></a>    <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">length</span>
+<a name="ln-73"></a>    <span class="k">type</span><span class="p">(</span><span class="n">index_array</span><span class="p">)</span> <span class="kd">::</span> <span class="n">this</span>
+<a name="ln-74"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span>
+<a name="ln-75"></a>
+<a name="ln-76"></a>    <span class="k">allocate</span><span class="p">(</span> <span class="n">this</span><span class="p">%</span><span class="n">indices</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">)</span>
+<a name="ln-77"></a>    <span class="n">this</span><span class="p">%</span><span class="n">indices</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span> <span class="p">]</span>
+<a name="ln-78"></a>   <span class="k">end function</span>
+<a name="ln-79"></a>
+<a name="ln-80"></a><span class="k">   subroutine </span><span class="n">find_index</span><span class="p">(</span> <span class="n">index_in</span><span class="p">,</span> <span class="n">mask</span> <span class="p">)</span>
+<a name="ln-81"></a>    <span class="c">!! Type bound procedure that finds and pack all the array indices</span>
+<a name="ln-82"></a>    <span class="c">!! according to the given mask</span>
+<a name="ln-83"></a>
+<a name="ln-84"></a>    <span class="k">class</span><span class="p">(</span><span class="n">index_array</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">index_in</span>
+<a name="ln-85"></a>    <span class="kt">logical</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mask</span><span class="p">(:)</span>
+<a name="ln-86"></a>    <span class="n">index_in</span><span class="p">%</span><span class="n">indices</span> <span class="o">=</span> <span class="nb">PACK</span><span class="p">(</span> <span class="n">index_in</span><span class="p">%</span><span class="n">indices</span><span class="p">,</span> <span class="n">mask</span> <span class="p">)</span>
+<a name="ln-87"></a>   <span class="k">end subroutine</span>
+<a name="ln-88"></a>
+<a name="ln-89"></a><span class="k"> end module</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-01-29 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

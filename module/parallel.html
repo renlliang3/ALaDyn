@@ -1,0 +1,5725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>parallel &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>parallel 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 3.0% of total for modules and submodules.">724 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/parallel.F90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/parallel.f90.html'>parallel.F90</a></li>
+    
+  
+     <li class="active">parallel</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-offset_kind">offset_kind</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-whence">whence</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-mpi_err">mpi_err</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-fp0x">fp0x</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-fp1x">fp1x</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-status">status</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-error">error</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-mpi_sd">mpi_sd</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-check_decomposition">check_decomposition</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-start_parallel">start_parallel</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_dp">mpi_write_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_row_dp">mpi_write_row_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_col_dp">mpi_write_col_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_read_col_dp">mpi_read_col_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_read_dp">mpi_read_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_part">mpi_write_part</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_part_col">mpi_write_part_col</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_field">mpi_write_field</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_field_col">mpi_write_field_col</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-end_parallel">End_parallel</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_idata">exchange_idata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_2d_idata">exchange_2d_idata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_3d_sp_data">exchange_3d_sp_data</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_1d_grdata">exchange_1d_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_2d_grdata">exchange_2d_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_3d_grdata">exchange_3d_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_grdata">exchange_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-realvec_distribute">realvec_distribute</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-intvec_distribute">intvec_distribute</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-sr_idata">sr_idata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-sr_pdata">sr_pdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-sr_vidata">sr_vidata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_pdata">exchange_pdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_rdata">exchange_rdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_rdata_int">exchange_rdata_int</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-vint_2d_bcast">vint_2d_bcast</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-vint_bcast">vint_bcast</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-int_bcast">int_bcast</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-all_gather_dpreal">all_gather_dpreal</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-allreduce_dpreal">allreduce_dpreal</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-allreduce_big_int">allreduce_big_int</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-allreduce_sint">allreduce_sint</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-allreduce_vint">allreduce_vint</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-bcast_grdata">bcast_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-bcast_realv_sum">bcast_realv_sum</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-bcast_int_sum">bcast_int_sum</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-real_bcast">real_bcast</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-local_to_global_grdata">local_to_global_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_bd_3d_data">exchange_bd_3d_data</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_bdx_data">exchange_bdx_data</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-processor_grid_diag">processor_grid_diag</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/mpi_var.html'>mpi_var</a></li>
+    
+    <li><a href='../module/common_param.html'>common_param</a></li>
+    
+    <li><a href='../module/util.html'>util</a></li>
+    
+    <li><a href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm">mpi</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~parallel~~UsesGraph Pages: 1 -->
+<svg id="moduleparallelUsesGraph" width="408pt" height="132pt"
+ viewBox="0.00 0.00 408.00 131.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~parallel~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 127.9783)">
+<title>module~~parallel~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-127.9783 404,-127.9783 404,4 -4,4"/>
+<!-- module~parallel -->
+<g id="module~~parallel~~UsesGraph_node1" class="node">
+<title>module~parallel</title>
+<polygon fill="none" stroke="#000000" points="400,-66 346,-66 346,-42 400,-42 400,-66"/>
+<text text-anchor="middle" x="373" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">parallel</text>
+</g>
+<!-- module~util -->
+<g id="module~~parallel~~UsesGraph_node2" class="node">
+<title>module~util</title>
+<g id="a_module~~parallel~~UsesGraph_node2"><a xlink:href=".././module/util.html" xlink:title="util">
+<polygon fill="#337ab7" stroke="#337ab7" points="310,-108 256,-108 256,-84 310,-84 310,-108"/>
+<text text-anchor="middle" x="283" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">util</text>
+</a>
+</g>
+</g>
+<!-- module~parallel&#45;&gt;module~util -->
+<g id="module~~parallel~~UsesGraph_edge1" class="edge">
+<title>module~parallel&#45;&gt;module~util</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M346.9683,-66.1481C338.013,-70.3273 327.8309,-75.0789 318.2652,-79.5429"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="316.5549,-76.4786 308.9732,-83.8792 319.5152,-82.8219 316.5549,-76.4786"/>
+</g>
+<!-- module~mpi_var -->
+<g id="module~~parallel~~UsesGraph_node3" class="node">
+<title>module~mpi_var</title>
+<g id="a_module~~parallel~~UsesGraph_node3"><a xlink:href=".././module/mpi_var.html" xlink:title="mpi_var">
+<polygon fill="#337ab7" stroke="#337ab7" points="197.5,-66 142.5,-66 142.5,-42 197.5,-42 197.5,-66"/>
+<text text-anchor="middle" x="170" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_var</text>
+</a>
+</g>
+</g>
+<!-- module~parallel&#45;&gt;module~mpi_var -->
+<g id="module~~parallel~~UsesGraph_edge2" class="edge">
+<title>module~parallel&#45;&gt;module~mpi_var</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M283,-54C258.1535,-51.7109 230.1033,-51.6963 208.1658,-52.2613"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="207.8153,-48.7703 197.9283,-52.5777 208.0317,-55.767 207.8153,-48.7703"/>
+</g>
+<!-- module~common_param -->
+<g id="module~~parallel~~UsesGraph_node4" class="node">
+<title>module~common_param</title>
+<g id="a_module~~parallel~~UsesGraph_node4"><a xlink:href=".././module/common_param.html" xlink:title="common_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="220,-24 120,-24 120,0 220,0 220,-24"/>
+<text text-anchor="middle" x="170" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">common_param</text>
+</a>
+</g>
+</g>
+<!-- module~parallel&#45;&gt;module~common_param -->
+<g id="module~~parallel~~UsesGraph_edge3" class="edge">
+<title>module~parallel&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M345.7654,-55.297C327.8843,-55.8294 304.0048,-55.9352 283,-54"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M283,-54C275.323,-53.2927 239.0495,-39.4862 209.6408,-27.8936"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="210.5681,-24.4964 199.9818,-24.0692 207.9911,-31.0048 210.5681,-24.4964"/>
+</g>
+<!-- mpi -->
+<g id="module~~parallel~~UsesGraph_node5" class="node">
+<title>mpi</title>
+<g id="a_module~~parallel~~UsesGraph_node5"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="310,-26 256,-26 256,-2 310,-2 310,-26"/>
+<text text-anchor="middle" x="283" y="-11.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~parallel&#45;&gt;mpi -->
+<g id="module~~parallel~~UsesGraph_edge4" class="edge">
+<title>module~parallel&#45;&gt;mpi</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M345.997,-41.9987C337.7078,-38.3146 328.4431,-34.1969 319.6234,-30.2771"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="320.8546,-26.9942 310.295,-26.1311 318.0116,-33.3909 320.8546,-26.9942"/>
+</g>
+<!-- module~precision_def -->
+<g id="module~~parallel~~UsesGraph_node6" class="node">
+<title>module~precision_def</title>
+<g id="a_module~~parallel~~UsesGraph_node6"><a xlink:href=".././module/precision_def.html" xlink:title="precision_def">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-87 0,-87 0,-63 84,-63 84,-87"/>
+<text text-anchor="middle" x="42" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def</text>
+</a>
+</g>
+</g>
+<!-- module~util&#45;&gt;module~precision_def -->
+<g id="module~~parallel~~UsesGraph_edge6" class="edge">
+<title>module~util&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M255.8835,-107.1641C244.9376,-111.1056 232.0631,-115.0424 220,-117 176.1294,-124.1192 163.0959,-127.8652 120,-117 101.1043,-112.2361 81.806,-101.8995 67.1323,-92.6734"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="68.9261,-89.6647 58.6384,-87.1321 65.1013,-95.5275 68.9261,-89.6647"/>
+</g>
+<!-- module~code_util -->
+<g id="module~~parallel~~UsesGraph_node7" class="node">
+<title>module~code_util</title>
+<g id="a_module~~parallel~~UsesGraph_node7"><a xlink:href=".././module/code_util.html" xlink:title="code_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="200.5,-108 139.5,-108 139.5,-84 200.5,-84 200.5,-108"/>
+<text text-anchor="middle" x="170" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">code_util</text>
+</a>
+</g>
+</g>
+<!-- module~util&#45;&gt;module~code_util -->
+<g id="module~~parallel~~UsesGraph_edge5" class="edge">
+<title>module~util&#45;&gt;module~code_util</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M255.9337,-96C242.4588,-96 225.8851,-96 210.8999,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="210.8369,-92.5001 200.8369,-96 210.8369,-99.5001 210.8369,-92.5001"/>
+</g>
+<!-- module~mpi_var&#45;&gt;module~precision_def -->
+<g id="module~~parallel~~UsesGraph_edge7" class="edge">
+<title>module~mpi_var&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M142.2259,-58.5567C128.2213,-60.8543 110.766,-63.7181 94.3656,-66.4088"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="93.6319,-62.9823 84.3305,-68.0551 94.7653,-69.8899 93.6319,-62.9823"/>
+</g>
+<!-- module~common_param&#45;&gt;module~precision_def -->
+<g id="module~~parallel~~UsesGraph_edge8" class="edge">
+<title>module~common_param&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M139.9149,-24.0829C133.3009,-26.8923 126.3712,-29.9554 120,-33 103.9493,-40.6701 86.4799,-49.9829 72.1503,-57.8884"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="70.2709,-54.9287 63.2336,-62.8488 73.6739,-61.0459 70.2709,-54.9287"/>
+</g>
+<!-- module~code_util&#45;&gt;module~precision_def -->
+<g id="module~~parallel~~UsesGraph_edge9" class="edge">
+<title>module~code_util&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M139.3408,-90.97C125.7506,-88.7403 109.3776,-86.0541 93.9697,-83.5263"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="94.4575,-80.0596 84.0228,-81.8944 93.3242,-86.9673 94.4575,-80.0596"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~parallel~~UsedByGraph Pages: 1 -->
+<svg id="moduleparallelUsedByGraph" width="641pt" height="392pt"
+ viewBox="0.00 0.00 641.00 391.66" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~parallel~~UsedByGraph" class="graph" transform="scale(.8639 .8639) rotate(0) translate(4 449.3709)">
+<title>module~~parallel~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-449.3709 738,-449.3709 738,4 -4,4"/>
+<!-- module~parallel -->
+<g id="module~~parallel~~UsedByGraph_node1" class="node">
+<title>module~parallel</title>
+<polygon fill="none" stroke="#000000" points="54,-285 0,-285 0,-261 54,-261 54,-285"/>
+<text text-anchor="middle" x="27" y="-270.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">parallel</text>
+</g>
+<!-- module~mpi_curr_interface -->
+<g id="module~~parallel~~UsedByGraph_node2" class="node">
+<title>module~mpi_curr_interface</title>
+<g id="a_module~~parallel~~UsedByGraph_node2"><a xlink:href=".././module/mpi_curr_interface.html" xlink:title="mpi_curr_interface">
+<polygon fill="#337ab7" stroke="#337ab7" points="362,-347 249,-347 249,-323 362,-323 362,-347"/>
+<text text-anchor="middle" x="305.5" y="-332.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_curr_interface</text>
+</a>
+</g>
+</g>
+<!-- module~mpi_curr_interface&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge2" class="edge">
+<title>module~mpi_curr_interface&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M270.4137,-322.9115C239.423,-312.8519 192.7917,-299.2095 151,-293"/>
+</g>
+<!-- module~pic_out -->
+<g id="module~~parallel~~UsedByGraph_node3" class="node">
+<title>module~pic_out</title>
+<g id="a_module~~parallel~~UsedByGraph_node3"><a xlink:href=".././module/pic_out.html" xlink:title="pic_out">
+<polygon fill="#337ab7" stroke="#337ab7" points="178,-429 124,-429 124,-405 178,-405 178,-429"/>
+<text text-anchor="middle" x="151" y="-414.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_out</text>
+</a>
+</g>
+</g>
+<!-- module~pic_out&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge3" class="edge">
+<title>module~pic_out&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M123.8061,-412.3436C112.3366,-409.2665 99.4763,-404.2195 90,-396 58.6393,-368.7984 40.8909,-322.1761 32.6807,-294.8131"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="36.0006,-293.6911 29.9058,-285.0249 29.266,-295.6004 36.0006,-293.6911"/>
+</g>
+<!-- module~diag_part_and_fields -->
+<g id="module~~parallel~~UsedByGraph_node4" class="node">
+<title>module~diag_part_and_fields</title>
+<g id="a_module~~parallel~~UsedByGraph_node4"><a xlink:href=".././module/diag_part_and_fields.html" xlink:title="diag_part_and_fields">
+<polygon fill="#337ab7" stroke="#337ab7" points="212,-387 90,-387 90,-363 212,-363 212,-387"/>
+<text text-anchor="middle" x="151" y="-372.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">diag_part_and_fields</text>
+</a>
+</g>
+</g>
+<!-- module~diag_part_and_fields&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge5" class="edge">
+<title>module~diag_part_and_fields&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M106.1876,-362.979C100.4788,-360.4853 94.9202,-357.5174 90,-354 67.7855,-338.1189 49.5871,-312.2165 38.5595,-293.9868"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="41.5241,-292.1226 33.4632,-285.247 35.4771,-295.6487 41.5241,-292.1226"/>
+</g>
+<!-- module~mpi_part_interface -->
+<g id="module~~parallel~~UsedByGraph_node5" class="node">
+<title>module~mpi_part_interface</title>
+<g id="a_module~~parallel~~UsedByGraph_node5"><a xlink:href=".././module/mpi_part_interface.html" xlink:title="mpi_part_interface">
+<polygon fill="#337ab7" stroke="#337ab7" points="362,-204 249,-204 249,-180 362,-180 362,-204"/>
+<text text-anchor="middle" x="305.5" y="-189.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_part_interface</text>
+</a>
+</g>
+</g>
+<!-- module~mpi_part_interface&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge4" class="edge">
+<title>module~mpi_part_interface&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M248.9032,-196.3884C204.4265,-201.2705 141.5884,-211.3812 90,-232 75.9018,-237.6348 61.6059,-246.6161 50.2038,-254.7383"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="48.0723,-251.9613 42.0998,-260.7123 52.226,-257.5958 48.0723,-251.9613"/>
+</g>
+<!-- module~grid_fields -->
+<g id="module~~parallel~~UsedByGraph_node6" class="node">
+<title>module~grid_fields</title>
+<g id="a_module~~parallel~~UsedByGraph_node6"><a xlink:href=".././module/grid_fields.html" xlink:title="grid_fields">
+<polygon fill="#337ab7" stroke="#337ab7" points="184.5,-265 117.5,-265 117.5,-241 184.5,-241 184.5,-265"/>
+<text text-anchor="middle" x="151" y="-250.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_fields</text>
+</a>
+</g>
+</g>
+<!-- module~grid_fields&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge9" class="edge">
+<title>module~grid_fields&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M117.4438,-258.4123C101.0502,-261.0564 81.2693,-264.2469 64.3923,-266.969"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="63.6305,-263.5465 54.3154,-268.5943 64.7452,-270.4572 63.6305,-263.5465"/>
+</g>
+<!-- module~run_data_info -->
+<g id="module~~parallel~~UsedByGraph_node7" class="node">
+<title>module~run_data_info</title>
+<g id="a_module~~parallel~~UsedByGraph_node7"><a xlink:href=".././module/run_data_info.html" xlink:title="run_data_info">
+<polygon fill="#337ab7" stroke="#337ab7" points="348,-24 263,-24 263,0 348,0 348,-24"/>
+<text text-anchor="middle" x="305.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">run_data_info</text>
+</a>
+</g>
+</g>
+<!-- module~run_data_info&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge6" class="edge">
+<title>module~run_data_info&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M262.8104,-16.7222C214.5909,-24.2536 136.7662,-43.378 90,-91 46.0505,-135.7537 32.6827,-212.6475 28.6767,-250.5459"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="25.1479,-250.6965 27.7106,-260.9768 32.118,-251.3422 25.1479,-250.6965"/>
+</g>
+<!-- module~mpi_field_interface -->
+<g id="module~~parallel~~UsedByGraph_node8" class="node">
+<title>module~mpi_field_interface</title>
+<g id="a_module~~parallel~~UsedByGraph_node8"><a xlink:href=".././module/mpi_field_interface.html" xlink:title="mpi_field_interface">
+<polygon fill="#337ab7" stroke="#337ab7" points="363,-305 248,-305 248,-281 363,-281 363,-305"/>
+<text text-anchor="middle" x="305.5" y="-290.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_field_interface</text>
+</a>
+</g>
+</g>
+<!-- module~mpi_field_interface&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge7" class="edge">
+<title>module~mpi_field_interface&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M247.9738,-297.0053C218.7756,-298.0262 182.838,-297.7306 151,-293"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M151,-293C121.7468,-288.6535 88.686,-283.2989 64.0627,-279.2244"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="64.5005,-275.7493 54.0621,-277.5632 63.3534,-282.6546 64.5005,-275.7493"/>
+</g>
+<!-- module~prl_fft -->
+<g id="module~~parallel~~UsedByGraph_node9" class="node">
+<title>module~prl_fft</title>
+<g id="a_module~~parallel~~UsedByGraph_node9"><a xlink:href=".././module/prl_fft.html" xlink:title="prl_fft">
+<polygon fill="#337ab7" stroke="#337ab7" points="178,-345 124,-345 124,-321 178,-321 178,-345"/>
+<text text-anchor="middle" x="151" y="-330.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">prl_fft</text>
+</a>
+</g>
+</g>
+<!-- module~prl_fft&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge8" class="edge">
+<title>module~prl_fft&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M123.7343,-322.0091C113.1089,-317.5623 100.8901,-312.2458 90,-307 79.1981,-301.7967 67.5911,-295.6869 57.3196,-290.0927"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="58.7718,-286.8969 48.3235,-285.1408 55.3963,-293.0292 58.7718,-286.8969"/>
+</g>
+<!-- module~pic_dump -->
+<g id="module~~parallel~~UsedByGraph_node10" class="node">
+<title>module~pic_dump</title>
+<g id="a_module~~parallel~~UsedByGraph_node10"><a xlink:href=".././module/pic_dump.html" xlink:title="pic_dump">
+<polygon fill="#337ab7" stroke="#337ab7" points="183,-124 119,-124 119,-100 183,-100 183,-124"/>
+<text text-anchor="middle" x="151" y="-109.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_dump</text>
+</a>
+</g>
+</g>
+<!-- module~pic_dump&#45;&gt;module~parallel -->
+<g id="module~~parallel~~UsedByGraph_edge1" class="edge">
+<title>module~pic_dump&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M141.6798,-124.1012C120.5849,-151.4905 68.9868,-218.4849 42.7999,-252.4856"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="39.7573,-250.7001 36.4283,-260.7584 45.3031,-254.9715 39.7573,-250.7001"/>
+</g>
+<!-- module~init_beam_part_distrib -->
+<g id="module~~parallel~~UsedByGraph_node11" class="node">
+<title>module~init_beam_part_distrib</title>
+<g id="a_module~~parallel~~UsedByGraph_node11"><a xlink:href=".././module/init_beam_part_distrib.html" xlink:title="init_beam_part_distrib">
+<polygon fill="#337ab7" stroke="#337ab7" points="532,-347 402,-347 402,-323 532,-323 532,-347"/>
+<text text-anchor="middle" x="467" y="-332.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_beam_part_distrib</text>
+</a>
+</g>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~mpi_curr_interface -->
+<g id="module~~parallel~~UsedByGraph_edge10" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~mpi_curr_interface</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M401.7773,-335C392.0312,-335 381.9716,-335 372.1955,-335"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="372.1356,-331.5001 362.1355,-335 372.1355,-338.5001 372.1356,-331.5001"/>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~mpi_field_interface -->
+<g id="module~~parallel~~UsedByGraph_edge25" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M420.7206,-322.9645C402.306,-318.1756 380.9471,-312.6209 361.658,-307.6045"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="362.3452,-304.1669 351.7862,-305.0373 360.5833,-310.9416 362.3452,-304.1669"/>
+</g>
+<!-- module~psolve -->
+<g id="module~~parallel~~UsedByGraph_node16" class="node">
+<title>module~psolve</title>
+<g id="a_module~~parallel~~UsedByGraph_node16"><a xlink:href=".././module/psolve.html" xlink:title="psolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="332.5,-389 278.5,-389 278.5,-365 332.5,-365 332.5,-389"/>
+<text text-anchor="middle" x="305.5" y="-374.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">psolve</text>
+</a>
+</g>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~psolve -->
+<g id="module~~parallel~~UsedByGraph_edge38" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~psolve</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M420.7206,-347.0355C395.8753,-353.4968 365.6703,-361.352 342.4204,-367.3984"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="341.3926,-364.0492 332.5955,-369.9535 343.1545,-370.8239 341.3926,-364.0492"/>
+</g>
+<!-- module~curr_and_fields_util -->
+<g id="module~~parallel~~UsedByGraph_node12" class="node">
+<title>module~curr_and_fields_util</title>
+<g id="a_module~~parallel~~UsedByGraph_node12"><a xlink:href=".././module/curr_and_fields_util.html" xlink:title="curr_and_fields_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="524.5,-305 409.5,-305 409.5,-281 524.5,-281 524.5,-305"/>
+<text text-anchor="middle" x="467" y="-290.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">curr_and_fields_util</text>
+</a>
+</g>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~mpi_curr_interface -->
+<g id="module~~parallel~~UsedByGraph_edge12" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~mpi_curr_interface</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M420.7206,-305.0355C402.306,-309.8244 380.9471,-315.3791 361.658,-320.3955"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="360.5833,-317.0584 351.7862,-322.9627 362.3452,-323.8331 360.5833,-317.0584"/>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~grid_fields -->
+<g id="module~~parallel~~UsedByGraph_edge20" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M425.6325,-280.9143C385.8875,-269.6392 328.5687,-254.3523 305.5,-253"/>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~mpi_field_interface -->
+<g id="module~~parallel~~UsedByGraph_edge26" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M409.151,-293C397.6004,-293 385.3684,-293 373.5122,-293"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="373.2165,-289.5001 363.2164,-293 373.2164,-296.5001 373.2165,-289.5001"/>
+</g>
+<!-- module~start_all -->
+<g id="module~~parallel~~UsedByGraph_node13" class="node">
+<title>module~start_all</title>
+<g id="a_module~~parallel~~UsedByGraph_node13"><a xlink:href=".././module/start_all.html" xlink:title="start_all">
+<polygon fill="#337ab7" stroke="#337ab7" points="635,-103 580,-103 580,-79 635,-79 635,-103"/>
+<text text-anchor="middle" x="607.5" y="-88.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">start_all</text>
+</a>
+</g>
+</g>
+<!-- module~start_all&#45;&gt;module~run_data_info -->
+<g id="module~~parallel~~UsedByGraph_edge23" class="edge">
+<title>module~start_all&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M579.8321,-81.6984C551.7267,-72.5888 506.7919,-58.9517 467,-51"/>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M467,-51C430.3749,-43.6811 389.4821,-33.7884 358.009,-25.798"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="358.694,-22.3606 348.1388,-23.2762 356.9611,-29.1427 358.694,-22.3606"/>
+</g>
+<!-- module~start_all&#45;&gt;module~pic_dump -->
+<g id="module~~parallel~~UsedByGraph_edge31" class="edge">
+<title>module~start_all&#45;&gt;module~pic_dump</title>
+<path fill="none" stroke="#ff00aa" stroke-dasharray="5,2" d="M467,-51C365.4832,-30.7137 245.3855,-71.7451 186.7795,-95.9626"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="185.0975,-92.8733 177.2412,-99.9817 187.8156,-99.3241 185.0975,-92.8733"/>
+</g>
+<!-- module~pic_in -->
+<g id="module~~parallel~~UsedByGraph_node22" class="node">
+<title>module~pic_in</title>
+<g id="a_module~~parallel~~UsedByGraph_node22"><a xlink:href=".././module/pic_in.html" xlink:title="pic_in">
+<polygon fill="#337ab7" stroke="#337ab7" points="494,-103 440,-103 440,-79 494,-79 494,-103"/>
+<text text-anchor="middle" x="467" y="-88.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_in</text>
+</a>
+</g>
+</g>
+<!-- module~start_all&#45;&gt;module~pic_in -->
+<g id="module~~parallel~~UsedByGraph_edge46" class="edge">
+<title>module~start_all&#45;&gt;module~pic_in</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M579.7417,-91C558.146,-91 527.9687,-91 504.2694,-91"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="504.2226,-87.5001 494.2225,-91 504.2225,-94.5001 504.2226,-87.5001"/>
+</g>
+<!-- module~init_laser_field -->
+<g id="module~~parallel~~UsedByGraph_node14" class="node">
+<title>module~init_laser_field</title>
+<g id="a_module~~parallel~~UsedByGraph_node14"><a xlink:href=".././module/init_laser_field.html" xlink:title="init_laser_field">
+<polygon fill="#337ab7" stroke="#337ab7" points="350,-124 261,-124 261,-100 350,-100 350,-124"/>
+<text text-anchor="middle" x="305.5" y="-109.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_laser_field</text>
+</a>
+</g>
+</g>
+<!-- module~init_laser_field&#45;&gt;module~grid_fields -->
+<g id="module~~parallel~~UsedByGraph_edge18" class="edge">
+<title>module~init_laser_field&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M292.3274,-124.0216C265.553,-148.4565 204.5758,-204.1056 172.1658,-233.6836"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="169.6067,-231.2806 164.5797,-240.6069 174.3254,-236.4511 169.6067,-231.2806"/>
+</g>
+<!-- module~pic_evolve -->
+<g id="module~~parallel~~UsedByGraph_node15" class="node">
+<title>module~pic_evolve</title>
+<g id="a_module~~parallel~~UsedByGraph_node15"><a xlink:href=".././module/pic_evolve.html" xlink:title="pic_evolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="642,-183 573,-183 573,-159 642,-159 642,-183"/>
+<text text-anchor="middle" x="607.5" y="-168.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_evolve</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~mpi_part_interface -->
+<g id="module~~parallel~~UsedByGraph_edge15" class="edge">
+<title>module~pic_evolve&#45;&gt;module~mpi_part_interface</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M573.2691,-158.9381C561.3193,-155.3047 547.7147,-151.8044 535,-150 475.1552,-141.5074 458.1027,-137.3351 399,-150 376.3295,-154.858 352.5164,-165.65 334.5959,-175.0776"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="332.9236,-172.0029 325.799,-179.8446 336.2587,-178.1574 332.9236,-172.0029"/>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~curr_and_fields_util -->
+<g id="module~~parallel~~UsedByGraph_edge33" class="edge">
+<title>module~pic_evolve&#45;&gt;module~curr_and_fields_util</title>
+<path fill="none" stroke="#ff8b00" stroke-dasharray="5,2" d="M581.6269,-183.1125C577.7517,-185.6756 574.0422,-188.6399 571,-192 544.8315,-220.9034 564.2164,-246.1814 535,-272 533.5071,-273.3193 531.9324,-274.5558 530.2922,-275.7145"/>
+<polygon fill="#ff8b00" stroke="#ff8b00" points="528.4173,-272.7575 521.6207,-280.8851 532.0023,-278.7698 528.4173,-272.7575"/>
+</g>
+<!-- module~fluid_density_momenta -->
+<g id="module~~parallel~~UsedByGraph_node18" class="node">
+<title>module~fluid_density_momenta</title>
+<g id="a_module~~parallel~~UsedByGraph_node18"><a xlink:href=".././module/fluid_density_momenta.html" xlink:title="fluid_density_momenta">
+<polygon fill="#337ab7" stroke="#337ab7" points="535,-263 399,-263 399,-239 535,-239 535,-263"/>
+<text text-anchor="middle" x="467" y="-248.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fluid_density_momenta</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~fluid_density_momenta -->
+<g id="module~~parallel~~UsedByGraph_edge40" class="edge">
+<title>module~pic_evolve&#45;&gt;module~fluid_density_momenta</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M586.1611,-183.1503C562.4012,-196.679 523.8225,-218.6456 497.0236,-233.9047"/>
+<polygon fill="#002eff" stroke="#002eff" points="495.0376,-231.0079 488.0794,-238.9975 498.5013,-237.0909 495.0376,-231.0079"/>
+</g>
+<!-- module~window -->
+<g id="module~~parallel~~UsedByGraph_node21" class="node">
+<title>module~window</title>
+<g id="a_module~~parallel~~UsedByGraph_node21"><a xlink:href=".././module/window.html" xlink:title="window">
+<polygon fill="#337ab7" stroke="#337ab7" points="494,-183 440,-183 440,-159 494,-159 494,-183"/>
+<text text-anchor="middle" x="467" y="-168.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">window</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~window -->
+<g id="module~~parallel~~UsedByGraph_edge44" class="edge">
+<title>module~pic_evolve&#45;&gt;module~window</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M572.7697,-171C552.0536,-171 525.7452,-171 504.5493,-171"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="504.2955,-167.5001 494.2955,-171 504.2955,-174.5001 504.2955,-167.5001"/>
+</g>
+<!-- module~psolve&#45;&gt;module~grid_fields -->
+<g id="module~~parallel~~UsedByGraph_edge21" class="edge">
+<title>module~psolve&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M278.2584,-371.7472C267.8041,-368.612 256.3836,-363.6829 248,-356 220.1485,-330.4764 239.1688,-305.2492 212,-279 206.7634,-273.9406 200.3907,-269.7942 193.7631,-266.4184"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="195.2023,-263.228 184.65,-262.2793 192.3075,-269.6014 195.2023,-263.228"/>
+</g>
+<!-- module~psolve&#45;&gt;module~prl_fft -->
+<g id="module~~parallel~~UsedByGraph_edge30" class="edge">
+<title>module~psolve&#45;&gt;module~prl_fft</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M278.2341,-369.235C253.1592,-362.0939 215.771,-351.4461 188.0059,-343.5389"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="188.8289,-340.1342 178.2527,-340.7613 186.9116,-346.8665 188.8289,-340.1342"/>
+</g>
+<!-- program~aladyn -->
+<g id="module~~parallel~~UsedByGraph_node17" class="node">
+<title>program~aladyn</title>
+<g id="a_module~~parallel~~UsedByGraph_node17"><a xlink:href=".././program/aladyn.html" xlink:title="aladyn">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="734,-183 680,-183 680,-159 734,-159 734,-183"/>
+<text text-anchor="middle" x="707" y="-168.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">aladyn</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_out -->
+<g id="module~~parallel~~UsedByGraph_edge13" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_out</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M305.5,-417C265.7258,-411.711 219.6808,-412.6031 188.2744,-414.2585"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="187.9957,-410.7687 178.2149,-414.8414 188.4007,-417.757 187.9957,-410.7687"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~diag_part_and_fields -->
+<g id="module~~parallel~~UsedByGraph_edge14" class="edge">
+<title>program~aladyn&#45;&gt;module~diag_part_and_fields</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M607.5,-417C486.7775,-475.6658 439.4161,-426.0594 305.5,-417"/>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M305.5,-417C267.211,-411.9085 224.9664,-399.9692 194.3424,-390.1165"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="195.4203,-386.7867 184.8276,-387.0023 193.2427,-393.4394 195.4203,-386.7867"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~run_data_info -->
+<g id="module~~parallel~~UsedByGraph_edge22" class="edge">
+<title>program~aladyn&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M702.6853,-158.7467C694.5709,-137.4815 675.0107,-93.7479 644,-70 560.1919,-5.8201 430.4068,-2.6706 358.321,-6.833"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="357.8693,-3.3548 348.1164,-7.4938 358.3217,-10.3402 357.8693,-3.3548"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~init_beam_part_distrib -->
+<g id="module~~parallel~~UsedByGraph_edge32" class="edge">
+<title>program~aladyn&#45;&gt;module~init_beam_part_distrib</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M704.2821,-183.2287C693.6174,-229.8459 652.976,-394.9007 607.5,-417"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M607.5,-417C569.625,-435.4056 571.9654,-376.1703 535,-356 531.5598,-354.1228 527.9281,-352.3884 524.2053,-350.7902"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="525.4077,-347.5022 514.8207,-347.0945 522.8427,-354.0153 525.4077,-347.5022"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~start_all -->
+<g id="module~~parallel~~UsedByGraph_edge35" class="edge">
+<title>program~aladyn&#45;&gt;module~start_all</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M691.8881,-158.8497C675.5026,-145.6755 649.1653,-124.4997 630.2709,-109.3082"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="632.4146,-106.5409 622.4281,-103.0025 628.0284,-111.9963 632.4146,-106.5409"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_evolve -->
+<g id="module~~parallel~~UsedByGraph_edge37" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_evolve</title>
+<path fill="none" stroke="#00ff2e" stroke-dasharray="5,2" d="M679.8112,-171C671.2756,-171 661.6159,-171 652.2,-171"/>
+<polygon fill="#00ff2e" stroke="#00ff2e" points="652.1432,-167.5001 642.1431,-171 652.1431,-174.5001 652.1432,-167.5001"/>
+</g>
+<!-- module~pic_out_util -->
+<g id="module~~parallel~~UsedByGraph_node19" class="node">
+<title>module~pic_out_util</title>
+<g id="a_module~~parallel~~UsedByGraph_node19"><a xlink:href=".././module/pic_out_util.html" xlink:title="pic_out_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="503.5,-389 430.5,-389 430.5,-365 503.5,-365 503.5,-389"/>
+<text text-anchor="middle" x="467" y="-374.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_out_util</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_out_util -->
+<g id="module~~parallel~~UsedByGraph_edge42" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_out_util</title>
+<path fill="none" stroke="#5c00ff" stroke-dasharray="5,2" d="M607.5,-417C598.6007,-421.3247 548.3416,-405.5129 510.4547,-392.5075"/>
+<polygon fill="#5c00ff" stroke="#5c00ff" points="511.2273,-389.0711 500.6325,-389.1045 508.9357,-395.6854 511.2273,-389.0711"/>
+</g>
+<!-- module~env_evolve -->
+<g id="module~~parallel~~UsedByGraph_node20" class="node">
+<title>module~env_evolve</title>
+<g id="a_module~~parallel~~UsedByGraph_node20"><a xlink:href=".././module/env_evolve.html" xlink:title="env_evolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="644,-225 571,-225 571,-201 644,-201 644,-225"/>
+<text text-anchor="middle" x="607.5" y="-210.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">env_evolve</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;module~env_evolve -->
+<g id="module~~parallel~~UsedByGraph_edge43" class="edge">
+<title>program~aladyn&#45;&gt;module~env_evolve</title>
+<path fill="none" stroke="#e700ff" stroke-dasharray="5,2" d="M679.8112,-182.4767C669.2024,-186.9548 656.8571,-192.1659 645.4016,-197.0013"/>
+<polygon fill="#e700ff" stroke="#e700ff" points="643.8978,-193.837 636.046,-200.9504 646.62,-200.286 643.8978,-193.837"/>
+</g>
+<!-- module~fluid_density_momenta&#45;&gt;module~grid_fields -->
+<g id="module~~parallel~~UsedByGraph_edge19" class="edge">
+<title>module~fluid_density_momenta&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M398.9796,-253.9806C370.1292,-254.6906 336.1516,-254.7968 305.5,-253"/>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M305.5,-253C268.211,-250.8141 225.7726,-251.0063 194.8212,-251.6363"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="194.7071,-248.1378 184.7891,-251.8639 194.866,-255.136 194.7071,-248.1378"/>
+</g>
+<!-- module~fluid_density_momenta&#45;&gt;module~mpi_field_interface -->
+<g id="module~~parallel~~UsedByGraph_edge27" class="edge">
+<title>module~fluid_density_momenta&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M420.7206,-263.0355C402.306,-267.8244 380.9471,-273.3791 361.658,-278.3955"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="360.5833,-275.0584 351.7862,-280.9627 362.3452,-281.8331 360.5833,-275.0584"/>
+</g>
+<!-- module~pic_out_util&#45;&gt;module~mpi_curr_interface -->
+<g id="module~~parallel~~UsedByGraph_edge11" class="edge">
+<title>module~pic_out_util&#45;&gt;module~mpi_curr_interface</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M430.3532,-367.4695C410.0861,-362.1989 384.4722,-355.5377 361.7265,-349.6224"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="362.4027,-346.1819 351.8436,-347.0522 360.6408,-352.9565 362.4027,-346.1819"/>
+</g>
+<!-- module~pic_out_util&#45;&gt;module~mpi_field_interface -->
+<g id="module~~parallel~~UsedByGraph_edge28" class="edge">
+<title>module~pic_out_util&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M430.3829,-369.7633C419.7091,-366.6068 408.3997,-362.1698 399,-356 378.4467,-342.5091 383.2052,-328.0069 363,-314 360.7441,-312.4362 358.3582,-310.9741 355.8913,-309.6093"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="357.2107,-306.3578 346.6927,-305.084 354.1207,-312.6389 357.2107,-306.3578"/>
+</g>
+<!-- module~pic_out_util&#45;&gt;module~psolve -->
+<g id="module~~parallel~~UsedByGraph_edge39" class="edge">
+<title>module~pic_out_util&#45;&gt;module~psolve</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M430.3532,-377C404.2604,-377 369.3053,-377 343.0181,-377"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="342.6923,-373.5001 332.6923,-377 342.6922,-380.5001 342.6923,-373.5001"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~mpi_part_interface -->
+<g id="module~~parallel~~UsedByGraph_edge16" class="edge">
+<title>module~env_evolve&#45;&gt;module~mpi_part_interface</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M570.7708,-210.446C521.5849,-207.0258 433.4437,-200.8967 372.3306,-196.6472"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="372.2271,-193.1316 362.0084,-195.9294 371.7415,-200.1147 372.2271,-193.1316"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~curr_and_fields_util -->
+<g id="module~~parallel~~UsedByGraph_edge34" class="edge">
+<title>module~env_evolve&#45;&gt;module~curr_and_fields_util</title>
+<path fill="none" stroke="#ff8b00" stroke-dasharray="5,2" d="M595.7253,-225.0368C582.1848,-238.2561 558.752,-259.2908 535,-272 531.4849,-273.8808 527.7757,-275.6212 523.9771,-277.2265"/>
+<polygon fill="#ff8b00" stroke="#ff8b00" points="522.4649,-274.059 514.4104,-280.9421 524.9992,-280.5842 522.4649,-274.059"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~fluid_density_momenta -->
+<g id="module~~parallel~~UsedByGraph_edge41" class="edge">
+<title>module~env_evolve&#45;&gt;module~fluid_density_momenta</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M570.9521,-222.8849C555.8695,-226.9641 538.0707,-231.778 521.5036,-236.2588"/>
+<polygon fill="#002eff" stroke="#002eff" points="520.1221,-233.0066 511.3827,-238.9961 521.9497,-239.7638 520.1221,-233.0066"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~window -->
+<g id="module~~parallel~~UsedByGraph_edge45" class="edge">
+<title>module~env_evolve&#45;&gt;module~window</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M570.9521,-202.0746C550.2694,-195.8919 524.479,-188.1823 503.7614,-181.9892"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="504.6266,-178.5948 494.043,-179.084 502.6216,-185.3016 504.6266,-178.5948"/>
+</g>
+<!-- module~window&#45;&gt;module~mpi_part_interface -->
+<g id="module~~parallel~~UsedByGraph_edge17" class="edge">
+<title>module~window&#45;&gt;module~mpi_part_interface</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M439.9685,-174.5149C421.4258,-176.9261 395.9668,-180.2365 372.1867,-183.3287"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="371.5883,-179.8769 362.1231,-184.6372 372.491,-186.8185 371.5883,-179.8769"/>
+</g>
+<!-- module~window&#45;&gt;module~run_data_info -->
+<g id="module~~parallel~~UsedByGraph_edge24" class="edge">
+<title>module~window&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M452.2852,-158.9927C438.2432,-147.3594 416.671,-129.0261 399,-112 371.1976,-85.2122 341.0329,-52.1575 322.6975,-31.5741"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="325.307,-29.2416 316.0543,-24.0803 320.0689,-33.8851 325.307,-29.2416"/>
+</g>
+<!-- module~window&#45;&gt;module~mpi_field_interface -->
+<g id="module~~parallel~~UsedByGraph_edge29" class="edge">
+<title>module~window&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M452.3607,-183.0865C438.3734,-194.7772 416.8394,-213.1504 399,-230 382.3201,-245.7544 381.7812,-253.8209 363,-267 358.0592,-270.4671 352.5818,-273.646 347.0278,-276.5003"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="345.1847,-273.5029 337.6894,-280.991 348.2184,-279.8114 345.1847,-273.5029"/>
+</g>
+<!-- module~pic_in&#45;&gt;module~init_laser_field -->
+<g id="module~~parallel~~UsedByGraph_edge36" class="edge">
+<title>module~pic_in&#45;&gt;module~init_laser_field</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M439.9685,-94.5149C418.2314,-97.3414 386.9898,-101.4038 360.0902,-104.9016"/>
+<polygon fill="#5cff00" stroke="#5cff00" points="359.4873,-101.4504 350.0222,-106.2107 360.39,-108.392 359.4873,-101.4504"/>
+</g>
+</g>
+</svg>
+</div><script>var panmoduleparallelUsedByGraph = svgPanZoom('#moduleparallelUsedByGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-offset_kind">offset_kind</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-whence">whence</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-mpi_err">mpi_err</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-fp0x">fp0x</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-fp1x">fp1x</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-status">status</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-error">error</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#variable-mpi_sd">mpi_sd</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-check_decomposition">check_decomposition</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-start_parallel">start_parallel</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_dp">mpi_write_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_row_dp">mpi_write_row_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_col_dp">mpi_write_col_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_read_col_dp">mpi_read_col_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_read_dp">mpi_read_dp</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_part">mpi_write_part</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_part_col">mpi_write_part_col</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_field">mpi_write_field</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-mpi_write_field_col">mpi_write_field_col</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-end_parallel">End_parallel</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_idata">exchange_idata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_2d_idata">exchange_2d_idata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_3d_sp_data">exchange_3d_sp_data</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_1d_grdata">exchange_1d_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_2d_grdata">exchange_2d_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_3d_grdata">exchange_3d_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_grdata">exchange_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-realvec_distribute">realvec_distribute</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-intvec_distribute">intvec_distribute</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-sr_idata">sr_idata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-sr_pdata">sr_pdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-sr_vidata">sr_vidata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_pdata">exchange_pdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_rdata">exchange_rdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_rdata_int">exchange_rdata_int</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-vint_2d_bcast">vint_2d_bcast</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-vint_bcast">vint_bcast</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-int_bcast">int_bcast</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-all_gather_dpreal">all_gather_dpreal</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-allreduce_dpreal">allreduce_dpreal</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-allreduce_big_int">allreduce_big_int</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-allreduce_sint">allreduce_sint</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-allreduce_vint">allreduce_vint</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-bcast_grdata">bcast_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-bcast_realv_sum">bcast_realv_sum</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-bcast_int_sum">bcast_int_sum</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-real_bcast">real_bcast</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-local_to_global_grdata">local_to_global_grdata</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_bd_3d_data">exchange_bd_3d_data</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-exchange_bdx_data">exchange_bdx_data</a>
+      
+      <a class="list-group-item" href="../module/parallel.html#proc-processor_grid_diag">processor_grid_diag</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-offset_kind"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>offset_kind</strong></td><td> =</td><td>mpi_offset_kind</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-whence"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>whence</strong></td><td> =</td><td>mpi_seek_set</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mpi_err"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mpi_err</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fp0x"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>fp0x</strong>(:,:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fp1x"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>fp1x</strong>(:,:,:,:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-status"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>status</strong>(mpi_status_size)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-error"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>error</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mpi_sd"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mpi_sd</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-check_decomposition"></span><h3>
+public subroutine <a href='../proc/check_decomposition.html'>check_decomposition</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-start_parallel"></span><h3>
+public subroutine <a href='../proc/start_parallel.html'>start_parallel</a>(ncmp, p_ind, b_ind)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncmp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p_ind</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>b_ind</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_write_dp"></span><h3>
+public subroutine <a href='../proc/mpi_write_dp.html'>mpi_write_dp</a>(buf, bufsize, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_write_row_dp"></span><h3>
+public subroutine <a href='../proc/mpi_write_row_dp.html'>mpi_write_row_dp</a>(buf, bufsize, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_write_col_dp"></span><h3>
+public subroutine <a href='../proc/mpi_write_col_dp.html'>mpi_write_col_dp</a>(buf, bufsize, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_read_col_dp"></span><h3>
+public subroutine <a href='../proc/mpi_read_col_dp.html'>mpi_read_col_dp</a>(buf, bufsize, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_read_dp"></span><h3>
+public subroutine <a href='../proc/mpi_read_dp.html'>mpi_read_dp</a>(buf, bufsize, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_write_part"></span><h3>
+public subroutine <a href='../proc/mpi_write_part.html'>mpi_write_part</a>(buf, bufsize, loc_np, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=sp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>loc_np</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_write_part_col"></span><h3>
+public subroutine <a href='../proc/mpi_write_part_col.html'>mpi_write_part_col</a>(buf, bufsize, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=sp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_write_field"></span><h3>
+public subroutine <a href='../proc/mpi_write_field.html'>mpi_write_field</a>(buf, bufsize, header, header_size, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=sp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>header</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>header_size</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-mpi_write_field_col"></span><h3>
+public subroutine <a href='../proc/mpi_write_field_col.html'>mpi_write_field_col</a>(buf, bufsize, header, header_size, disp, nchar, fout)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=sp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buf</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bufsize</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>header</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>header_size</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=offset_kind),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>disp</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nchar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=nchar),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fout</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-end_parallel"></span><h3>
+public subroutine <a href='../proc/end_parallel.html'>End_parallel</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_idata"></span><h3>
+public subroutine <a href='../proc/exchange_idata.html'>exchange_idata</a>(sr, idat, lenw, ipe, tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>idat</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenw</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_2d_idata"></span><h3>
+public subroutine <a href='../proc/exchange_2d_idata.html'>exchange_2d_idata</a>(sr, idat, n1, n2, ipe, tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>idat</strong>(:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_3d_sp_data"></span><h3>
+public subroutine <a href='../proc/exchange_3d_sp_data.html'>exchange_3d_sp_data</a>(sr, dat0, n1, n2, n3, ipe, tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=sp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dat0</strong>(:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n3</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_1d_grdata"></span><h3>
+public subroutine <a href='../proc/exchange_1d_grdata.html'>exchange_1d_grdata</a>(sr, dat0, lenw, ipe, tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dat0</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenw</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_2d_grdata"></span><h3>
+public subroutine <a href='../proc/exchange_2d_grdata.html'>exchange_2d_grdata</a>(sr, dat0, n1, n2, ipe, tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dat0</strong>(:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_3d_grdata"></span><h3>
+public subroutine <a href='../proc/exchange_3d_grdata.html'>exchange_3d_grdata</a>(sr, dat0, lenw, dir, ipe)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dat0</strong>(:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenw</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_grdata"></span><h3>
+public subroutine <a href='../proc/exchange_grdata.html'>exchange_grdata</a>(sr, dat0, lenw, dir, ipe)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dat0</strong>(:,:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenw</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-realvec_distribute"></span><h3>
+public subroutine <a href='../proc/realvec_distribute.html'>realvec_distribute</a>(rs, rv, nproc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rv</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nproc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-intvec_distribute"></span><h3>
+public subroutine <a href='../proc/intvec_distribute.html'>intvec_distribute</a>(ns, nc, nproc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ns</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nc</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nproc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sr_idata"></span><h3>
+public subroutine <a href='../proc/sr_idata.html'>sr_idata</a>(ns, nr, dir, side)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ns</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>side</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sr_pdata"></span><h3>
+public subroutine <a href='../proc/sr_pdata.html'>sr_pdata</a>(sdata, rdata, ns, nr, dir, side)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sdata</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rdata</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ns</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>side</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sr_vidata"></span><h3>
+public subroutine <a href='../proc/sr_vidata.html'>sr_vidata</a>(sidat, ridat, n2, n3, dir, side)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sidat</strong>(n2,n3)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ridat</strong>(n2,n3)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n3</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>side</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_pdata"></span><h3>
+public subroutine <a href='../proc/exchange_pdata.html'>exchange_pdata</a>(sr, pdata, lenw, ipe, tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=sp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>pdata</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenw</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_rdata"></span><h3>
+public subroutine <a href='../proc/exchange_rdata.html'>exchange_rdata</a>(buff, sr, lenw, ipe, dir, tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buff</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenw</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_rdata_int"></span><h3>
+public subroutine <a href='../proc/exchange_rdata_int.html'>exchange_rdata_int</a>(buff, sr, lenw, ipe, dir, tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buff</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenw</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ipe</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vint_2d_bcast"></span><h3>
+public subroutine <a href='../proc/vint_2d_bcast.html'>vint_2d_bcast</a>(mydat, n1, n2)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:, :)</td><td>::</td>
+  <td><strong>mydat</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vint_bcast"></span><h3>
+public subroutine <a href='../proc/vint_bcast.html'>vint_bcast</a>(mydat, nt)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>mydat</strong>(nt)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nt</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-int_bcast"></span><h3>
+public subroutine <a href='../proc/int_bcast.html'>int_bcast</a>(mydat)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>mydat</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-all_gather_dpreal"></span><h3>
+public subroutine <a href='../proc/all_gather_dpreal.html'>all_gather_dpreal</a>(rv_send, rv_recv, dir, nt)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rv_send</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rv_recv</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nt</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-allreduce_dpreal"></span><h3>
+public subroutine <a href='../proc/allreduce_dpreal.html'>allreduce_dpreal</a>(ib, rv_loc, rv, nt)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ib</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rv_loc</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rv</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nt</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-allreduce_big_int"></span><h3>
+public subroutine <a href='../proc/allreduce_big_int.html'>allreduce_big_int</a>(n0, n1)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-allreduce_sint"></span><h3>
+public subroutine <a href='../proc/allreduce_sint.html'>allreduce_sint</a>(ib, dt0, dt_tot)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ib</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt_tot</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-allreduce_vint"></span><h3>
+public subroutine <a href='../proc/allreduce_vint.html'>allreduce_vint</a>(ib, dt0, dt_tot, nt)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ib</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt0</strong>(nt)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt_tot</strong>(nt)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nt</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bcast_grdata"></span><h3>
+public subroutine <a href='../proc/bcast_grdata.html'>bcast_grdata</a>(dat0, n1, n2, n3, nc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dat0</strong>(:,:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n3</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bcast_realv_sum"></span><h3>
+public subroutine <a href='../proc/bcast_realv_sum.html'>bcast_realv_sum</a>(ib, dt_prl, dt_tot, nt)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ib</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt_prl</strong>(nt)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt_tot</strong>(nt)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nt</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bcast_int_sum"></span><h3>
+public subroutine <a href='../proc/bcast_int_sum.html'>bcast_int_sum</a>(dt_prl, dt_tot)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt_prl</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt_tot</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-real_bcast"></span><h3>
+public subroutine <a href='../proc/real_bcast.html'>real_bcast</a>(dt_tot, ndt)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dt_tot</strong>(ndt)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ndt</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-local_to_global_grdata"></span><h3>
+public subroutine <a href='../proc/local_to_global_grdata.html'>local_to_global_grdata</a>(buff1, buff2, lenws, ip, dir)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buff1</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buff2</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenws</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ip</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_bd_3d_data"></span><h3>
+public subroutine <a href='../proc/exchange_bd_3d_data.html'>exchange_bd_3d_data</a>(buff1, lenws, buff2, lenwr, dir, side)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buff1</strong>(:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenws</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buff2</strong>(:,:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenwr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=hp_int),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>side</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-exchange_bdx_data"></span><h3>
+public subroutine <a href='../proc/exchange_bdx_data.html'>exchange_bdx_data</a>(buff1, buff2, lenws, lenwr, dir, side)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buff1</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>buff2</strong>(:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenws</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lenwr</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dir</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=hp_int),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>side</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-processor_grid_diag"></span><h3>
+public subroutine <a href='../proc/processor_grid_diag.html'>processor_grid_diag</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-01-29 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

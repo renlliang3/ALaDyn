@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>pic_in &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>pic_in 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.1% of total for modules and submodules.">21 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/pic_in.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/pic_in.f90.html'>pic_in.f90</a></li>
+    
+  
+     <li class="active">pic_in</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/pic_in.html#variable-xf0~15">xf0</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/pic_in.html#proc-init">init</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/init_laser_field.html'>init_laser_field</a></li>
+    
+    <li><a href='../module/init_part_distrib.html'>init_part_distrib</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~pic_in~~UsesGraph Pages: 1 -->
+<svg id="modulepic_inUsesGraph" width="641pt" height="305pt"
+ viewBox="0.00 0.00 641.00 305.34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~pic_in~~UsesGraph" class="graph" transform="scale(.7884 .7884) rotate(0) translate(4 383.2673)">
+<title>module~~pic_in~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-383.2673 809,-383.2673 809,4 -4,4"/>
+<!-- module~pic_in -->
+<g id="module~~pic_in~~UsesGraph_node1" class="node">
+<title>module~pic_in</title>
+<polygon fill="none" stroke="#000000" points="805,-130.723 751,-130.723 751,-106.723 805,-106.723 805,-130.723"/>
+<text text-anchor="middle" x="778" y="-116.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">pic_in</text>
+</g>
+<!-- module~init_laser_field -->
+<g id="module~~pic_in~~UsesGraph_node2" class="node">
+<title>module~init_laser_field</title>
+<g id="a_module~~pic_in~~UsesGraph_node2"><a xlink:href=".././module/init_laser_field.html" xlink:title="init_laser_field">
+<polygon fill="#337ab7" stroke="#337ab7" points="715,-100.723 626,-100.723 626,-76.723 715,-76.723 715,-100.723"/>
+<text text-anchor="middle" x="670.5" y="-86.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_laser_field</text>
+</a>
+</g>
+</g>
+<!-- module~pic_in&#45;&gt;module~init_laser_field -->
+<g id="module~~pic_in~~UsesGraph_edge1" class="edge">
+<title>module~pic_in&#45;&gt;module~init_laser_field</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M750.8732,-111.1527C742.4715,-108.808 732.9086,-106.1393 723.3822,-103.4808"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="724.0907,-100.0448 713.518,-100.728 722.2091,-106.7872 724.0907,-100.0448"/>
+</g>
+<!-- module~init_part_distrib -->
+<g id="module~~pic_in~~UsesGraph_node3" class="node">
+<title>module~init_part_distrib</title>
+<g id="a_module~~pic_in~~UsesGraph_node3"><a xlink:href=".././module/init_part_distrib.html" xlink:title="init_part_distrib">
+<polygon fill="#337ab7" stroke="#337ab7" points="590,-165.723 496,-165.723 496,-141.723 590,-141.723 590,-165.723"/>
+<text text-anchor="middle" x="543" y="-151.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_part_distrib</text>
+</a>
+</g>
+</g>
+<!-- module~pic_in&#45;&gt;module~init_part_distrib -->
+<g id="module~~pic_in~~UsesGraph_edge2" class="edge">
+<title>module~pic_in&#45;&gt;module~init_part_distrib</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M750.5826,-122.8064C713.8463,-128.2778 647.7498,-138.1219 599.993,-145.2346"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="599.4731,-141.7734 590.0978,-146.7084 600.5043,-148.697 599.4731,-141.7734"/>
+</g>
+<!-- module~pstruct_data -->
+<g id="module~~pic_in~~UsesGraph_node8" class="node">
+<title>module~pstruct_data</title>
+<g id="a_module~~pic_in~~UsesGraph_node8"><a xlink:href=".././module/pstruct_data.html" xlink:title="pstruct_data">
+<polygon fill="#337ab7" stroke="#337ab7" points="310.5,-88.723 231.5,-88.723 231.5,-64.723 310.5,-64.723 310.5,-88.723"/>
+<text text-anchor="middle" x="271" y="-74.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pstruct_data</text>
+</a>
+</g>
+</g>
+<!-- module~init_laser_field&#45;&gt;module~pstruct_data -->
+<g id="module~~pic_in~~UsesGraph_edge4" class="edge">
+<title>module~init_laser_field&#45;&gt;module~pstruct_data</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M543,-38.723C485.186,-23.5268 468.1666,-35.0783 408.5,-38.723"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M408.5,-38.723C374.4845,-40.8008 337.3106,-51.6236 310.2011,-61.1901"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="308.9002,-57.9388 300.6932,-64.6393 311.2874,-64.5192 308.9002,-57.9388"/>
+</g>
+<!-- module~init_grid_field -->
+<g id="module~~pic_in~~UsesGraph_node9" class="node">
+<title>module~init_grid_field</title>
+<g id="a_module~~pic_in~~UsesGraph_node9"><a xlink:href=".././module/init_grid_field.html" xlink:title="init_grid_field">
+<polygon fill="#337ab7" stroke="#337ab7" points="585,-90.723 501,-90.723 501,-66.723 585,-66.723 585,-90.723"/>
+<text text-anchor="middle" x="543" y="-76.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_grid_field</text>
+</a>
+</g>
+</g>
+<!-- module~init_laser_field&#45;&gt;module~init_grid_field -->
+<g id="module~~pic_in~~UsesGraph_edge5" class="edge">
+<title>module~init_laser_field&#45;&gt;module~init_grid_field</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M625.9067,-85.2254C615.9967,-84.4482 605.406,-83.6175 595.2213,-82.8187"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="595.4553,-79.3264 585.2122,-82.0337 594.9079,-86.305 595.4553,-79.3264"/>
+</g>
+<!-- module~fstruct_data -->
+<g id="module~~pic_in~~UsesGraph_node12" class="node">
+<title>module~fstruct_data</title>
+<g id="a_module~~pic_in~~UsesGraph_node12"><a xlink:href=".././module/fstruct_data.html" xlink:title="fstruct_data">
+<polygon fill="#337ab7" stroke="#337ab7" points="309,-46.723 233,-46.723 233,-22.723 309,-22.723 309,-46.723"/>
+<text text-anchor="middle" x="271" y="-32.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fstruct_data</text>
+</a>
+</g>
+</g>
+<!-- module~init_laser_field&#45;&gt;module~fstruct_data -->
+<g id="module~~pic_in~~UsesGraph_edge3" class="edge">
+<title>module~init_laser_field&#45;&gt;module~fstruct_data</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M644.725,-76.5496C619.3848,-65.0806 579.333,-48.2729 543,-38.723"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M543,-38.723C482.9229,-22.932 470.4072,-5.8333 408.5,-.723"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M408.5,-.723C373.4682,2.1689 334.6876,-8.7696 307.2673,-18.9949"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="305.7646,-15.8235 297.707,-22.7029 308.2959,-22.3499 305.7646,-15.8235"/>
+</g>
+<!-- module~grid_fields -->
+<g id="module~~pic_in~~UsesGraph_node14" class="node">
+<title>module~grid_fields</title>
+<g id="a_module~~pic_in~~UsesGraph_node14"><a xlink:href=".././module/grid_fields.html" xlink:title="grid_fields">
+<polygon fill="#337ab7" stroke="#337ab7" points="576.5,-212.723 509.5,-212.723 509.5,-188.723 576.5,-188.723 576.5,-212.723"/>
+<text text-anchor="middle" x="543" y="-198.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_fields</text>
+</a>
+</g>
+</g>
+<!-- module~init_laser_field&#45;&gt;module~grid_fields -->
+<g id="module~~pic_in~~UsesGraph_edge6" class="edge">
+<title>module~init_laser_field&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M661.1061,-100.9795C647.0399,-118.773 619.0391,-152.0992 590,-174.723 585.9656,-177.866 581.5028,-180.8557 576.9801,-183.6135"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="575.2242,-180.5857 568.3062,-188.6102 578.7184,-186.6513 575.2242,-180.5857"/>
+</g>
+<!-- module~array_alloc -->
+<g id="module~~pic_in~~UsesGraph_node4" class="node">
+<title>module~array_alloc</title>
+<g id="a_module~~pic_in~~UsesGraph_node4"><a xlink:href=".././module/array_alloc.html" xlink:title="array_alloc">
+<polygon fill="#337ab7" stroke="#337ab7" points="444.5,-90.723 372.5,-90.723 372.5,-66.723 444.5,-66.723 444.5,-90.723"/>
+<text text-anchor="middle" x="408.5" y="-76.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">array_alloc</text>
+</a>
+</g>
+</g>
+<!-- module~init_part_distrib&#45;&gt;module~array_alloc -->
+<g id="module~~pic_in~~UsesGraph_edge7" class="edge">
+<title>module~init_part_distrib&#45;&gt;module~array_alloc</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M526.4036,-141.5767C510.043,-129.9324 484.0673,-112.3137 460,-99.723 456.8678,-98.0844 453.5783,-96.485 450.2404,-94.9471"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="451.3592,-91.6157 440.7963,-90.7943 448.5415,-98.0235 451.3592,-91.6157"/>
+</g>
+<!-- module~mpi_var -->
+<g id="module~~pic_in~~UsesGraph_node5" class="node">
+<title>module~mpi_var</title>
+<g id="a_module~~pic_in~~UsesGraph_node5"><a xlink:href=".././module/mpi_var.html" xlink:title="mpi_var">
+<polygon fill="#337ab7" stroke="#337ab7" points="298.5,-252.723 243.5,-252.723 243.5,-228.723 298.5,-228.723 298.5,-252.723"/>
+<text text-anchor="middle" x="271" y="-238.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_var</text>
+</a>
+</g>
+</g>
+<!-- module~init_part_distrib&#45;&gt;module~mpi_var -->
+<g id="module~~pic_in~~UsesGraph_edge8" class="edge">
+<title>module~init_part_distrib&#45;&gt;module~mpi_var</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M517.062,-165.9211C509.9032,-169.8471 502.3615,-174.5393 496,-179.723 476.9408,-195.2533 481.7937,-210.3442 460,-221.723 412.3676,-246.5925 348.8038,-247.5011 308.8851,-244.8752"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="309.0163,-241.3751 298.7782,-244.1012 308.4817,-248.3547 309.0163,-241.3751"/>
+</g>
+<!-- module~phys_param -->
+<g id="module~~pic_in~~UsesGraph_node6" class="node">
+<title>module~phys_param</title>
+<g id="a_module~~pic_in~~UsesGraph_node6"><a xlink:href=".././module/phys_param.html" xlink:title="phys_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="447.5,-132.723 369.5,-132.723 369.5,-108.723 447.5,-108.723 447.5,-132.723"/>
+<text text-anchor="middle" x="408.5" y="-118.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">phys_param</text>
+</a>
+</g>
+</g>
+<!-- module~init_part_distrib&#45;&gt;module~phys_param -->
+<g id="module~~pic_in~~UsesGraph_edge9" class="edge">
+<title>module~init_part_distrib&#45;&gt;module~phys_param</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M495.9584,-142.1812C483.5253,-139.1307 470.0764,-135.8309 457.5403,-132.7552"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="458.2653,-129.3293 447.7193,-130.3455 456.5972,-136.1276 458.2653,-129.3293"/>
+</g>
+<!-- module~util -->
+<g id="module~~pic_in~~UsesGraph_node7" class="node">
+<title>module~util</title>
+<g id="a_module~~pic_in~~UsesGraph_node7"><a xlink:href=".././module/util.html" xlink:title="util">
+<polygon fill="#337ab7" stroke="#337ab7" points="298,-336.723 244,-336.723 244,-312.723 298,-312.723 298,-336.723"/>
+<text text-anchor="middle" x="271" y="-322.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">util</text>
+</a>
+</g>
+</g>
+<!-- module~init_part_distrib&#45;&gt;module~util -->
+<g id="module~~pic_in~~UsesGraph_edge10" class="edge">
+<title>module~init_part_distrib&#45;&gt;module~util</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M513.0332,-165.7248C506.6935,-169.4203 500.5521,-174.05 496,-179.723 460.6184,-223.8159 486.4123,-251.7386 460,-301.723 443.1039,-333.6983 441.3813,-349.6656 408.5,-364.723"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M408.5,-364.723C390.3697,-373.0254 340.9696,-355.2159 306.6082,-340.7596"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="307.9241,-337.5157 297.3538,-336.7956 305.1679,-343.9503 307.9241,-337.5157"/>
+</g>
+<!-- module~code_util -->
+<g id="module~~pic_in~~UsesGraph_node10" class="node">
+<title>module~code_util</title>
+<g id="a_module~~pic_in~~UsesGraph_node10"><a xlink:href=".././module/code_util.html" xlink:title="code_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="183,-336.723 122,-336.723 122,-312.723 183,-312.723 183,-336.723"/>
+<text text-anchor="middle" x="152.5" y="-322.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">code_util</text>
+</a>
+</g>
+</g>
+<!-- module~init_part_distrib&#45;&gt;module~code_util -->
+<g id="module~~pic_in~~UsesGraph_edge13" class="edge">
+<title>module~init_part_distrib&#45;&gt;module~code_util</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M408.5,-364.723C333.7672,-398.9454 235.296,-363.936 185.047,-341.0902"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="186.4937,-337.903 175.9516,-336.8464 183.5338,-344.2464 186.4937,-337.903"/>
+</g>
+<!-- module~grid_param -->
+<g id="module~~pic_in~~UsesGraph_node11" class="node">
+<title>module~grid_param</title>
+<g id="a_module~~pic_in~~UsesGraph_node11"><a xlink:href=".././module/grid_param.html" xlink:title="grid_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="308,-168.723 234,-168.723 234,-144.723 308,-144.723 308,-168.723"/>
+<text text-anchor="middle" x="271" y="-154.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_param</text>
+</a>
+</g>
+</g>
+<!-- module~init_part_distrib&#45;&gt;module~grid_param -->
+<g id="module~~pic_in~~UsesGraph_edge11" class="edge">
+<title>module~init_part_distrib&#45;&gt;module~grid_param</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M495.9478,-155.3526C470.1038,-156.4537 437.4996,-158.1789 408.5,-160.723"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M408.5,-160.723C378.5717,-163.3485 344.8535,-162.4277 318.2975,-160.8119"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="318.3357,-157.3069 308.1263,-160.1384 317.8731,-164.2916 318.3357,-157.3069"/>
+</g>
+<!-- module~common_param -->
+<g id="module~~pic_in~~UsesGraph_node13" class="node">
+<title>module~common_param</title>
+<g id="a_module~~pic_in~~UsesGraph_node13"><a xlink:href=".././module/common_param.html" xlink:title="common_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="321,-210.723 221,-210.723 221,-186.723 321,-186.723 321,-210.723"/>
+<text text-anchor="middle" x="271" y="-196.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">common_param</text>
+</a>
+</g>
+</g>
+<!-- module~init_part_distrib&#45;&gt;module~common_param -->
+<g id="module~~pic_in~~UsesGraph_edge12" class="edge">
+<title>module~init_part_distrib&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M408.5,-160.723C375.1008,-163.653 338.5749,-174.1105 311.5688,-183.3148"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="310.359,-180.03 302.0733,-186.633 312.6682,-186.6382 310.359,-180.03"/>
+</g>
+<!-- module~array_alloc&#45;&gt;module~pstruct_data -->
+<g id="module~~pic_in~~UsesGraph_edge15" class="edge">
+<title>module~array_alloc&#45;&gt;module~pstruct_data</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M372.3735,-78.1975C356.6911,-77.9694 338.0605,-77.6984 321.0753,-77.4513"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="320.8033,-73.9471 310.7534,-77.3012 320.7014,-80.9463 320.8033,-73.9471"/>
+</g>
+<!-- module~array_alloc&#45;&gt;module~fstruct_data -->
+<g id="module~~pic_in~~UsesGraph_edge14" class="edge">
+<title>module~array_alloc&#45;&gt;module~fstruct_data</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M372.3735,-67.1625C355.8581,-61.8776 336.073,-55.5463 318.3834,-49.8856"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="319.3965,-46.5351 308.8055,-46.8207 317.2631,-53.202 319.3965,-46.5351"/>
+</g>
+<!-- module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_node18" class="node">
+<title>module~precision_def</title>
+<g id="a_module~~pic_in~~UsesGraph_node18"><a xlink:href=".././module/precision_def.html" xlink:title="precision_def">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-210.723 0,-210.723 0,-186.723 84,-186.723 84,-210.723"/>
+<text text-anchor="middle" x="42" y="-196.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def</text>
+</a>
+</g>
+</g>
+<!-- module~mpi_var&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge16" class="edge">
+<title>module~mpi_var&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#ff8b00" stroke-dasharray="5,2" d="M243.3186,-235.2143C219.3618,-230.5917 183.7488,-224.0658 152.5,-219.723"/>
+</g>
+<!-- module~phys_param&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge17" class="edge">
+<title>module~phys_param&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M369.2488,-115.6111C307.0088,-108.247 188.9823,-97.5207 152.5,-116.723"/>
+</g>
+<!-- module~util&#45;&gt;module~code_util -->
+<g id="module~~pic_in~~UsesGraph_edge18" class="edge">
+<title>module~util&#45;&gt;module~code_util</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M243.8137,-324.723C228.8749,-324.723 210.0446,-324.723 193.37,-324.723"/>
+<polygon fill="#5cff00" stroke="#5cff00" points="193.3203,-321.2231 183.3203,-324.723 193.3203,-328.2231 193.3203,-321.2231"/>
+</g>
+<!-- module~util&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge19" class="edge">
+<title>module~util&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M243.7538,-316.0863C235.98,-312.9002 227.7857,-308.798 221,-303.723 182.4228,-274.8709 200.2145,-226.3541 152.5,-219.723"/>
+</g>
+<!-- module~struct_def -->
+<g id="module~~pic_in~~UsesGraph_node16" class="node">
+<title>module~struct_def</title>
+<g id="a_module~~pic_in~~UsesGraph_node16"><a xlink:href=".././module/struct_def.html" xlink:title="struct_def">
+<polygon fill="#337ab7" stroke="#337ab7" points="185,-168.723 120,-168.723 120,-144.723 185,-144.723 185,-168.723"/>
+<text text-anchor="middle" x="152.5" y="-154.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">struct_def</text>
+</a>
+</g>
+</g>
+<!-- module~pstruct_data&#45;&gt;module~struct_def -->
+<g id="module~~pic_in~~UsesGraph_edge20" class="edge">
+<title>module~pstruct_data&#45;&gt;module~struct_def</title>
+<path fill="none" stroke="#00ff2e" stroke-dasharray="5,2" d="M253.0024,-88.8732C233.2255,-102.2247 201.2754,-123.7944 178.7158,-139.0245"/>
+<polygon fill="#00ff2e" stroke="#00ff2e" points="176.6084,-136.2242 170.2787,-144.7205 180.5252,-142.0259 176.6084,-136.2242"/>
+</g>
+<!-- module~pstruct_data&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge21" class="edge">
+<title>module~pstruct_data&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#00ff2e" stroke-dasharray="5,2" d="M231.2917,-86.6995C207.6464,-93.4661 177.4786,-103.5756 152.5,-116.723"/>
+</g>
+<!-- module~init_grid_field&#45;&gt;module~phys_param -->
+<g id="module~~pic_in~~UsesGraph_edge25" class="edge">
+<title>module~init_grid_field&#45;&gt;module~phys_param</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M504.4577,-90.7585C489.5438,-95.4156 472.311,-100.7968 456.5996,-105.703"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="455.5501,-102.364 447.0479,-108.6857 457.6366,-109.0458 455.5501,-102.364"/>
+</g>
+<!-- module~init_grid_field&#45;&gt;module~pstruct_data -->
+<g id="module~~pic_in~~UsesGraph_edge23" class="edge">
+<title>module~init_grid_field&#45;&gt;module~pstruct_data</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M520.2585,-66.6813C493.972,-54.0203 449.1079,-36.2425 408.5,-38.723"/>
+</g>
+<!-- module~init_grid_field&#45;&gt;module~fstruct_data -->
+<g id="module~~pic_in~~UsesGraph_edge22" class="edge">
+<title>module~init_grid_field&#45;&gt;module~fstruct_data</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M519.147,-66.4639C511.5972,-62.3375 503.3168,-57.5499 496,-52.723 458.2389,-27.8118 453.5846,-4.4446 408.5,-.723"/>
+</g>
+<!-- module~grid_field_param -->
+<g id="module~~pic_in~~UsesGraph_node17" class="node">
+<title>module~grid_field_param</title>
+<g id="a_module~~pic_in~~UsesGraph_node17"><a xlink:href=".././module/grid_field_param.html" xlink:title="grid_field_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="460,-212.723 357,-212.723 357,-188.723 460,-188.723 460,-212.723"/>
+<text text-anchor="middle" x="408.5" y="-198.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_field_param</text>
+</a>
+</g>
+</g>
+<!-- module~init_grid_field&#45;&gt;module~grid_field_param -->
+<g id="module~~pic_in~~UsesGraph_edge24" class="edge">
+<title>module~init_grid_field&#45;&gt;module~grid_field_param</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M532.146,-91.1396C522.6027,-102.0696 508.3487,-118.4261 496,-132.723 479.9294,-151.3289 479.349,-159.5552 460,-174.723 455.821,-177.9989 451.1642,-181.033 446.4067,-183.785"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="444.3821,-180.8998 437.2329,-188.719 447.6978,-187.0647 444.3821,-180.8998"/>
+</g>
+<!-- module~code_util&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge26" class="edge">
+<title>module~code_util&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M141.9048,-312.6415C122.8951,-290.9653 82.8198,-245.2686 59.6177,-218.8119"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="61.9504,-216.1636 52.7255,-210.9529 56.6876,-220.779 61.9504,-216.1636"/>
+</g>
+<!-- module~grid_param&#45;&gt;module~struct_def -->
+<g id="module~~pic_in~~UsesGraph_edge27" class="edge">
+<title>module~grid_param&#45;&gt;module~struct_def</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M233.831,-156.723C221.6346,-156.723 207.9816,-156.723 195.3966,-156.723"/>
+<polygon fill="#002eff" stroke="#002eff" points="195.1318,-153.223 185.1318,-156.723 195.1317,-160.223 195.1318,-153.223"/>
+</g>
+<!-- module~grid_param&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge28" class="edge">
+<title>module~grid_param&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M240.254,-168.7663C233.8094,-171.5317 227.1158,-174.5868 221,-177.723 189.2229,-194.0179 187.8715,-224.6387 152.5,-219.723"/>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M152.5,-219.723C133.3247,-217.0581 112.429,-213.3077 94.0212,-209.7123"/>
+<polygon fill="#002eff" stroke="#002eff" points="94.5674,-206.2525 84.0773,-207.7387 93.2046,-213.1186 94.5674,-206.2525"/>
+</g>
+<!-- module~fstruct_data&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge29" class="edge">
+<title>module~fstruct_data&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#5c00ff" stroke-dasharray="5,2" d="M237.9426,-46.7781C232.1256,-49.4073 226.2563,-52.4086 221,-55.723 186.5169,-77.4667 188.5743,-97.7355 152.5,-116.723"/>
+<path fill="none" stroke="#5c00ff" stroke-dasharray="5,2" d="M152.5,-116.723C137.694,-124.516 133.7693,-126.2173 120,-135.723 100.0569,-149.4908 78.7368,-166.9159 63.4355,-179.9488"/>
+<polygon fill="#5c00ff" stroke="#5c00ff" points="60.9008,-177.5123 55.6009,-186.6862 65.465,-182.8197 60.9008,-177.5123"/>
+</g>
+<!-- module~common_param&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge30" class="edge">
+<title>module~common_param&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#e700ff" stroke-dasharray="5,2" d="M236.1089,-210.7449C212.5625,-217.4176 180.7481,-223.6488 152.5,-219.723"/>
+</g>
+<!-- module~parallel -->
+<g id="module~~pic_in~~UsesGraph_node15" class="node">
+<title>module~parallel</title>
+<g id="a_module~~pic_in~~UsesGraph_node15"><a xlink:href=".././module/parallel.html" xlink:title="parallel">
+<polygon fill="#337ab7" stroke="#337ab7" points="435.5,-292.723 381.5,-292.723 381.5,-268.723 435.5,-268.723 435.5,-292.723"/>
+<text text-anchor="middle" x="408.5" y="-278.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">parallel</text>
+</a>
+</g>
+</g>
+<!-- module~grid_fields&#45;&gt;module~parallel -->
+<g id="module~~pic_in~~UsesGraph_edge31" class="edge">
+<title>module~grid_fields&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M525.5404,-212.882C508.9807,-224.221 483.2443,-241.3474 460,-254.723 454.4739,-257.9029 448.5118,-261.1089 442.6721,-264.1316"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="441.0076,-261.0513 433.6766,-268.7003 444.1775,-267.2925 441.0076,-261.0513"/>
+</g>
+<!-- module~grid_fields&#45;&gt;module~grid_field_param -->
+<g id="module~~pic_in~~UsesGraph_edge32" class="edge">
+<title>module~grid_fields&#45;&gt;module~grid_field_param</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M509.4069,-200.723C497.5642,-200.723 483.8453,-200.723 470.4123,-200.723"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="470.2315,-197.2231 460.2314,-200.723 470.2314,-204.2231 470.2315,-197.2231"/>
+</g>
+<!-- module~parallel&#45;&gt;module~mpi_var -->
+<g id="module~~pic_in~~UsesGraph_edge34" class="edge">
+<title>module~parallel&#45;&gt;module~mpi_var</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M381.3344,-272.8202C360.4725,-266.7513 331.4276,-258.3019 308.3745,-251.5955"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="309.1594,-248.1788 298.5798,-248.7462 307.2041,-254.9002 309.1594,-248.1788"/>
+</g>
+<!-- module~parallel&#45;&gt;module~util -->
+<g id="module~~pic_in~~UsesGraph_edge33" class="edge">
+<title>module~parallel&#45;&gt;module~util</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M381.3344,-289.4159C360.3362,-296.1354 331.0476,-305.5077 307.9233,-312.9075"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="306.5666,-309.6667 298.1091,-316.048 308.7001,-316.3337 306.5666,-309.6667"/>
+</g>
+<!-- module~parallel&#45;&gt;module~common_param -->
+<g id="module~~pic_in~~UsesGraph_edge35" class="edge">
+<title>module~parallel&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M393.3381,-268.6649C376.3791,-255.5392 347.7671,-234.4579 321,-219.723 318.1132,-218.1338 315.0812,-216.5867 311.9976,-215.0997"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="313.2352,-211.8171 302.6857,-210.8379 310.322,-218.1821 313.2352,-211.8171"/>
+</g>
+<!-- mpi -->
+<g id="module~~pic_in~~UsesGraph_node19" class="node">
+<title>mpi</title>
+<g id="a_module~~pic_in~~UsesGraph_node19"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="298,-294.723 244,-294.723 244,-270.723 298,-270.723 298,-294.723"/>
+<text text-anchor="middle" x="271" y="-280.323" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~parallel&#45;&gt;mpi -->
+<g id="module~~pic_in~~UsesGraph_edge36" class="edge">
+<title>module~parallel&#45;&gt;mpi</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M381.3344,-281.1181C360.4303,-281.4221 331.3101,-281.8457 308.2347,-282.1814"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="308.0571,-278.6835 298.1091,-282.3286 308.159,-285.6827 308.0571,-278.6835"/>
+</g>
+<!-- module~struct_def&#45;&gt;module~precision_def -->
+<g id="module~~pic_in~~UsesGraph_edge37" class="edge">
+<title>module~struct_def&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M120.8351,-168.7585C109.1604,-173.1959 95.756,-178.2908 83.3514,-183.0057"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="81.7735,-179.8611 73.6695,-186.6857 84.2606,-186.4043 81.7735,-179.8611"/>
+</g>
+<!-- module~grid_field_param&#45;&gt;module~mpi_var -->
+<g id="module~~pic_in~~UsesGraph_edge39" class="edge">
+<title>module~grid_field_param&#45;&gt;module~mpi_var</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M367.2455,-212.7243C348.557,-218.1609 326.6233,-224.5416 308.4182,-229.8377"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="307.3564,-226.5014 298.7321,-232.6554 309.3117,-233.2228 307.3564,-226.5014"/>
+</g>
+<!-- module~grid_field_param&#45;&gt;module~grid_param -->
+<g id="module~~pic_in~~UsesGraph_edge38" class="edge">
+<title>module~grid_field_param&#45;&gt;module~grid_param</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M370.9275,-188.6998C354.5762,-183.4673 335.2397,-177.2797 317.9537,-171.7481"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="318.642,-168.2936 308.051,-168.5793 316.5085,-174.9606 318.642,-168.2936"/>
+</g>
+<!-- module~grid_field_param&#45;&gt;module~common_param -->
+<g id="module~~pic_in~~UsesGraph_edge40" class="edge">
+<title>module~grid_field_param&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M356.9089,-199.9725C348.5658,-199.8512 339.8625,-199.7246 331.3346,-199.6005"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="331.1053,-196.0969 321.0555,-199.451 331.0035,-203.0962 331.1053,-196.0969"/>
+</g>
+</g>
+</svg>
+</div><script>var panmodulepic_inUsesGraph = svgPanZoom('#modulepic_inUsesGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~pic_in~~UsedByGraph Pages: 1 -->
+<svg id="modulepic_inUsedByGraph" width="243pt" height="32pt"
+ viewBox="0.00 0.00 243.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~pic_in~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~pic_in~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 239,-28 239,4 -4,4"/>
+<!-- module~pic_in -->
+<g id="module~~pic_in~~UsedByGraph_node1" class="node">
+<title>module~pic_in</title>
+<polygon fill="none" stroke="#000000" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">pic_in</text>
+</g>
+<!-- module~start_all -->
+<g id="module~~pic_in~~UsedByGraph_node2" class="node">
+<title>module~start_all</title>
+<g id="a_module~~pic_in~~UsedByGraph_node2"><a xlink:href=".././module/start_all.html" xlink:title="start_all">
+<polygon fill="#337ab7" stroke="#337ab7" points="145,-24 90,-24 90,0 145,0 145,-24"/>
+<text text-anchor="middle" x="117.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">start_all</text>
+</a>
+</g>
+</g>
+<!-- module~start_all&#45;&gt;module~pic_in -->
+<g id="module~~pic_in~~UsedByGraph_edge1" class="edge">
+<title>module~start_all&#45;&gt;module~pic_in</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M89.8553,-12C81.799,-12 72.8606,-12 64.3124,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="64.1645,-8.5001 54.1645,-12 64.1644,-15.5001 64.1645,-8.5001"/>
+</g>
+<!-- program~aladyn -->
+<g id="module~~pic_in~~UsedByGraph_node3" class="node">
+<title>program~aladyn</title>
+<g id="a_module~~pic_in~~UsedByGraph_node3"><a xlink:href=".././program/aladyn.html" xlink:title="aladyn">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="235,-24 181,-24 181,0 235,0 235,-24"/>
+<text text-anchor="middle" x="208" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">aladyn</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;module~start_all -->
+<g id="module~~pic_in~~UsedByGraph_edge2" class="edge">
+<title>program~aladyn&#45;&gt;module~start_all</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M180.847,-12C172.8518,-12 163.954,-12 155.4144,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="155.2603,-8.5001 145.2603,-12 155.2603,-15.5001 155.2603,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/pic_in.html#variable-xf0~15">xf0</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/pic_in.html#proc-init">init</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xf0~15"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xf0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-init"></span><h3>
+public subroutine <a href='../proc/init.html'>init</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-01-29 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>
